@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    width: 75%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 100px;
+
+    .in4 {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+main {
+    .items {
+        background-color: black;
+        margin-bottom: 30px;
+        margin: auto;
+        color: white;
+        display: flex;
+        padding: 20px;
+        gap: 40px;
+        font-size: 1.5rem;
+        width: 90%;
+        margin: auto;
+        border: 1px solid black;
+        border-radius: 10px;
+
+        li {
+            margin-left: 20px;
+        }
+    }
+
+    .position {
+
+        width: 80%;
+        margin: auto;
+
+        .up {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+
+            .box {
+                position: relative;
+            }
+
+            h1 {
+                position: absolute;
+                bottom: 70px;
+                left: 30px;
+                color: white;
+            }
+
+            p {
+                position: absolute;
+                bottom: 40px;
+                left: 30px;
+                color: white;
+            }
+        }
+
+        .down {
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+
+            .box {
+                position: relative;
+            }
+
+            h2 {
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                bottom: 30px;
+                color: white;
+            }
+        }
+    }
+
+    .contain {
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 2.5fr 1fr;
+        gap: 40px;
+
+        .left {
+            border: 1px solid black;
+            padding: 30px;
+
+            hr {
+                margin-top: 10px;
+                margin-bottom: 40px;
+                width: 45%;
+            }
+
+            .big_box {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+
+                .box {
+                    position: relative;
+                    margin-bottom: 90px;
+
+                    h3 {
+                        position: absolute;
+                        bottom: 30px;
+                        color: white;
+                        background-color: green;
+                        padding: 10px 40px 10px 10px;
+                    }
+
+                    h2 {
+                        margin-top: 10px;
+                    }
+
+                    p {
+                        margin-top: 10px;
+
+                    }
+
+                }
+            }.load{
+                margin-top: 40px;
+                background-color: green;
+                text-align: center;
+                padding: 40px;
+                font-size: 1.5rem;
+                color: white;
+                border-radius: 10px;
+                margin-bottom: 35px;
+            }
+
+        }
+
+        .right {}
+    }
+
+
+}

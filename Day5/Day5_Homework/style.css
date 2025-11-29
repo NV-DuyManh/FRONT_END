@@ -5,7 +5,7 @@
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 
@@ -17,11 +17,18 @@ li {
   list-style: none;
 }
 
+/* body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+} */
+
 header {
   background-image: url(./Mask.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 80vh;
+  height: 100vh;
   margin-bottom: 170px;
 
   position: relative;
@@ -31,7 +38,8 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 600px;
+    top: 550px;
+
 
     i {
       position: absolute;
@@ -86,41 +94,6 @@ header {
     color: white;
   }
 
-  /* .down {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-       
-        margin-top: -30px;
-
-        h1 {
-            text-align: center;
-            color: white;
-            margin-bottom: 40px;
-            font-size: 3rem;
-        }
-
-        .box {
-            position: relative;
-
-            img {
-                width: 800px;
-                height: 400px;
-            }
-
-            i {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                font-size: 3rem;
-                color: white;
-
-            }
-        }
-
-    } */
 }
 
 main {
@@ -420,20 +393,24 @@ main {
       }
     }
   }
+
   .final {
     margin-bottom: 50px;
+
     h1 {
       margin-top: 80px;
       text-align: center;
       font-size: 3rem;
       margin-bottom: 50px;
     }
+
     p {
       text-align: center;
       font-size: 1.8rem;
       margin-bottom: 50px;
       color: gray;
     }
+
     .input {
       margin: auto;
       width: 80%;
@@ -461,9 +438,11 @@ main {
     }
   }
 }
+
 footer {
   background-color: rgb(1, 1, 68);
   color: white;
+
   .top {
     width: 65%;
     margin: auto;
@@ -495,15 +474,18 @@ footer {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 200px;
+
       .box {
         font-size: 1.5rem;
         margin-bottom: 100px;
+
         b {
           li:nth-child(1) {
             margin-bottom: 40px;
             color: white;
           }
         }
+
         li {
           color: gray;
           margin-bottom: 10px;
@@ -511,14 +493,17 @@ footer {
       }
     }
   }
+
   .end {
     width: 90%;
     margin: auto;
     display: flex;
     justify-content: space-between;
+
     p {
       font-size: 1.2rem;
     }
+
     .icon {
       display: flex;
       gap: 5px;
@@ -527,14 +512,19 @@ footer {
     }
   }
 }
+
 /* laptop */
-@media screen and (max-width: 1024px) {
-}
+@media screen and (max-width: 1024px) {}
 
 /* Tablet */
 @media screen and (max-width: 768px) {
   body {
     background-color: blue;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin: auto;
   }
 }
 

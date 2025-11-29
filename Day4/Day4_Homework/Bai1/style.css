@@ -26,22 +26,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-
-
 }
 
 form {
-    width: 90%;
-    height: 80%;
+    width: 60%;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 3fr 5fr;
     border-radius: 20px;
-
+    background-color: rgb(6, 160, 155);
 
     .left {
-        width: 115%;
-        background-color: rgb(6, 160, 155);
         border-radius: 20px;
 
 
@@ -68,13 +63,14 @@ form {
         background-color: white;
         border-radius: 20px;
         color: black;
+        padding: 20px 50px;
 
         img {
 
             position: absolute;
             width: 600px;
             height: 450px;
-            left: -450px;
+            right: 500px;
 
             top: 150px;
 
@@ -86,23 +82,19 @@ form {
             text-align: center;
         }
 
-        select {
-            margin-top: 20px;
-            margin-left: 760px;
-            border: none;
-            padding-right: 5px;
+        .language {
+            text-align: end;
 
+            select {
+                border: none;
+
+            }
         }
-
-        .box {
-            padding: 20px 150px 0px 150px;
-
-
 
             .nhap {
                 margin-top: 5px;
                 margin-bottom: 15px;
-                position: relative;
+                /* position: relative; */
 
                 input {
                     margin-top: 15px;
@@ -112,20 +104,19 @@ form {
                     border: 1px solid rgb(247, 247, 247);
                 }
 
-                .eye {
-                    position: absolute;
-                    top: 130px;
-                    left: 565px;
+                .form_group {
+                    position: relative;
+                    /* top: 130px;
+                    left: 565px; */
                     color: gray;
+                    i{
+                        position: absolute;
+                        top: 25px;
+                        right: 10px;
+                    }
                 }
 
-                .eyes {
-                    position: absolute;
-                    top: 183px;
-                    left: 565px;
-                    color: gray;
-                }
-
+                
             }
 
             .tick {
@@ -158,11 +149,11 @@ form {
                 display: flex;
                 /* align-items: center; */
                 justify-content: center;
-                gap: 215px;
+                gap: 100px;
 
                 .gg,
                 .fb {
-          
+
 
                     button {
                         display: flex;
@@ -180,7 +171,6 @@ form {
                 }
             }
 
-        }
 
 
     }

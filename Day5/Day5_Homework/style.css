@@ -5,7 +5,7 @@
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
 }
 
@@ -17,12 +17,6 @@ li {
   list-style: none;
 }
 
-/* body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-
-} */
 
 header {
   background-image: url(./Mask.png);
@@ -85,6 +79,10 @@ header {
           font-size: 1.3rem;
         }
       }
+
+      i {
+        display: none;
+      }
     }
   }
 
@@ -119,21 +117,31 @@ main {
           position: relative;
 
           .content {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+
             h3 {
               color: white;
               font-size: 2.2rem;
               margin-bottom: 10px;
             }
 
-            p {
+            .p1 {
               color: rgb(169, 168, 168);
               margin-bottom: 10px;
               font-size: 1.2rem;
             }
 
-            position: absolute;
-            bottom: 10px;
-            left: 20px;
+            .p2 {
+              display: none;
+            }
+
+            .p3 {
+              display: none;
+            }
+
+
           }
 
           .anh {
@@ -156,7 +164,21 @@ main {
     }
 
     .down {
-      h2 {
+      .h2_1 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .h2_2 {
+        display: none;
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .h2_3 {
+        display: none;
         font-size: 3rem;
         text-align: center;
         margin-bottom: 30px;
@@ -166,7 +188,6 @@ main {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 40px;
-        display: flex;
         text-align: center;
         justify-content: center;
         margin-bottom: 50px;
@@ -179,12 +200,13 @@ main {
               width: 150px;
               height: 150px;
               border-radius: 50%;
+              border: 3px solid white;
             }
 
             .music1 {
               position: absolute;
               bottom: 5px;
-              right: 35px;
+              right: 50px;
 
               .music {
                 position: relative;
@@ -192,6 +214,7 @@ main {
                 img {
                   width: 50px;
                   height: 50px;
+                  border: 5px solid white;
                 }
 
                 i {
@@ -213,10 +236,22 @@ main {
               margin-bottom: 20px;
             }
 
-            p {
+            .p1 {
               font-size: 1.5rem;
               color: rgb(106, 106, 106);
             }
+
+            .p2 {
+              display: none;
+            }
+
+            .p3 {
+              display: none;
+              font-size: 1.5rem;
+              color: rgb(106, 106, 106);
+            }
+
+
           }
         }
       }
@@ -250,12 +285,21 @@ main {
     .container {
       width: 80%;
 
-      h1 {
+      .h1_1 {
         margin-top: 60px;
         padding-top: 50px;
         font-size: 3rem;
         text-align: center;
         padding-bottom: 80px;
+      }
+
+      .h1_2 {
+        display: none;
+        margin-top: 60px;
+        padding-top: 50px;
+        font-size: 3rem;
+        text-align: center;
+        padding-bottom: 30px;
       }
 
       .anh {
@@ -333,8 +377,24 @@ main {
         margin-bottom: 50px;
       }
 
-      p {
-        font-size: 1.5rem;
+      .p1 {
+        font-size: 1.8rem;
+        color: rgb(106, 106, 106);
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .p2 {
+        display: none;
+        font-size: 1.8rem;
+        color: rgb(106, 106, 106);
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .p3 {
+        display: none;
+        font-size: 1.8rem;
         color: rgb(106, 106, 106);
         text-align: center;
         margin-bottom: 50px;
@@ -423,14 +483,14 @@ main {
         padding: 15px 20px;
         font-size: 1.8rem;
         border-radius: 5px;
-        border: 1px solid rgb(163, 163, 163);
+        border: 3px solid rgb(163, 163, 163);
         color: rgb(216, 216, 216);
       }
 
       button {
         padding: 15px 20px;
         font-size: 1.8rem;
-        border: 1px solid rgb(0, 198, 233);
+        border: 3px solid rgb(0, 198, 233);
         background-color: white;
         color: rgb(0, 198, 233);
         border-radius: 15px;
@@ -442,6 +502,10 @@ main {
 footer {
   background-color: rgb(1, 1, 68);
   color: white;
+  margin: auto;
+
+
+
 
   .top {
     width: 65%;
@@ -467,26 +531,27 @@ footer {
   }
 
   .center {
-    width: 70%;
+    width: 80%;
     margin: auto;
 
     .table {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 200px;
+      gap: 80px;
+
 
       .box {
         font-size: 1.5rem;
         margin-bottom: 100px;
 
-        b {
-          li:nth-child(1) {
-            margin-bottom: 40px;
-            color: white;
-          }
+
+        h3 {
+          text-align: center;
+          margin-bottom: 40px;
         }
 
         li {
+          margin-left: 58px;
           color: gray;
           margin-bottom: 10px;
         }
@@ -519,18 +584,667 @@ footer {
 /* Tablet */
 @media screen and (max-width: 768px) {
   body {
-    background-color: blue;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
+    background-color: rgb(162, 58, 145);
     margin: auto;
   }
+
+  header {
+    height: 130vh;
+    margin-bottom: 80px;
+
+    .anh {
+      top: 520px;
+      width: 600px;
+    }
+
+    .top {
+      padding: 20px;
+      margin-bottom: 50px;
+
+      .left {
+        gap: 5px;
+      }
+
+      .right {
+        ul {
+          gap: 30px;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  main {
+    .container {
+      width: 90%;
+
+      .top {
+        h2 {
+          font-size: 2.2rem;
+          margin-bottom: 10px;
+        }
+
+        .step {
+          gap: 15px;
+
+          img {
+            width: 220px;
+            height: 350px;
+          }
+
+          .box {
+            .content {
+              h3 {
+                font-size: 1.7rem;
+                margin-bottom: 10px;
+              }
+
+              .p1 {
+                display: none;
+                margin-bottom: 10px;
+                font-size: 0.9rem;
+              }
+
+              .p2 {
+                display: block;
+                color: rgb(169, 168, 168);
+                margin-bottom: 10px;
+                font-size: 0.9rem;
+              }
+
+
+            }
+
+            .anh {
+              width: 175px;
+              top: -24px;
+              left: -28px;
+
+              img {
+                width: 150px;
+                height: 150px;
+              }
+
+              h4 {
+                top: 35px;
+                right: 95px;
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+
+      .down {
+        .h2_1 {
+          display: none;
+        }
+
+        .h2_2 {
+          display: block;
+        }
+
+        .avatar {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+
+          .box {
+            .anh {
+              img {
+                width: 120px;
+                height: 120px;
+
+              }
+
+              .music1 {
+                right: 105px;
+
+                .music {
+                  img {
+                    width: 40px;
+                    height: 40px;
+                  }
+
+                  i {
+                    font-size: 1rem;
+                  }
+                }
+              }
+            }
+
+            .content {
+              h4 {
+                margin-top: 20px;
+                font-size: 1.7rem;
+                margin-bottom: 20px;
+              }
+
+              .p1 {
+                display: none;
+              }
+
+              .p2 {
+                display: block;
+                font-size: 1.1rem;
+                color: rgb(106, 106, 106);
+              }
+            }
+          }
+        }
+
+
+      }
+    }
+
+    .background {
+      padding-bottom: 50px;
+      margin-bottom: 40px;
+
+      .container {
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        width: 90%;
+
+        h1 {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+      }
+    }
+
+    .contain {
+      width: 97%;
+
+      .muiten {
+        .left {
+          width: 70px;
+          height: 70px;
+          top: 70px;
+
+          i {
+            font-size: 2.2rem;
+          }
+        }
+
+        .right {
+          width: 70px;
+          height: 70px;
+          top: 70px;
+
+          i {
+            font-size: 2.2rem;
+          }
+        }
+      }
+
+      .fb {
+        h1 {
+          font-size: 2.2rem;
+          margin-bottom: 20px;
+        }
+
+        .p1 {
+          display: none;
+        }
+
+        .p2 {
+          display: block;
+          font-size: 1.5rem;
+          margin-bottom: 30px;
+          color: rgb(106, 106, 106);
+          text-align: center;
+
+        }
+
+        .bossfb {
+          gap: 30px;
+
+          img {
+            width: 100px;
+            height: 100px;
+          }
+
+          .review {
+
+            gap: 15px;
+
+            h2 {
+              font-size: 1.5rem;
+            }
+
+            ul {
+              gap: 8px;
+            }
+          }
+        }
+      }
+    }
+
+    .final {
+      margin-bottom: 50px;
+
+      h1 {
+        margin-top: 100px;
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+      }
+
+      p {
+        font-size: 1.6rem;
+        margin-bottom: 40px;
+      }
+
+      .input {
+        width: 90%;
+        grid-template-columns: 2.2fr 1fr;
+        gap: 20px;
+
+        input {
+          padding: 15px;
+          font-size: 1.5rem;
+        }
+
+        button {
+          padding: 15px;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  footer {
+    .top {
+      width: 70%;
+
+      .img {
+        padding-top: 40px;
+        margin-bottom: 100px;
+
+        h2 {
+          font-size: 1.2rem;
+        }
+
+        img {
+          width: 100px;
+        }
+      }
+    }
+
+    .center {
+      .table {
+        gap: 50px;
+
+        .box {
+          font-size: 1rem;
+          margin-bottom: 70px;
+
+          h3 {
+            text-align: center;
+            margin-bottom: 10px;
+          }
+
+          li {
+            margin-left: 9px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+
+    .end {
+      p {
+        font-size: 1rem;
+      }
+
+      .icon {
+        margin-bottom: 40px;
+
+        i {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
 }
+
 
 /* Mobile */
 @media screen and (max-width: 767px) {
   body {
     background-color: rgb(183, 255, 0);
   }
+
+  header {
+    .top {
+      .right {
+        ul {
+          display: none;
+        }
+
+        i {
+          display: block;
+          color: white;
+          font-size: 2.5rem;
+          margin-top: -30px;
+        }
+      }
+    }
+  }
+
+  main {
+    .container {
+      width: 95%;
+
+
+      .top {
+        .step {
+          grid-template-columns: 1fr;
+          gap: 15px;
+
+
+          img {
+            width: 100%;
+            /* height: 60%; */
+          }
+
+          .box {
+            .content {
+              h3 {
+                font-size: 2.7rem;
+                padding-left: 30px;
+
+              }
+
+
+
+              .p2 {
+                display: none;
+              }
+
+              .p3 {
+                display: block;
+                color: rgb(169, 168, 168);
+                margin-bottom: 10px;
+                font-size: 1.5rem;
+                padding-left: 30px;
+              }
+
+            }
+
+            .anh {
+              top: -23.7px;
+            }
+          }
+        }
+      }
+
+      .down {
+        .h2_2 {
+          display: none;
+        }
+
+        .h2_3 {
+          display: block;
+          margin-bottom: 50px;
+        }
+
+        .avatar {
+          grid-template-columns: 1fr;
+
+          .box {
+            .anh {
+              img {
+                width: 200px;
+                height: 200px;
+
+              }
+
+              .music1 {
+                right: 250px;
+
+                .music {
+                  img {
+                    width: 60px;
+                    height: 60px;
+                  }
+
+                  i {
+                    font-size: 2rem;
+
+                  }
+                }
+              }
+            }
+
+            .content {
+              h4 {
+                margin-top: 20px;
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+              }
+
+              .p1 {
+                display: none;
+              }
+
+              .p2 {
+                display: none;
+              }
+
+              .p3 {
+                display: block;
+                margin-bottom: 50px;
+                font-size: 1.7rem;
+              }
+            }
+          }
+        }
+
+        button {
+          width: 95%;
+          border-radius: 25px;
+          justify-content: center;
+          margin-bottom: 40px;
+
+          b {
+            font-size: 2rem;
+          }
+        }
+
+      }
+    }
+
+    .background {
+      padding-bottom: 70px;
+      margin-bottom: 50px;
+
+      .container {
+        width: 95%;
+
+        .h1_1 {
+          display: none;
+        }
+
+        .h1_2 {
+          display: block;
+        }
+
+        .anh {
+          grid-template-rows: 1fr;
+
+          .box1,
+          .box2,
+          .box3 {
+            grid-template-columns: 1fr;
+            gap: 20px;
+          }
+        }
+
+      }
+    }
+
+    .contain {
+      width: 97%;
+
+      .muiten {
+        .left {
+          width: 0px;
+          height: 0px;
+          top: 140px;
+          left: 30px;
+
+          i {
+            font-size: 3rem;
+          }
+        }
+
+        .right {
+          width: 0px;
+          height: 0px;
+          top: 140px;
+          right: 30px;
+
+          i {
+            font-size: 3rem;
+          }
+        }
+      }
+
+      .fb {
+        h1 {
+          font-size: 3.2rem;
+        }
+
+        .p2 {
+          display: none;
+        }
+
+        .p3 {
+          display: block;
+          font-size: 2.5rem;
+        }
+
+        .bossfb {
+          gap: 40px;
+
+          img {
+            width: 150px;
+            height: 150px;
+          }
+
+          .review {
+
+            gap: 25px;
+
+            h2 {
+              font-size: 2rem;
+            }
+
+            ul {
+              gap: 5px;
+
+              i {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .final {
+      h1 {
+        font-size: 3rem;
+
+      }
+
+      p {
+        font-size: 2.5em;
+        margin-bottom: 40px;
+      }
+
+      .input {
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 10px;
+
+        input {
+          padding-left: 35px;
+          font-size: 2rem;
+        }
+
+        button {
+          font-size: 2rem;
+
+        }
+      }
+    }
+  }
+
+  footer {
+    .top {
+      width: 70%;
+
+      .img {
+        padding-top: 60px;
+        margin-bottom: 70px;
+
+        h2 {
+          font-size: 1.2rem;
+        }
+
+        img {
+          width: 80px;
+        }
+      }
+    }
+
+    .center {
+      width: 95%;
+      margin: auto;
+
+      .table {
+        gap: 50px;
+
+        .box {
+          font-size: 1rem;
+          margin-bottom: 70px;
+
+          h3 {
+            text-align: center;
+            margin-bottom: 10px;
+          }
+
+          li {
+            margin-left: 20px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+
+    .end {
+      p {
+        font-size: 1rem;
+      }
+
+      .icon {
+        margin-bottom: 40px;
+
+        i {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
 }

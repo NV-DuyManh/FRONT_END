@@ -551,7 +551,7 @@ footer {
         }
 
         li {
-          margin-left: 58px;
+          margin-left: 47px;
           color: gray;
           margin-bottom: 10px;
         }
@@ -589,11 +589,11 @@ footer {
   }
 
   header {
-    height: 130vh;
+    height: 100vh;
     margin-bottom: 80px;
 
     .anh {
-      top: 520px;
+      top: 530px;
       width: 600px;
     }
 
@@ -923,6 +923,10 @@ footer {
   }
 
   header {
+     .anh {
+      top: 550px;
+      width: 600px;
+    }
     .top {
       .right {
         ul {

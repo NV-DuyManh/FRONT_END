@@ -20,30 +20,8 @@ li {
 
 header {
   background-image: url(./Mask.png);
-  background-size: 100% 100%;
+  background-size: 100% 90%;
   background-repeat: no-repeat;
-  height: 100vh;
-  margin-bottom: 170px;
-
-  position: relative;
-
-  .anh {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 550px;
-
-
-    i {
-      position: absolute;
-      font-size: 4rem;
-      color: white;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
 
   .top {
     padding: 20px 50px;
@@ -64,31 +42,69 @@ header {
       }
 
       h2 {
+        background: #3026CF;
+        background: linear-gradient(to right, #3026CF 0%, #CF1512 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
         color: white;
+        font-size: 2rem;
       }
     }
 
-    .right {
-      ul {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      color: white;
+
+      .menu {
         display: flex;
-        align-items: center;
         gap: 60px;
-        color: white;
 
         li {
-          font-size: 1.3rem;
+          background: #FF8C1D;
+          background: repeating-linear-gradient(to bottom, #FF8C1D 47%, #CE15CF 76%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          font-size: 1.6rem;
         }
       }
 
-      i {
+      .fa-bars {
         display: none;
       }
     }
+
   }
 
+  .anh {
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+
+    i {
+      position: absolute;
+      font-size: 4rem;
+      color: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+
+
   h1 {
+    background: #FF0101;
+    background: linear-gradient(to top left, #FF0101 24%, #00FFFD 47%, #CE15CF 76%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: white;
   }
 
@@ -98,10 +114,9 @@ main {
   .container {
     width: 80%;
     margin: auto;
+    margin-top: 70px;
 
     .top {
-      margin-bottom: 100px;
-
       h2 {
         font-size: 3rem;
         text-align: center;
@@ -109,8 +124,7 @@ main {
       }
 
       .step {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
         gap: 40px;
 
         .box {
@@ -118,28 +132,21 @@ main {
 
           .content {
             position: absolute;
-            bottom: 10px;
+            bottom: 30px;
             left: 20px;
 
             h3 {
               color: white;
-              font-size: 2.2rem;
+              font-size: 2.5rem;
               margin-bottom: 10px;
             }
 
-            .p1 {
+            p {
               color: rgb(169, 168, 168);
               margin-bottom: 10px;
-              font-size: 1.2rem;
+              font-size: 1.5rem;
             }
 
-            .p2 {
-              display: none;
-            }
-
-            .p3 {
-              display: none;
-            }
 
 
           }
@@ -164,67 +171,54 @@ main {
     }
 
     .down {
-      .h2_1 {
+      margin-top: 50px;
+
+      h2 {
+        margin-top: 30px;
+        color: rgb(79, 78, 78);
         font-size: 3rem;
         text-align: center;
         margin-bottom: 30px;
       }
 
-      .h2_2 {
-        display: none;
-        font-size: 3rem;
-        text-align: center;
-        margin-bottom: 30px;
-      }
-
-      .h2_3 {
-        display: none;
-        font-size: 3rem;
-        text-align: center;
-        margin-bottom: 30px;
-      }
 
       .avatar {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 40px;
+        gap: 20px;
         text-align: center;
         justify-content: center;
         margin-bottom: 50px;
 
-        .box {
+        .box1 {
           .anh {
             position: relative;
+            width: 180px;
+            height: 180px;
+            margin: auto;
 
             img {
-              width: 150px;
-              height: 150px;
               border-radius: 50%;
-              border: 3px solid white;
+              border: 5px solid black;
             }
 
-            .music1 {
+
+            .music {
               position: absolute;
-              bottom: 5px;
-              right: 50px;
+              background-color: red;
+              border-radius: 50%;
+              height: 50px;
+              width: 50px;
+              transform: translate(50%, -50px);
+              left: 50%;
+              border: 3px solid black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
 
-              .music {
-                position: relative;
-
-                img {
-                  width: 50px;
-                  height: 50px;
-                  border: 5px solid white;
-                }
-
-                i {
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  color: white;
-                  font-size: 1.5rem;
-                }
+              i {
+                color: yellow;
+                font-size: 1.5rem;
               }
             }
           }
@@ -233,25 +227,150 @@ main {
             h4 {
               margin-top: 20px;
               font-size: 1.7rem;
-              margin-bottom: 20px;
             }
 
-            .p1 {
+            p {
               font-size: 1.5rem;
               color: rgb(106, 106, 106);
             }
+          }
+        }
 
-            .p2 {
-              display: none;
+        .box2 {
+          .anh {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin: auto;
+
+            img {
+              border-radius: 50%;
+              border: 5px solid black;
             }
 
-            .p3 {
-              display: none;
+
+            .music {
+              position: absolute;
+              background-color: blue;
+              border-radius: 50%;
+              height: 50px;
+              width: 50px;
+              transform: translate(50%, -50px);
+              left: 50%;
+              border: 3px solid black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              i {
+                color: pink;
+                font-size: 1.5rem;
+              }
+            }
+          }
+
+          .content {
+            h4 {
+              margin-top: 20px;
+              font-size: 1.7rem;
+            }
+
+            p {
               font-size: 1.5rem;
               color: rgb(106, 106, 106);
             }
+          }
+        }
+
+        .box3 {
+          .anh {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin: auto;
+
+            img {
+              border-radius: 50%;
+              border: 5px solid black;
+            }
 
 
+            .music {
+              position: absolute;
+              background-color: rgb(47, 255, 0);
+              border-radius: 50%;
+              height: 50px;
+              width: 50px;
+              transform: translate(50%, -50px);
+              left: 50%;
+              border: 3px solid black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              i {
+                color: brown;
+                font-size: 1.5rem;
+              }
+            }
+          }
+
+          .content {
+            h4 {
+              margin-top: 20px;
+              font-size: 1.7rem;
+            }
+
+            p {
+              font-size: 1.5rem;
+              color: rgb(106, 106, 106);
+            }
+          }
+        }
+
+        .box4 {
+          .anh {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin: auto;
+
+            img {
+              border-radius: 50%;
+              border: 5px solid black;
+            }
+
+
+            .music {
+              position: absolute;
+              background-color: yellow;
+              border-radius: 50%;
+              height: 50px;
+              width: 50px;
+              transform: translate(50%, -50px);
+              left: 50%;
+              border: 3px solid black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              i {
+                color: rgb(244, 0, 228);
+                font-size: 1.5rem;
+              }
+            }
+          }
+
+          .content {
+            h4 {
+              margin-top: 20px;
+              font-size: 1.7rem;
+            }
+
+            p {
+              font-size: 1.5rem;
+              color: rgb(106, 106, 106);
+            }
           }
         }
       }
@@ -275,60 +394,35 @@ main {
     }
   }
 
-  .background {
+
+  .discover {
     background-color: rgba(7, 6, 6, 0.792);
+    padding: 30px 0px;
     color: white;
-    margin: auto;
-    padding-bottom: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 
-    .container {
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .holiday {
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
       width: 80%;
+      margin: auto;
 
-      .h1_1 {
-        margin-top: 60px;
-        padding-top: 50px;
-        font-size: 3rem;
-        text-align: center;
-        padding-bottom: 80px;
+      img {
+        height: 250px;
       }
 
-      .h1_2 {
-        display: none;
-        margin-top: 60px;
-        padding-top: 50px;
-        font-size: 3rem;
-        text-align: center;
-        padding-bottom: 30px;
-      }
-
-      .anh {
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        gap: 20px;
-
-        .box1 {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 10px;
-        }
-
-        .box2 {
-          display: grid;
-          grid-template-columns: 1fr 2fr;
-          gap: 10px;
-        }
-
-        .box3 {
-          display: grid;
-          grid-template-columns: 2fr 1fr;
-          gap: 10px;
-        }
-      }
     }
   }
 
-  .contain {
+  .app {
     width: 90%;
     margin: auto;
     position: relative;
@@ -408,8 +502,10 @@ main {
         margin-bottom: 50px;
 
         img {
-          width: 150px;
-          height: 150px;
+          border: 5px solid black;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
         }
 
         .review {
@@ -418,7 +514,7 @@ main {
           gap: 20px;
 
           h2 {
-            font-size: 1.5rem;
+            font-size: 2rem;
           }
 
           ul {
@@ -504,7 +600,7 @@ footer {
   color: white;
   margin: auto;
 
-
+  padding: 30px 0px;
 
 
   .top {
@@ -514,13 +610,11 @@ footer {
     justify-content: start;
 
     .img {
-      padding-top: 70px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: start;
       gap: 5px;
-      margin-bottom: 130px;
 
       img {
         width: 120px;
@@ -533,6 +627,7 @@ footer {
   .center {
     width: 80%;
     margin: auto;
+    margin-top: 50px;
 
     .table {
       display: grid;
@@ -542,17 +637,16 @@ footer {
 
       .box {
         font-size: 1.5rem;
-        margin-bottom: 100px;
-
 
         h3 {
           text-align: center;
-          margin-bottom: 40px;
+          margin-bottom: 20px;
         }
 
         li {
-          margin-left: 47px;
+
           color: gray;
+          text-align: center;
           margin-bottom: 10px;
         }
       }
@@ -564,201 +658,91 @@ footer {
     margin: auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.2em;
     }
 
     .icon {
       display: flex;
       gap: 5px;
-      font-size: 3rem;
-      margin-bottom: 80px;
+      font-size: 3em;
+      align-items: center;
     }
   }
 }
 
 /* laptop */
-@media screen and (max-width: 1024px) {}
-
-/* Tablet */
-@media screen and (max-width: 768px) {
-  body {
-    background-color: rgb(162, 58, 145);
-    margin: auto;
-  }
-
-  header {
-    height: 100vh;
-    margin-bottom: 80px;
-
-    .anh {
-      top: 530px;
-      width: 600px;
-    }
-
-    .top {
-      padding: 20px;
-      margin-bottom: 50px;
-
-      .left {
-        gap: 5px;
+@media screen and (min-width: 1025px) {
+  .discover {
+    .holiday {
+      .minibox1 {
+        grid-column: 2/4;
       }
 
-      .right {
-        ul {
+      .minibox2 {
+        grid-column: 1/3;
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    .top {
+      ul {
+        .menu {
           gap: 30px;
         }
       }
+
     }
 
-    h1 {
-      font-size: 2.5rem;
+    .anh {
+      i {
+        font-size: 3rem;
+      }
     }
+
   }
 
   main {
     .container {
-      width: 90%;
-
       .top {
-        h2 {
-          font-size: 2.2rem;
-          margin-bottom: 10px;
-        }
-
         .step {
-          gap: 15px;
-
-          img {
-            width: 220px;
-            height: 350px;
-          }
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
 
           .box {
-            .content {
-              h3 {
-                font-size: 1.7rem;
-                margin-bottom: 10px;
-              }
-
-              .p1 {
-                display: none;
-                margin-bottom: 10px;
-                font-size: 0.9rem;
-              }
-
-              .p2 {
-                display: block;
-                color: rgb(169, 168, 168);
-                margin-bottom: 10px;
-                font-size: 0.9rem;
-              }
-
-
-            }
-
-            .anh {
-              width: 175px;
-              top: -24px;
-              left: -28px;
-
-              img {
-                width: 150px;
-                height: 150px;
-              }
-
-              h4 {
-                top: 35px;
-                right: 95px;
-                font-size: 0.9rem;
-              }
-            }
+            width: calc(100%/2 - 10px);
           }
         }
       }
 
       .down {
-        .h2_1 {
-          display: none;
-        }
-
-        .h2_2 {
-          display: block;
-        }
-
         .avatar {
           grid-template-columns: repeat(2, 1fr);
-          gap: 10px;
-
-          .box {
-            .anh {
-              img {
-                width: 120px;
-                height: 120px;
-
-              }
-
-              .music1 {
-                right: 105px;
-
-                .music {
-                  img {
-                    width: 40px;
-                    height: 40px;
-                  }
-
-                  i {
-                    font-size: 1rem;
-                  }
-                }
-              }
-            }
-
-            .content {
-              h4 {
-                margin-top: 20px;
-                font-size: 1.7rem;
-                margin-bottom: 20px;
-              }
-
-              .p1 {
-                display: none;
-              }
-
-              .p2 {
-                display: block;
-                font-size: 1.1rem;
-                color: rgb(106, 106, 106);
-              }
-            }
-          }
         }
-
-
       }
     }
 
-    .background {
-      padding-bottom: 50px;
-      margin-bottom: 40px;
-
-      .container {
-        h1 {
-          font-size: 2.2rem;
+    .discover {
+      .holiday {
+        .minibox1 {
+          grid-column: 2/4;
         }
 
-        width: 90%;
-
-        h1 {
-          padding-top: 30px;
-          padding-bottom: 30px;
+        .minibox2 {
+          grid-column: 1/3;
         }
-
       }
     }
 
-    .contain {
+    .app {
       width: 97%;
 
       .muiten {
@@ -806,6 +790,7 @@ footer {
           gap: 30px;
 
           img {
+
             width: 100px;
             height: 100px;
           }
@@ -863,8 +848,8 @@ footer {
       width: 70%;
 
       .img {
-        padding-top: 40px;
-        margin-bottom: 100px;
+        /* padding-top: 40px; */
+        /* margin-bottom: 100px; */
 
         h2 {
           font-size: 1.2rem;
@@ -882,17 +867,14 @@ footer {
 
         .box {
           font-size: 1rem;
-          margin-bottom: 70px;
+          /* margin-bottom: 70px; */
 
           h3 {
             text-align: center;
             margin-bottom: 10px;
           }
 
-          li {
-            margin-left: 9px;
-            margin-bottom: 10px;
-          }
+
         }
       }
     }
@@ -904,7 +886,7 @@ footer {
       }
 
       .icon {
-        margin-bottom: 40px;
+
 
         i {
           font-size: 2rem;
@@ -918,88 +900,62 @@ footer {
 
 /* Mobile */
 @media screen and (max-width: 767px) {
-  body {
-    background-color: rgb(183, 255, 0);
-  }
-
   header {
-     .anh {
-      top: 550px;
-      width: 600px;
-    }
     .top {
-      .right {
-        ul {
-          display: none;
+      ul {
+        position: relative;
+
+        .fa-bars {
+          display: block;
+          font-size: 2rem;
+          margin-top: -50px;
         }
 
-        i {
+        &:hover .menu {
           display: block;
-          color: white;
-          font-size: 2.5rem;
-          margin-top: -30px;
         }
+
+        .menu {
+          display: none;
+          position: absolute;
+          flex-direction: column;
+          background-color: black;
+          color: white;
+          bottom: 0;
+          transform: translateY(100%);
+          right: 0;
+          gap: 0;
+
+          li {
+            padding: 5px 10px;
+            border-bottom: 1px solid white;
+
+            &:hover {
+              background-color: antiquewhite;
+              color: black;
+            }
+          }
+        }
+      }
+
+    }
+
+    .anh {
+      i {
+        font-size: 2rem;
       }
     }
   }
 
   main {
     .container {
-      width: 95%;
-
-
       .top {
         .step {
-          grid-template-columns: 1fr;
-          gap: 15px;
-
-
-          img {
-            width: 100%;
-            /* height: 60%; */
-          }
-
-          .box {
-            .content {
-              h3 {
-                font-size: 2.7rem;
-                padding-left: 30px;
-
-              }
-
-
-
-              .p2 {
-                display: none;
-              }
-
-              .p3 {
-                display: block;
-                color: rgb(169, 168, 168);
-                margin-bottom: 10px;
-                font-size: 1.5rem;
-                padding-left: 30px;
-              }
-
-            }
-
-            .anh {
-              top: -23.7px;
-            }
-          }
+          flex-direction: column;
         }
       }
 
       .down {
-        .h2_2 {
-          display: none;
-        }
-
-        .h2_3 {
-          display: block;
-          margin-bottom: 50px;
-        }
-
         .avatar {
           grid-template-columns: 1fr;
 
@@ -1066,36 +1022,17 @@ footer {
       }
     }
 
-    .background {
-      padding-bottom: 70px;
-      margin-bottom: 50px;
+    .discover {
+      .holiday {
+        grid-template-columns: 1fr;
 
-      .container {
-        width: 95%;
-
-        .h1_1 {
-          display: none;
+        img {
+          height: 250px;
         }
-
-        .h1_2 {
-          display: block;
-        }
-
-        .anh {
-          grid-template-rows: 1fr;
-
-          .box1,
-          .box2,
-          .box3 {
-            grid-template-columns: 1fr;
-            gap: 20px;
-          }
-        }
-
       }
     }
 
-    .contain {
+    .app {
       width: 97%;
 
       .muiten {
@@ -1125,6 +1062,10 @@ footer {
       .fb {
         h1 {
           font-size: 3.2rem;
+        }
+
+        .p1 {
+          display: none;
         }
 
         .p2 {
@@ -1195,11 +1136,11 @@ footer {
 
   footer {
     .top {
-      width: 70%;
+      width: 60%;
 
       .img {
-        padding-top: 60px;
-        margin-bottom: 70px;
+        /* padding-top: 60px; */
+        margin-bottom: 40px;
 
         h2 {
           font-size: 1.2rem;
@@ -1212,43 +1153,29 @@ footer {
     }
 
     .center {
-      width: 95%;
+      width: 100%;
       margin: auto;
 
       .table {
-        gap: 50px;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
 
-        .box {
-          font-size: 1rem;
-          margin-bottom: 70px;
-
-          h3 {
-            text-align: center;
-            margin-bottom: 10px;
-          }
-
-          li {
-            margin-left: 20px;
-            margin-bottom: 10px;
-          }
-        }
       }
-    }
 
+    }
 
     .end {
       p {
-        font-size: 1rem;
+        font-size: 20px;
       }
 
-      .icon {
-        margin-bottom: 40px;
+      icon {
 
         i {
-          font-size: 2rem;
+          font-size: 1px;
         }
       }
+
     }
   }
-
 }

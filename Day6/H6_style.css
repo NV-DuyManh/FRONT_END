@@ -173,6 +173,7 @@
                 background-image: url(./car.png);
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
+                /* background-size: cover; */
             }
 
             .line {
@@ -222,6 +223,143 @@
                 }
 
             }
+        }
+
+        .everything {
+            margin-top: 30px;
+
+            h1 {
+                text-align: center;
+                font-size: 3rem;
+            }
+
+            .poster {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                margin: auto;
+                width: 90%;
+                gap: 30px;
+                margin-top: 30px;
+
+                .dodge,
+                .dodge1 {
+                    background-color: #FAF5F8;
+                    border-radius: 25px 25px 0px 0px;
+                    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+                    height: 500px;
+                    margin-bottom: 70px;
+
+                    h2 {
+                        text-align: center;
+                        margin-top: 20px;
+                        color: #21408E;
+                        font-size: 1.8rem;
+                    }
+
+                    .anh {
+                        margin-top: 80px;
+                        background-color: #CBC9C2;
+                        height: 250px;
+                        position: relative;
+
+                        img {
+                            position: absolute;
+                            left: -20px;
+                            bottom: 0px;
+                            height: 200px;
+                        }
+
+                        .container {
+                            width: 100%;
+                            bottom: -120px;
+                            position: absolute;
+
+                            .year {
+                                background-color: #FFFFFF;
+                                height: 150px;
+                                border-radius: 20px 20px 0px 0px;
+                                bottom: 0;
+                                position: relative;
+
+                                p {
+                                    align-self: start;
+                                    padding-top: 5px;
+                                    padding-left: 20px;
+                                    font-size: 1.5rem;
+                                }
+
+                                .auto {
+                                    display: flex;
+                                    margin-top: 10px;
+                                    justify-content: space-around;
+                                    text-align: center;
+
+                                    .clock,
+                                    .stop,
+                                    .gas {
+                                        display: flex;
+                                        gap: 3px;
+                                        justify-content: center;
+                                        text-align: center;
+
+                                        p {
+                                            padding: 0;
+                                            font-size: 1.1rem;
+                                        }
+
+                                        i {
+                                            font-size: 1.1rem;
+                                        }
+                                    }
+
+
+
+                                }
+
+                                h3 {
+                                    margin-top: 20px;
+                                    font-weight: normal;
+                                    font-size: 1.8rem;
+                                    text-align: center;
+                                    color: #21408E;
+                                }
+
+                                button {
+                                    position: absolute;
+                                    background-color: #21408E;
+                                    color: white;
+                                    padding: 10px 40px;
+                                    border-radius: 15px;
+                                    top: 100%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+
+                                }
+                            }
+                        }
+
+                    }
+
+
+
+                }
+            }
+            .see{
+                display: none;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                i{
+                    color: #21408E;
+                }
+            }
+        }
+
+
+
+
+        .luxury {
+            margin-top: 50px;
         }
 
     }
@@ -324,6 +462,19 @@
                     }
                 }
             }
+
+            .everything {
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                .poster {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 70px;
+                    width: 80%;
+                }
+            }
         }
     }
 
@@ -409,6 +560,26 @@
                             font-size: 1.2rem;
                         }
                     }
+                }
+            }
+
+            .everything {
+                h1 {
+                    font-size: 2rem;
+                }
+
+                .poster {
+
+                    grid-template-columns: 1fr;
+                    width: 60%;
+
+                    .dodge {
+                        display: none;
+                    }
+
+                }
+                .see{
+                    display: flex;
                 }
             }
         }

@@ -91,85 +91,86 @@ form {
             }
         }
 
-            .nhap {
-                margin-top: 5px;
-                margin-bottom: 15px;
-                /* position: relative; */
+        .nhap {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            /* position: relative; */
 
-                input {
-                    margin-top: 15px;
-                    width: 100%;
-                    padding: 10px;
-                    border-radius: 10px;
-                    border: 1px solid rgb(247, 247, 247);
-                }
-
-                .form_group {
-                    position: relative;
-                    /* top: 130px;
-                    left: 565px; */
-                    color: gray;
-                    i{
-                        position: absolute;
-                        top: 25px;
-                        right: 10px;
-                    }
-                }
-
-                
-            }
-
-            .tick {
+            input {
                 margin-top: 15px;
-                margin-bottom: 15px;
-                display: flex;
-                gap: 8px;
-                align-items: center;
-                margin-left: 50px;
-                /* font-size: 1.5rem; */
-                color: rgb(162, 162, 162);
-            }
-
-            button {
-                margin-top: 5px;
-                margin-bottom: 10px;
                 width: 100%;
                 padding: 10px;
-                background-color: rgb(7, 203, 138);
-                color: white;
-                font-size: 1rem;
+                border-radius: 10px;
+                border: 1px solid rgb(247, 247, 247);
             }
 
-            p {
-                text-align: center;
-                margin: 0px 0px 0px 0px;
-            }
+            .form_group {
+                position: relative;
+                /* top: 130px;
+                    left: 565px; */
+                color: gray;
 
-            .mxh {
-                display: flex;
-                /* align-items: center; */
-                justify-content: center;
-                gap: 100px;
-
-                .gg,
-                .fb {
-
-
-                    button {
-                        display: flex;
-                        width: 100%;
-                        border: none;
-                        align-items: center;
-                        background-color: white;
-                        color: black;
-                        justify-content: space-around;
-
-
-
-                    }
-
+                i {
+                    position: absolute;
+                    top: 25px;
+                    right: 10px;
                 }
             }
+
+
+        }
+
+        .tick {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-left: 50px;
+            /* font-size: 1.5rem; */
+            color: rgb(162, 162, 162);
+        }
+
+        button {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(7, 203, 138);
+            color: white;
+            font-size: 1rem;
+        }
+
+        p {
+            text-align: center;
+            margin: 0px 0px 0px 0px;
+        }
+
+        .mxh {
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            gap: 100px;
+
+            .gg,
+            .fb {
+
+
+                button {
+                    display: flex;
+                    width: 100%;
+                    border: none;
+                    align-items: center;
+                    background-color: white;
+                    color: black;
+                    justify-content: space-around;
+
+
+
+                }
+
+            }
+        }
 
 
 

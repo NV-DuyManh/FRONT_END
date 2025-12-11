@@ -1,374 +1,616 @@
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    img {
-        width: 100%;
-        height: 100%;
-    }
+img {
+    width: 100%;
+    height: 100%;
+}
 
-    a {
-        text-decoration: none;
-    }
+a {
+    text-decoration: none;
+}
 
-    li {
-        list-style: none;
-    }
+li {
+    list-style: none;
+}
 
-    body {
-        font-size: 2rem;
-    }
+body {
+    font-size: 2rem;
+}
 
-    header {
-        display: grid;
-        padding: 30px;
-        grid-template-columns: 3.5fr 6.5fr;
-        margin: auto;
+header {
+    display: grid;
+    padding: 30px;
+    grid-template-columns: 3.5fr 6.5fr;
+    margin: auto;
+    justify-content: space-between;
+
+    .left {
+        display: flex;
         justify-content: space-between;
 
-
-
-        .left {
+        ul {
+            gap: 20px;
             display: flex;
-            justify-content: space-between;
 
-            ul {
-                gap: 20px;
-                display: flex;
-
-                li:nth-child(1) {
-                    text-decoration: underline;
-                    text-decoration-color: #F1BC00;
-                    text-underline-offset: 10px;
-                }
-            }
-
-            .sign_in {
-                display: flex;
-                gap: 10px;
-                align-items: center;
-
-                i {
-                    color: #F1BC00;
-                }
-
-                p {
-                    margin-left: 0px;
-                }
-            }
-
-            .fa-bars {
-                display: none;
-            }
-        }
-    }
-
-    main {
-        .lambo {
-            margin-top: 30px;
-            position: relative;
-
-            .safer {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                transform: translate(-30%, -20%);
-                color: black;
-
-                h1 {
-                    font-size: 2rem;
-                }
-
-                p {
-                    margin-top: 20px;
-                    font-size: 2rem;
-                }
-
-                button {
-                    margin-top: 15px;
-                    background-color: #21408E;
-                    color: white;
-                    font-size: 1.5rem;
-                    padding: 5px 20px;
-                    border-radius: 20px;
-
-                }
+            li:nth-child(1) {
+                text-decoration: underline;
+                text-decoration-color: #f1bc00;
+                text-underline-offset: 10px;
             }
         }
 
-        .book_car {
-            width: 90%;
-            background-color: #C4C4C4;
-            margin: auto;
-            padding: 23px 35px;
-            margin-top: 30px;
+        .sign_in {
+            display: flex;
+            gap: 10px;
+            align-items: center;
 
-            h1 {
-                font-size: 2.5rem;
+            i {
+                color: #f1bc00;
             }
 
             p {
-                width: 70%;
-                margin-top: 10px;
-            }
-
-            .location {
-                display: grid;
-                gap: 30px;
-                grid-template-columns: 8.5fr 1.5fr;
-                margin: auto;
-                margin-top: 40px;
-
-                .schedual {
-                    display: flex;
-                    gap: 20px;
-
-                    button {
-                        padding: 15px;
-                        border-radius: 25px;
-                        border: 1px solid #FFF9F9;
-                        font-size: 1.5rem;
-                        background-color: white;
-                        color: black;
-                        position: relative;
-
-                        i {
-                            position: absolute;
-                            right: 10%;
-                            top: 30%;
-                        }
-
-                        .fa-location-dot {
-                            color: #21408E;
-                        }
-
-                        .fa-calendar-days {
-                            color: #F1BC00;
-                        }
-                    }
-                }
-
-                button {
-                    flex: 1;
-                    padding: 15px;
-                    border-radius: 25px;
-                    border: 1px solid #FFF9F9;
-                    font-size: 1.5rem;
-                    background-color: #21408E;
-                    color: white;
-                }
-
+                margin-left: 0px;
             }
         }
 
-        .our_services {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            margin-top: 30px;
-            gap: 10px;
-
-            .car {
-                background-image: url(./car.png);
-                background-repeat: no-repeat;
-                background-size: 100% 100%;
-                /* background-size: cover; */
-            }
-
-            .line {
-                display: grid;
-                grid-template-columns: 1fr 4fr;
-                gap: 30px;
-                width: 80%;
-
-                .box {
-
-                    display: grid;
-                    grid-template-rows: repeat(4, 1fr);
-                    gap: 10px;
-
-                    h1 {
-                        font-size: 2.5rem;
-                    }
-
-                    h2 {
-                        font-size: 2rem;
-                    }
-
-                    p {
-                        font-size: 1.8rem;
-                    }
-
-                    .chia1 {
-                        margin-bottom: 30px;
-                        align-self: end;
-
-                        h1 {
-                            align-self: end;
-                            color: #21408E;
-                        }
-
-                    }
-
-                    .chia {
-                        margin-bottom: 30px;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-
-                        }
-                    }
-                }
-
-            }
+        .fa-bars {
+            display: none;
         }
+    }
+}
 
-        .everything {
-            margin-top: 30px;
+main {
+    .lambo {
+        margin-top: 30px;
+        position: relative;
+
+        .safer {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translate(-30%, -20%);
+            color: black;
 
             h1 {
-                text-align: center;
-                font-size: 3rem;
+                font-size: 2rem;
             }
 
-            .poster {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                margin: auto;
-                width: 90%;
-                gap: 30px;
-                margin-top: 30px;
+            p {
+                margin-top: 20px;
+                font-size: 2rem;
+            }
 
-                .dodge,
-                .dodge1 {
-                    background-color: #FAF5F8;
-                    border-radius: 25px 25px 0px 0px;
-                    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-                    height: 500px;
-                    margin-bottom: 70px;
+            button {
+                margin-top: 15px;
+                background-color: #21408e;
+                color: white;
+                font-size: 1.5rem;
+                padding: 5px 20px;
+                border-radius: 20px;
+            }
+        }
+    }
 
-                    h2 {
-                        text-align: center;
-                        margin-top: 20px;
-                        color: #21408E;
-                        font-size: 1.8rem;
+    .book_car {
+        width: 90%;
+        background-color: #c4c4c4;
+        margin: auto;
+        padding: 23px 35px;
+        margin-top: 30px;
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            width: 70%;
+            margin-top: 10px;
+        }
+
+        .location {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 8.5fr 1.5fr;
+            margin: auto;
+            margin-top: 40px;
+
+            .schedual {
+                display: flex;
+                gap: 20px;
+
+                button {
+                    padding: 15px;
+                    border-radius: 25px;
+                    border: 1px solid #fff9f9;
+                    font-size: 1.5rem;
+                    background-color: white;
+                    color: black;
+                    position: relative;
+
+                    i {
+                        position: absolute;
+                        right: 10%;
+                        top: 30%;
                     }
 
-                    .anh {
-                        margin-top: 80px;
-                        background-color: #CBC9C2;
-                        height: 250px;
-                        position: relative;
-
-                        img {
-                            position: absolute;
-                            left: -20px;
-                            bottom: 0px;
-                            height: 200px;
-                        }
-
-                        .container {
-                            width: 100%;
-                            bottom: -120px;
-                            position: absolute;
-
-                            .year {
-                                background-color: #FFFFFF;
-                                height: 150px;
-                                border-radius: 20px 20px 0px 0px;
-                                bottom: 0;
-                                position: relative;
-
-                                p {
-                                    align-self: start;
-                                    padding-top: 5px;
-                                    padding-left: 20px;
-                                    font-size: 1.5rem;
-                                }
-
-                                .auto {
-                                    display: flex;
-                                    margin-top: 10px;
-                                    justify-content: space-around;
-                                    text-align: center;
-
-                                    .clock,
-                                    .stop,
-                                    .gas {
-                                        display: flex;
-                                        gap: 3px;
-                                        justify-content: center;
-                                        text-align: center;
-
-                                        p {
-                                            padding: 0;
-                                            font-size: 1.1rem;
-                                        }
-
-                                        i {
-                                            font-size: 1.1rem;
-                                        }
-                                    }
-
-
-
-                                }
-
-                                h3 {
-                                    margin-top: 20px;
-                                    font-weight: normal;
-                                    font-size: 1.8rem;
-                                    text-align: center;
-                                    color: #21408E;
-                                }
-
-                                button {
-                                    position: absolute;
-                                    background-color: #21408E;
-                                    color: white;
-                                    padding: 10px 40px;
-                                    border-radius: 15px;
-                                    top: 100%;
-                                    left: 50%;
-                                    transform: translate(-50%, -50%);
-
-                                }
-                            }
-                        }
-
+                    .fa-location-dot {
+                        color: #21408e;
                     }
 
-
-
+                    .fa-calendar-days {
+                        color: #f1bc00;
+                    }
                 }
             }
-            .see{
-                display: none;
-                justify-content: center;
-                align-items: center;
-                gap: 20px;
-                i{
-                    color: #21408E;
+
+            button {
+                flex: 1;
+                padding: 15px;
+                border-radius: 25px;
+                border: 1px solid #fff9f9;
+                font-size: 1.5rem;
+                background-color: #21408e;
+                color: white;
+            }
+        }
+    }
+
+    .our_services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 30px;
+        gap: 10px;
+
+        .car {
+            background-image: url(anh/car.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            /* background-size: cover; */
+        }
+
+        .line {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            gap: 30px;
+            width: 80%;
+
+            .box {
+                display: grid;
+                grid-template-rows: repeat(4, 1fr);
+                gap: 10px;
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 1.8rem;
+                }
+
+                .chia1 {
+                    margin-bottom: 30px;
+                    align-self: end;
+
+                    h1 {
+                        align-self: end;
+                        color: #21408e;
+                    }
+                }
+
+                .chia {
+                    margin-bottom: 30px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .everything {
+        margin-top: 30px;
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .poster {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: auto;
+            width: 90%;
+            gap: 30px;
+            margin-top: 30px;
+
+            .dodge,
+            .dodge1 {
+                background-color: #faf5f8;
+                border-radius: 25px 25px 0px 0px;
+                box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+                    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+                height: 500px;
+                margin-bottom: 70px;
+
+                h2 {
+                    text-align: center;
+                    margin-top: 20px;
+                    color: #21408e;
+                    font-size: 1.8rem;
+                }
+
+                .anh {
+                    margin-top: 80px;
+                    background-color: #cbc9c2;
+                    height: 250px;
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        left: -20px;
+                        bottom: 0px;
+                        height: 200px;
+                    }
+
+                    .container {
+                        width: 100%;
+                        bottom: -120px;
+                        position: absolute;
+
+                        .year {
+                            background-color: #ffffff;
+                            height: 150px;
+                            border-radius: 20px 20px 0px 0px;
+                            bottom: 0;
+                            position: relative;
+
+                            p {
+                                align-self: start;
+                                padding-top: 5px;
+                                padding-left: 20px;
+                                font-size: 1.5rem;
+                            }
+
+                            .auto {
+                                display: flex;
+                                margin-top: 10px;
+                                justify-content: space-around;
+                                text-align: center;
+
+                                .clock,
+                                .stop,
+                                .gas {
+                                    display: flex;
+                                    gap: 3px;
+                                    justify-content: center;
+                                    text-align: center;
+
+                                    p {
+                                        padding: 0;
+                                        font-size: 1.1rem;
+                                    }
+
+                                    i {
+                                        font-size: 1.1rem;
+                                    }
+                                }
+                            }
+
+                            h3 {
+                                margin-top: 20px;
+                                font-weight: normal;
+                                font-size: 1.8rem;
+                                text-align: center;
+                                color: #21408e;
+                            }
+
+                            button {
+                                position: absolute;
+                                background-color: #21408e;
+                                color: white;
+                                padding: 10px 40px;
+                                border-radius: 15px;
+                                top: 100%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
+                    }
                 }
             }
         }
 
+        .see {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-size: 1.2rem;
+
+            i {
+                color: #21408e;
+            }
+        }
+    }
+
+    .luxury {
+        margin-top: 50px;
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            width: 85%;
+            margin: auto;
+            margin-top: 40px;
+
+            .ferrari {
+                display: flex;
+                gap: 5px;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: #c4c4c4;
+                border-radius: 10px;
+                padding: 5px 13px;
+
+                img {
+                    width: 50px;
+
+                }
 
 
 
-        .luxury {
+                p {
+                    text-align: center;
+                    margin-top: -1px;
+                    font-size: 1.7rem;
+                }
+            }
+        }
+
+        hr {
+            border: 1px solid #F1BC00;
+        }
+
+        .h1 {
+            display: none;
+            width: 5%;
+            margin: auto;
+            margin-top: 30px;
+
+        }
+
+        p {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .h2 {
+            width: 5%;
+            margin: auto;
+            margin-top: 5px;
+
+        }
+    }
+
+    .fell {
+        margin-top: 80px;
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .book {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            width: 80%;
+            margin: auto;
+
+            .app {
+                margin-top: 30px;
+
+                .setting,
+                .setting1 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+
+                    img {
+                        width: 130px;
+                    }
+
+                    .fa-gear {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 3rem;
+                    }
+                }
+
+                h2 {
+                    margin-top: 20px;
+                    font-size: 2rem;
+                    text-align: center;
+                }
+
+                p {
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    .become {
+        width: 90%;
+        margin: auto;
+        margin-top: 150px;
+        background-image: url(./anh/driver.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        color: white;
+
+        padding: 50px 30px;
+
+        h1 {
+            width: 60%;
+            font-size: 3rem;
+        }
+
+        p {
+            margin-top: 100px;
+        }
+
+        .input {
+            position: relative;
+            width: 80%;
+
+            input {
+                margin-top: 20px;
+                padding: 15px 20px;
+                background: #E5E5E5;
+                font-size: 2rem;
+                border-radius: 10px;
+                width: 100%;
+            }
+
+            button {
+                position: absolute;
+                background-color: #21408E;
+                font-size: 2rem;
+                padding: 8px 40px;
+                color: white;
+                border-radius: 10px;
+                right: 10px;
+                top: 27px
+            }
+        }
+    }
+}
+
+footer {
+    .subcribe {
+        margin-top: 100px;
+        background-color: #F1BC00;
+        padding: 50px 0px;
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .input {
+            text-align: center;
+            position: relative;
+            width: 55%;
+            margin: auto;
+            margin-top: 10px;
+
+            input {
+                margin-top: 20px;
+                padding: 15px 20px;
+                background: #E5E5E5;
+                font-size: 2rem;
+                border-radius: 10px;
+                width: 100%;
+            }
+
+            button {
+                position: absolute;
+                background-color: #21408E;
+                font-size: 2rem;
+                padding: 8px 40px;
+                color: white;
+                border-radius: 10px;
+                right: 10px;
+                top: 27px
+            }
+        }
+    }
+
+    .reservation {
+        background-color: #081630;
+        color: white;
+        padding: 80px 0px;
+
+        .carhire {
+            display: grid;
+            grid-template-columns: 2fr 2fr 3fr;
+            margin: auto;
+            text-align: center;
+
+            .box {
+                padding-top: 50px;
+
+                h2 {
+                    font-size: 2.5rem;
+
+                }
+
+                p {
+                    margin-top: 25px;
+                    margin-bottom: 5px;
+                }
+
+            }
+        }
+
+        hr {
+            width: 80%;
+            margin: auto;
             margin-top: 50px;
         }
 
+        .luxurycard {
+            width: 80%;
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .mxh {
+                display: flex;
+                gap: 40px;
+
+                i {
+                    font-size: 3rem;
+                }
+            }
+        }
     }
 
-    /* laptop */
-    @media screen and (min-width: 1025px) {
-        main {
+}
 
-            /* .lambo {
+/* laptop */
+@media screen and (min-width: 1025px) {
+    main {
+        /* .lambo {
                 background-color: #C4C4C4;
 
                 img {
@@ -376,211 +618,495 @@
                     padding-right: 10px;
                 }
             } */
-        }
 
+        /* .fell {
+            .book {
+                .app {
+                    .setting1 {
+                        margin-top: 45px;
+                        margin-bottom: 80px;
 
-    }
-
-    /* Tablet */
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-        body {
-            font-size: 1.5rem;
-        }
-
-        header {
-            grid-template-columns: 7fr 3fr;
-
-            .left {
-                ul {
-                    display: none;
-                }
-
-                .fa-bars {
-                    display: block;
-                }
-            }
-
-
-        }
-
-        main {
-            .lambo {
-                .safer {
-                    h1 {
-                        font-size: 1.2rem;
-                    }
-
-                    p {
-                        margin-top: 20px;
-                        font-size: 1.2rem;
-                    }
-
-                    button {
-                        font-size: 0.8rem;
-                        padding: 5px 15px;
-
-                    }
-                }
-            }
-
-            .book_car {
-                h1 {
-                    font-size: 2rem;
-                }
-
-                .location {
-                    .schedual {
-                        button {
-                            padding: 10px;
-                            font-size: 1.2rem;
+                        img {
+                            display: none;
                         }
                     }
+                }
+            }
+        } */
+    }
+}
 
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    header {
+        grid-template-columns: 7fr 3fr;
+
+        .left {
+            ul {
+                display: none;
+            }
+
+            .fa-bars {
+                display: block;
+            }
+        }
+    }
+
+    main {
+        .lambo {
+            .safer {
+                h1 {
+                    font-size: 1.2rem;
+                }
+
+                p {
+                    margin-top: 20px;
+                    font-size: 1.2rem;
+                }
+
+                button {
+                    font-size: 0.8rem;
+                    padding: 5px 15px;
+                }
+            }
+        }
+
+        .book_car {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .location {
+                .schedual {
                     button {
                         padding: 10px;
                         font-size: 1.2rem;
                     }
                 }
+
+                button {
+                    padding: 10px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .our_services {
+            .line {
+                width: 85%;
+
+                .box {
+                    h1 {
+                        font-size: 2rem;
+                    }
+
+                    h2 {
+                        font-size: 1.8rem;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .everything {
+            h1 {
+                font-size: 2.5rem;
             }
 
-            .our_services {
-                .line {
-                    width: 85%;
+            .poster {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 70px;
+                width: 80%;
+            }
+        }
 
-                    .box {
-                        h1 {
-                            font-size: 2rem;
-                        }
+        .luxury {
+            h1 {
+                font-size: 2.5rem;
+            }
 
-                        h2 {
-                            font-size: 1.8rem;
-                        }
+            .logo {
+                gap: 20px;
 
-                        p {
-                            font-size: 1.5rem;
-                        }
+                .ferrari {
+
+                    img {
+                        width: 40px;
+                    }
+
+                    p {
+                        font-size: 1.3rem;
                     }
                 }
             }
 
-            .everything {
+            .h1 {
+                display: block;
+            }
 
-                h1 {
-                    font-size: 2.5rem;
+            p {
+                margin-top: 5px;
+            }
+
+            .h2 {
+                display: none;
+            }
+        }
+
+        .fell {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .book {
+                .app {
+
+                    .setting,
+                    .setting1 {
+                        img {
+                            width: 100px;
+                        }
+
+                        .fa-gear {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        .become {
+            h1 {
+                width: 80%;
+                font-size: 2.3rem;
+            }
+
+            p {
+                margin-top: 150px;
+            }
+
+            .input {
+
+                input {
+                    font-size: 1.5rem;
                 }
 
-                .poster {
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 70px;
-                    width: 80%;
+                button {
+                    font-size: 1.5rem;
                 }
             }
         }
     }
 
-    /* Mobile */
-    @media screen and (max-width: 767px) {
-        body {
-            font-size: 1.5em;
-        }
-
-        header {
-            grid-template-columns: 5.5fr 4.5fr;
-
-            .left {
-                ul {
-                    display: none;
-                }
-
-                .fa-bars {
-                    display: block;
-                }
+    footer {
+        .subcribe {
+            h1 {
+                font-size: 2.5rem;
             }
 
-        }
-
-        main {
-            .lambo {
-                .safer {
-
-                    h1 {
-                        font-size: 1rem;
-                    }
-
-                    p {
-                        font-size: 1rem;
-                    }
-
-                    button {
-                        font-size: 0.6rem;
-                        padding: 5px 10px;
-
-                    }
-                }
-            }
-
-            .book_car {
-                h1 {
+            .input {
+                input {
                     font-size: 1.5rem;
+                }
+
+                button {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .reservation {
+
+            .carhire {
+                grid-template-columns: 2fr 2fr 2fr;
+
+                .box {
+                    h2 {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .luxurycard {
+                h1 {
+                    font-size: 2rem;
+                }
+
+                .mxh {
+                    gap: 20px;
+
+                    i {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 1.5em;
+    }
+
+    header {
+        grid-template-columns: 5.5fr 4.5fr;
+
+        .left {
+            ul {
+                display: none;
+            }
+
+            .fa-bars {
+                display: block;
+            }
+        }
+    }
+
+    main {
+        .lambo {
+            .safer {
+                h1 {
+                    font-size: 1rem;
                 }
 
                 p {
                     font-size: 1rem;
                 }
 
-                .location {
-                    .schedual {
-                        button {
-                            padding: 8px;
-                            font-size: 1rem;
-                        }
-                    }
+                button {
+                    font-size: 0.6rem;
+                    padding: 5px 10px;
+                }
+            }
+        }
 
+        .book_car {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .location {
+                .schedual {
                     button {
                         padding: 8px;
                         font-size: 1rem;
                     }
                 }
+
+                button {
+                    padding: 8px;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .our_services {
+            .line {
+                width: 90%;
+
+                .box {
+                    h1 {
+                        font-size: 1.7rem;
+                    }
+
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        .everything {
+            h1 {
+                font-size: 2rem;
             }
 
-            .our_services {
-                .line {
-                    width: 90%;
+            .poster {
+                grid-template-columns: 1fr;
+                width: 60%;
 
-                    .box {
-                        h1 {
-                            font-size: 1.7rem;
-                        }
+                .dodge {
+                    display: none;
+                }
+            }
 
-                        h2 {
-                            font-size: 1.5rem;
-                        }
+            .see {
+                display: flex;
+            }
+        }
 
-                        p {
-                            font-size: 1.2rem;
-                        }
+        .luxury {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .logo {
+                gap: 30px;
+
+                flex-wrap: wrap-reverse;
+
+
+                .ferrari {
+                    /* width: calc(100%/2 - 10px); */
+
+                    img {
+                        width: 45px;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
                     }
                 }
             }
 
-            .everything {
-                h1 {
-                    font-size: 2rem;
-                }
+            .h1 {
+                display: block;
+            }
 
-                .poster {
+            p {
+                margin-top: 5px;
+            }
 
-                    grid-template-columns: 1fr;
-                    width: 60%;
+            .h2 {
+                display: none;
+            }
+        }
 
-                    .dodge {
-                        display: none;
+        .fell {
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .book {
+                flex-wrap: wrap;
+
+                .app {
+
+                    width: 40%;
+                    margin: auto;
+                    margin-top: 30px;
+
+                    .setting,
+                    .setting1 {
+                        img {
+                            width: 100px;
+                        }
+
+                        .fa-gear {
+
+                            font-size: 2rem;
+                        }
                     }
 
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                    }
                 }
-                .see{
-                    display: flex;
+            }
+        }
+
+        .become {
+            h1 {
+                width: 80%;
+                font-size: 1.8rem;
+            }
+
+            p {
+                margin-top: 150px;
+            }
+
+            .input {
+                width: 65%;
+
+                input {
+                    font-size: 1.5rem;
+                }
+
+                button {
+                    font-size: 1.5rem;
                 }
             }
         }
     }
+
+    footer {
+        .subcribe {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .input {
+                width: 80%;
+
+                input {
+                    font-size: 1.5rem;
+                }
+
+                button {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .reservation {
+
+            .carhire {
+                grid-template-columns: 2fr 2fr 2fr;
+
+                .box {
+                    h2 {
+                        font-size: 1.8rem;
+                    }
+
+                    p {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+
+            .luxurycard {
+                h1 {
+                    font-size: 1.8rem;
+                }
+
+                .mxh {
+                    gap: 20px;
+
+                    i {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}

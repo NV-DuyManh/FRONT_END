@@ -22,45 +22,43 @@ body {
 }
 
 header {
-    display: grid;
+    display: flex;
     padding: 30px;
-    grid-template-columns: 3.5fr 6.5fr;
-    margin: auto;
+
     justify-content: space-between;
+    align-items: center;
+    gap: 30px;
 
-    .left {
+
+    ul {
+        gap: 20px;
         display: flex;
-        justify-content: space-between;
 
-        ul {
-            gap: 20px;
-            display: flex;
-
-            li:nth-child(1) {
-                text-decoration: underline;
-                text-decoration-color: #f1bc00;
-                text-underline-offset: 10px;
-            }
-        }
-
-        .sign_in {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-
-            i {
-                color: #f1bc00;
-            }
-
-            p {
-                margin-left: 0px;
-            }
-        }
-
-        .fa-bars {
-            display: none;
+        li:nth-child(1) {
+            text-decoration: underline;
+            text-decoration-color: #f1bc00;
+            text-underline-offset: 10px;
         }
     }
+
+    .sign_in {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        i {
+            color: #f1bc00;
+        }
+
+        p {
+            margin-left: 0px;
+        }
+    }
+
+    .fa-bars {
+        display: none;
+    }
+
 }
 
 main {
@@ -111,52 +109,43 @@ main {
             margin-top: 10px;
         }
 
-        .location {
-            display: grid;
-            gap: 30px;
-            grid-template-columns: 8.5fr 1.5fr;
-            margin: auto;
-            margin-top: 40px;
+        .schedual {
+            display: flex;
+            gap: 20px;
+            padding: 30px 0px;
 
-            .schedual {
-                display: flex;
-                gap: 20px;
+            .box {
+                flex: 1;
+                position: relative;
 
-                button {
-                    padding: 15px;
-                    border-radius: 25px;
-                    border: 1px solid #fff9f9;
-                    font-size: 1.5rem;
-                    background-color: white;
-                    color: black;
-                    position: relative;
+                input {
 
-                    i {
-                        position: absolute;
-                        right: 10%;
-                        top: 30%;
-                    }
+                    width: 100%;
+                    padding: 20px;
+                    border-radius: 20px;
+                }
 
-                    .fa-location-dot {
-                        color: #21408e;
-                    }
-
-                    .fa-calendar-days {
-                        color: #f1bc00;
-                    }
+                i {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 10px;
                 }
             }
 
             button {
-                flex: 1;
-                padding: 15px;
-                border-radius: 25px;
-                border: 1px solid #fff9f9;
-                font-size: 1.5rem;
-                background-color: #21408e;
+                padding: 20px;
+                width: 8%;
+                border-radius: 20px;
+                background-color: #21408E;
                 color: white;
             }
+
+
         }
+
+
+
     }
 
     .our_services {
@@ -556,10 +545,9 @@ footer {
 
         .carhire {
             display: grid;
-            grid-template-columns: 2fr 2fr 3fr;
+            grid-template-columns: repeat(3,1fr);
+             width: 80%;
             margin: auto;
-            text-align: center;
-
             .box {
                 padding-top: 50px;
 
@@ -643,16 +631,12 @@ footer {
     }
 
     header {
-        grid-template-columns: 7fr 3fr;
+        ul {
+            display: none;
+        }
 
-        .left {
-            ul {
-                display: none;
-            }
-
-            .fa-bars {
-                display: block;
-            }
+        .fa-bars {
+            display: block;
         }
     }
 
@@ -866,16 +850,12 @@ footer {
     }
 
     header {
-        grid-template-columns: 5.5fr 4.5fr;
+        ul {
+            display: none;
+        }
 
-        .left {
-            ul {
-                display: none;
-            }
-
-            .fa-bars {
-                display: block;
-            }
+        .fa-bars {
+            display: block;
         }
     }
 

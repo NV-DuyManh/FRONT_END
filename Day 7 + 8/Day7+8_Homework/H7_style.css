@@ -230,14 +230,267 @@ header {
     }
 
     .add {
+        &:hover {
+            background-color: orange;
+        }
+
         border: 1px solid orange;
-        border-radius: 10px;
+        border-radius: 20px;
         padding: 5px 10px;
 
         p {
             margin: 0;
         }
     }
+}
 
+.fresh {
+    .apples {
+        background-color: rgb(47, 238, 47);
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 30px;
 
+        h1 {
+            font-size: 2rem;
+            white-space: nowrap;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+    }
+
+    .card-body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .cao {
+        height: 100px;
+    }
+}
+
+.vegetables {
+    .muiten {
+        button {
+            border: 1px solid orange;
+            width: 80px;
+            padding: 2px 0px;
+            font-size: 1.5rem;
+            color: green;
+            border-radius: 20px;
+            background: white;
+
+            &:hover {
+                background-color: orange;
+                color: white;
+            }
+        }
+    }
+
+    .the {
+        border: 1px solid green;
+    }
+
+    .anh {
+        p {
+
+            top: 10px;
+            right: 10px;
+            background: rgb(15, 160, 15);
+            padding: 4px 15px;
+            border-radius: 10px;
+            color: white;
+        }
+    }
+
+    .card-body {
+        text-align: start;
+    }
+
+    .add {
+        &:hover {
+            background-color: orange;
+        }
+
+        border: 1px solid orange;
+        border-radius: 20px;
+        padding: 5px 10px;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.exotic {
+    padding: 0px 10%;
+    align-items: center;
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .text {
+
+        button {
+            padding: 10px 35px;
+            border-radius: 25px;
+            border: 2px solid white;
+            background-color: rgba(var(--bs-warning-rgb));
+
+            &:hover {
+                background-color: green;
+            }
+        }
+
+    }
+
+    .kg {
+        top: 0;
+        background-color: white;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        transform: translateX(40%);
+    }
+}
+
+.bestseller {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h5 {
+        &:hover {
+            color: green;
+        }
+    }
+
+    .anh {
+
+        img {
+            background-color: white;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 1px solid white;
+        }
+    }
+
+    .sao {
+        .fa-star {
+            color: green;
+        }
+    }
+
+    .add {
+        &:hover {
+            background-color: orange;
+        }
+
+        border: 1px solid orange;
+        border-radius: 20px;
+        padding: 5px 10px;
+        width: 120px;
+        white-space: nowrap;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.Tomato {
+    .sao {
+        .fa-star {
+            color: green;
+        }
+    }
+
+    .add {
+        &:hover {
+            background-color: orange;
+        }
+
+        border: 1px solid orange;
+        border-radius: 20px;
+        padding: 5px 10px;
+        width: 120px;
+        white-space: nowrap;
+        margin: auto;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    h5 {
+        &:hover {
+            color: green;
+        }
+    }
+}
+
+.customer {
+    border-radius: 10px;
+
+    .fa-user-group {
+        font-size: 3rem;
+    }
+}
+
+.our {
+    .muiten {
+        button {
+            border: 1px solid orange;
+            width: 80px;
+            padding: 2px 0px;
+            font-size: 1.5rem;
+            color: green;
+            border-radius: 20px;
+            background: white;
+
+            &:hover {
+                background-color: orange;
+                color: white;
+            }
+        }
+    }
+
+    .the{
+        background-color: rgb(238, 238, 238);
+        border: 1px solid  rgb(238, 238, 238);
+    }
+    hr {
+        color: rgb(255, 166, 0);
+        border: 1.3px solid orange;
+    }
+
+    .client {
+        img {
+            width: 100px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .sao {
+            .fa-star {
+                color: green;
+            }
+        }
+    }
+
+    .fa-quote-right {
+        font-size: 2.5rem;
+        color: orange;
+    }
 }

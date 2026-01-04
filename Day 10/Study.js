@@ -70,8 +70,6 @@
 *     - Expression function (Biến gán bằng function,Ko thể được gọi trước khi đinh nghĩa)
 *     - Arrow function
 */
-//   ----------------  VIDU --------------
-
 /**
 *  1. Làm việc với chuỗi
 *     - Length (Trả về độ dài chuỗi)
@@ -108,23 +106,23 @@
 */
 // -------- Ví dụ với String ------------
 
-// * 2. Math object
-// *    - Math.PI
-// *    - Math.round() (làm tròn trên nếu >= 5 và ngược lại )
-// *    - Math.abs() (Giá trị tuyệt đối)
-// *    - Math.ceil() (Chỉ làm tròn trên)
-// *    - Math.floor() (Chỉ làm tròn dưới)
-// *    - Math.random() (Trả về con số trong khoảng 0 -> 1)
-// *    - Math.min()
-// *    - Math.max()
-// *    - Math.pow(x,y) (Trả về giá trị của x mũ y)
-// *    - Math.sqrt(x) (Trả về căng bậc hai của x)
-// * 3. Đối tượng Date
-// * 4. Làm việc với số
-// *    - Tostring (Trả về kiểu string)
-// *    - ToFixed (Trả về kiểu string và làm tròn số >=5 lên 1 đơn vị và ngược lại)
-// *    - Lưu ý ToFixed nếu có sau thập phân thì làm tròn trên nếu > 5 và ngược lại.
-// */
+/* 2. Math object
+*    - Math.PI
+*    - Math.round() (làm tròn trên nếu >= 5 và ngược lại )
+*    - Math.abs() (Giá trị tuyệt đối)
+*    - Math.ceil() (Chỉ làm tròn trên)
+*    - Math.floor() (Chỉ làm tròn dưới)
+*    - Math.random() (Trả về con số trong khoảng 0 -> 1)
+*    - Math.min()
+*    - Math.max()
+*    - Math.pow(x,y) (Trả về giá trị của x mũ y)
+*    - Math.sqrt(x) (Trả về căng bậc hai của x)
+* 3. Đối tượng Date
+* 4. Làm việc với số
+*    - Tostring (Trả về kiểu string)
+*    - ToFixed (Trả về kiểu string và làm tròn số >=5 lên 1 đơn vị và ngược lại)
+*    - Lưu ý ToFixed nếu có sau thập phân thì làm tròn trên nếu > 5 và ngược lại.
+*/
 // --------------- VIDU ---------------
 
 /**

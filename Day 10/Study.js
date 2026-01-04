@@ -73,14 +73,37 @@
 /**
 *  1. Làm việc với chuỗi
 *     - Length (Trả về độ dài chuỗi)
+            let name = "Mạnh"; 
+            console.log(name.length); // Kết quả: 4
+
 *     - Find indexOf(kí tự tìm, start ) (Trả về vị trí của ký tự)
+            let text = "Học JavaScript";
+            console.log(text.indexOf("J")); // Kết quả: 4 (vì H=0, o=1, c=2, khoảng trắng=3, J=4)
+                
 *     - Slice(start,end) (Hàm cắt chuỗi)
+            let fruit = "Apple, Banana";
+            let part = fruit.slice(0, 5); // Lấy từ 0 đến sát 5
+            console.log(part); // Kết quả: "Apple"
+
 *     - Replace(ký tự cần thay thế, ký tự thay thế) (Hàm thay thế ký tự)
+            let str = "Chào bạn!";
+            let newStr = str.replace("bạn", "Mạnh");
+            console.log(newStr); // Kết quả: "Chào Mạnh!"
+
 *     - ToUpperCase (Hàm trả về all in hoa)
 *     - ToLowerCase ( Hàm trả về all viết thường)
 *     - Trim (Hàm xoá khoảng trắng hai đầu chuỗi)
+            let email = "  Manh@Gmail.com  ";
+            console.log(email.trim().toLowerCase()); // Kết quả: "manh@gmail.com"
+
 *     - Split (Hàm trả về mảng theo một điểm chung)
+            let list = "Cam, Quýt, Mít";
+            let array = list.split(", "); // Chặt tại chỗ có dấu phẩy và khoảng trắng
+            console.log(array); // Kết quả: ["Cam", "Quýt", "Mít"]
+
 *     - CharAt (Trả về ký tự theo index)
+            let text = "Hello";
+            console.log(text.charAt(1)); // Kết quả: "e" (vì H là 0, e là 1)
 *  2. Làm việc với mảng
 *     a. Array
 *        - Cách tạo mảng

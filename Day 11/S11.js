@@ -22,12 +22,16 @@ function cau1() {
     } console.log(max);
 }
 // cau1();
+
+
 //2. Lọc danh sách học sinh thuộc lớp "10".
 function cau2() {
     let a = students.filter(students => students.grade == 10);
     console.log(a);
 }
 // cau2();
+
+
 //3. Tính điểm trung bình của mỗi học sinh dựa trên các môn học và thêm thuộc tính average vào từng đối tượng học sinh.
 function cau3() {
     let a = students.map(s => {
@@ -38,12 +42,16 @@ function cau3() {
     return a;
 }
 // cau3();
+
+
 //4. Sắp xếp danh sách học sinh theo thứ tự tăng dần của tuổi.
 function cau4() {
     const sap_xep = students.sort((a, b) => a.age - b.age);
     console.log(sap_xep);
 }
 // cau4();
+
+
 //5. Lọc danh sách học sinh có điểm trung bình lớn hơn 80.
 function cau5() {
     let trung_binh = cau3().filter(s => s.average > 80);
@@ -51,6 +59,8 @@ function cau5() {
 
 }
 // cau5();
+
+
 //6. Thêm thuộc tính rank cho mỗi học sinh dựa vào điểm trung bình:
 // Điểm trung bình >= 90: "Xuất sắc"
 // Điểm trung bình từ 75 - 89: "Giỏi"
@@ -60,9 +70,9 @@ function cau6() {
     let rankk = cau3().map(s => {
         if (s.average >= 90) {
             s.rank = "Xuất sắc";
-        } else if (75 <= s.average <= 89) {
+        } else if (s.average>=75 &&s.average < 90) {
             s.rank = "Giỏi";
-        } else if (50 <= s.average <= 74) {
+        } else if (s.average>=50 && s.average < 75) {
             s.rank = "Trung bình";
         } else {
             s.rank = "Yếu";
@@ -74,6 +84,7 @@ function cau6() {
 
 }
 // cau6();
+
 
 //       7.Tính số lượng học sinh trong mỗi lớp (grade).
 function cau7() {
@@ -88,19 +99,45 @@ function cau7() {
     console.log(a);
 }
 // cau7();
+
+
 //      8.Kiểm tra xem có học sinh nào có điểm môn bất kỳ < 40 không.
 function cau8(){
     let a = students.some(s => s.scores.math <40 || s.scores.english <40 || s.scores.science <40);
     console.log(a);
 }
-cau8();
+// cau8();
+
+
 //      9.Lọc danh sách học sinh có điểm >= 80 ở tất cả các môn học.
+function cau9(){
+    let a = students.filter(s => s.scores.math >=80 && s.scores.english >= 80 && s.scores.science >=80);
+    console.log(a);
+}
+// cau9();
+
 
 //      10.Chia học sinh thành các nhóm dựa vào điểm Toán:
-
 // Nhóm 1: >= 90
 // Nhóm 2: Từ 75 - 89
 // Nhóm 3: < 75
+function cau10(){
+    let a = students.map(s=>{
+        if(s.scores.math >=90){
+            s.Group = "Nhom 1";
+        }else if(s.scores.math >=75 && s.scores.math < 90){
+            s.Group = "Nhom 2";
+        }else{
+            s.Group = "Nhom 3";
+        }
+        return s;
+    });
+    console.log(a);
+    
+}
+// cau10();
+
+
 //      11. Cập nhật tên học sinh trong danh sách sao cho mỗi tên đều được viết hoa chữ cái đầu.
 //     12. Xóa các học sinh có tuổi nhỏ hơn 14 khỏi danh sách.
 //     13. Lọc danh sách các học sinh có tên chứa chữ "An".

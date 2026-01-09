@@ -3,7 +3,7 @@ const students = [
     { id: 2, name: "Tran Thi Binh", age: 16, grade: "11", scores: { math: 90, english: 88, science: 84 } },
     { id: 3, name: "Le Van Cuong", age: 14, grade: "9", scores: { math: 72, english: 65, science: 70 } },
     { id: 4, name: "Hoang Thi Dao", age: 15, grade: "10", scores: { math: 95, english: 92, science: 98 } },
-    { id: 5, name: "Phan Van Em", age: 17, grade: "12", scores: { math: 67, english: 55, science: 60 } },
+    { id: 5, name: "Phan Van Em", age: 18, grade: "12", scores: { math: 67, english: 55, science: 60 } },
     { id: 6, name: "Vo Thi Hoa", age: 15, grade: "10", scores: { math: 78, english: 85, science: 80 } },
     { id: 7, name: "Dang Van Hieu", age: 16, grade: "11", scores: { math: 88, english: 75, science: 90 } },
     { id: 8, name: "Ngo Thi Lan", age: 14, grade: "9", scores: { math: 65, english: 60, science: 58 } },
@@ -195,11 +195,75 @@ function cau14() {
 
 
 //  15. Tạo một mảng mới chỉ chứa id của các học sinh.
+function cau15() {
+    let a = students.map(s => s.id);
+    console.log(a);
+}
+// cau15();
+
 
 //  16. Viết hàm để xáo trộn thứ tự ngẫu nhiên các học sinh trong danh sách.
+function cau16() {
+    let a = students.sort(() => Math.random() - 0.5);
+    console.log(a);
+}
+// cau16();
+
+
 //  17 .Tìm học sinh có tuổi nhỏ nhất trong danh sách.
+function cau17() {
+    let a = students.reduce((min, s) => s.age < min.age ? s : min);
+    console.log(a);
+}
+// cau17();
+
+
 //  18. Thêm một đối tượng học sinh mới vào danh sách.
+function cau18() {
+    let newStudent = { id: 11, name: "Nguyen Van Be", age: 21, grade: "10", scores: { math: 95, english: 48, science: 82 } };
+    let a = students.push(newStudent);
+    console.log(students);
+}
+// cau18();
+
+
 //  19. Kiểm tra xem có học sinh nào thuộc lớp "12" không.
+function cau19() {
+    let a = students.some(s => s.grade == "12");
+    console.log(a);
+}
+// cau19();
+
+
 //  20. Cập nhật điểm tiếng Anh của học sinh có id = 4 thành 95.
+function cau20() {
+    let a = students.map(s => {
+        if (s.id === 4) {
+            s.scores.english = 95;
+        }
+        return s;
+    });
+    console.log(a);
+}
+// cau20();
+
+
 //  21. Xóa học sinh có id = 2 khỏi danh sách.
+function cau21() {
+    let a = students.filter(s => s.id !== 2);
+    console.log(a);
+}
+// cau21();
+
+
 //  22. Cập nhật tên của học sinh có id = 3 thành "Le Van Cuong Updated".
+function cau22() {
+    let a = students.map(s => {
+        if (s.id === 3) {
+            s.name = "Le Van Cuong Updated";
+        }
+        return s;
+    });
+    console.log(a);
+}
+cau22();

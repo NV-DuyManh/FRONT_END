@@ -1,11 +1,11 @@
 const students = [
-    { id: 1, name: "Nguyen Van An", age: 15, grade: "10", scores: { math: 85, english: 78, science: 92 } },
+    { id: 1, name: "nguyen Van An", age: 15, grade: "10", scores: { math: 85, english: 78, science: 92 } },
     { id: 2, name: "Tran Thi Binh", age: 16, grade: "11", scores: { math: 90, english: 88, science: 84 } },
-    { id: 3, name: "Le Van Cuong", age: 14, grade: "9", scores: { math: 72, english: 65, science: 70 } },
-    { id: 4, name: "Hoang Thi Dao", age: 15, grade: "10", scores: { math: 95, english: 92, science: 98 } },
+    { id: 3, name: "Le Van cuong", age: 14, grade: "9", scores: { math: 72, english: 65, science: 70 } },
+    { id: 4, name: "hoang Thi dao", age: 15, grade: "10", scores: { math: 95, english: 92, science: 98 } },
     { id: 5, name: "Phan Van Em", age: 18, grade: "12", scores: { math: 67, english: 55, science: 60 } },
     { id: 6, name: "Vo Thi Hoa", age: 15, grade: "10", scores: { math: 78, english: 85, science: 80 } },
-    { id: 7, name: "Dang Van Hieu", age: 16, grade: "11", scores: { math: 88, english: 75, science: 90 } },
+    { id: 7, name: "Dang Van Hieu", age: 13, grade: "11", scores: { math: 88, english: 75, science: 90 } },
     { id: 8, name: "Ngo Thi Lan", age: 14, grade: "9", scores: { math: 65, english: 60, science: 58 } },
     { id: 9, name: "Pham Van Minh", age: 17, grade: "12", scores: { math: 92, english: 85, science: 91 } },
     { id: 10, name: "Tran Thi Ngoc", age: 15, grade: "10", scores: { math: 81, english: 39, science: 85 } }
@@ -141,8 +141,8 @@ function cau10() {
 //  11. Cập nhật tên học sinh trong danh sách sao cho mỗi tên đều được viết hoa chữ cái đầu.
 function cau11() {
     let a = students.map(s => {
-        let hai_ki_tu_dau = s.name.slice(0, 2);
-        let tach = s.name.slice(2);
+        let hai_ki_tu_dau = s.name.charAt(0);
+        let tach = s.name.slice(1);
         let inHoa = hai_ki_tu_dau.toUpperCase();
         let gop = inHoa.concat(tach);
         s.name = gop;
@@ -185,10 +185,7 @@ function cau13() {
 
 //  14. Tính tổng điểm Toán, Anh và Khoa học của tất cả học sinh trong danh sách.
 function cau14() {
-    let a = students.reduce((sum, s) => {
-        return sum + s.scores.math + s.scores.english + s.scores.science;
-    }, 0);
-
+    let a = students.reduce((sum, s) => sum += s.scores.math + s.scores.english + s.scores.science, 0);
     console.log("Tong diem 3 mon la:", a);
 }
 // cau14();
@@ -217,7 +214,6 @@ function cau17() {
 }
 // cau17();
 
-
 //  18. Thêm một đối tượng học sinh mới vào danh sách.
 function cau18() {
     let newStudent = { id: 11, name: "Nguyen Van Be", age: 21, grade: "10", scores: { math: 95, english: 48, science: 82 } };
@@ -234,18 +230,12 @@ function cau19() {
 }
 // cau19();
 
-
 //  20. Cập nhật điểm tiếng Anh của học sinh có id = 4 thành 95.
 function cau20() {
-    let a = students.map(s => {
-        if (s.id === 4) {
-            s.scores.english = 95;
-        }
-        return s;
-    });
+    let a = students.map(s =>  s.id == 4 ? ({...s ,grade : "50", scores : {...s.scores , english : 95 }})  : s ); // rest 
     console.log(a);
 }
-// cau20();
+cau20();
 
 
 //  21. Xóa học sinh có id = 2 khỏi danh sách.
@@ -266,4 +256,4 @@ function cau22() {
     });
     console.log(a);
 }
-cau22();
+// cau22();

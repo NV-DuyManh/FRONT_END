@@ -14,17 +14,7 @@ This repository records my front-end learning journey, including daily practice 
 ---
 
 ## 📂 Project Structure
-Each folder represents one learning day with related practice files.
-
-- **Day 01** – HTML & CSS: Layout  
-- **Day 02** – HTML & CSS: Home Page  
-- **Day 03** – HTML & CSS: After & Icon  
-- **Day 04** – HTML & CSS: Position & Table  
-- **Day 05** – HTML & CSS: Responsive Website  
-- **Day 06** – HTML & CSS: Store Website  
-- **Day 07–08** – Bootstrap 5  
-- **Day 09** – JavaScript Basics  
-- **Day 10-11–12** – JavaScript Array Methods  
+Each folder represents one learning day with practice exercises.
 
 ---
 

@@ -220,4 +220,4 @@ function cau19() {
     let a = students.filter(s => s.math >= 50 && s.english >= 50 && s.science >= 50 && s.age <= 15);
     console.log(a);
 }
-cau19();
+// cau19();

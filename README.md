@@ -28,17 +28,12 @@ Each folder represents one learning day with practice exercises.
 4. Open JavaScript files in VS Code and check the output using the browser Console
 
 🧠 Learned Concepts
-HTML semantic structure
-
-CSS layout techniques (Flexbox, Position)
-
-Responsive design with Media Queries
-
-Bootstrap 5 components & grid system
-
-JavaScript variables (var, let, const)
-
-JavaScript array methods (map, filter, reduce, sort, some, every)
+- HTML semantic structure
+- CSS layout techniques (Flexbox, Position)
+- Responsive design with Media Queries
+- Bootstrap 5 components & grid system
+- JavaScript variables (var, let, const)
+- JavaScript array methods (map, filter, reduce, sort, some, every)
 
 🎯 Goal
 Build a solid foundation in front-end development and improve coding skills through continuous practice.

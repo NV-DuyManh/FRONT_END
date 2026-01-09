@@ -10,5 +10,5 @@
 // let str = "Hello World";
 // console.log(str.split(" ")[1]);
 
-let arr = ["a", "b", "c"];
-console.log(arr.slice(1));
+// let arr = ["a", "b", "c"];
+// console.log(arr.slice(1));

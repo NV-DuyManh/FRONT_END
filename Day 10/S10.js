@@ -127,7 +127,7 @@
 *        - filter() ( trả về list(Mảng) phần tử theo điều kiện )
 *        - map()
 */
-// -------- Ví dụ với String ------------
+
 
 /* 2. Math object
 *    - Math.PI

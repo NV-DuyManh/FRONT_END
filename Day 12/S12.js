@@ -204,7 +204,20 @@ function cau17() {
 // cau17();
 
 // 18.Thêm 3 học sinh mới với thông tin đầy đủ vào danh sách.
-
+function cau18() {
+    let hsmoi = [
+        { name: "Trần Văn K", age: 16, class: 10, math: 75, english: 58, science: 85 },
+        { name: "Nguyễn Thị H", age: 15, class: 9, math: 60, english: 62, science: 91 },
+        { name: "Lê Văn L", age: 17, class: 11, math: 88, english: 92, science: 87 },
+    ];
+    let a = students.push(...hsmoi);
+    console.log(students);
+}
+// cau18();
 
 // 19.Lọc danh sách học sinh có tất cả điểm >= 50 và tuổi <= 15.
-
+function cau19() {
+    let a = students.filter(s => s.math >= 50 && s.english >= 50 && s.science >= 50 && s.age <= 15);
+    console.log(a);
+}
+cau19();

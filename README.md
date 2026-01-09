@@ -33,12 +33,9 @@ Each folder represents one learning day with related practice files.
 1. Clone this repository:
    ```bash
    git clone https://github.com/NV-DuyManh/FRONT_END.git
-Open the project folder in VS Code
-
-Open any .html file in your browser
-or use Live Server for a better experience
-
-Open JavaScript files in VS Code and check the output using the browser Console
+2. Open the project folder in VS Code
+3. Open any .html file in your browser or use Live Server for a better experience
+4. Open JavaScript files in VS Code and check the output using the browser Console
 
 🧠 Learned Concepts
 HTML semantic structure

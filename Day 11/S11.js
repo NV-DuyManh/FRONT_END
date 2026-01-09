@@ -235,7 +235,7 @@ function cau20() {
     let a = students.map(s =>  s.id == 4 ? ({...s ,grade : "50", scores : {...s.scores , english : 95 }})  : s ); // rest 
     console.log(a);
 }
-cau20();
+// cau20();
 
 
 //  21. Xóa học sinh có id = 2 khỏi danh sách.

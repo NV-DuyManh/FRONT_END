@@ -146,7 +146,7 @@
 *    - ToFixed (Trả về kiểu string và làm tròn số >=5 lên 1 đơn vị và ngược lại)
 *    - Lưu ý ToFixed nếu có sau thập phân thì làm tròn trên nếu > 5 và ngược lại.
 */
-// --------------- VIDU ---------------
+
 
 /**
 *  HTML DOM

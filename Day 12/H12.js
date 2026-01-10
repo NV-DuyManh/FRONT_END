@@ -89,3 +89,13 @@ function run(str) {
     });
     console.log(result.join(" "));
 }
+function run(str) {
+	var new_word = str.replace(/a/g, 4);
+     new_word = new_word.replace(/e/g, 3);
+      new_word = new_word.replace(/i/g, 1);
+       new_word = new_word.replace(/o/g, 0);
+        new_word = new_word.replace(/s/g, 5);
+         new_word = new_word.trim();
+ 
+    console.log(new_word);
+}

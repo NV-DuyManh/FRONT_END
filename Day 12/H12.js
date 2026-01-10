@@ -74,3 +74,18 @@ function ucfirst(str) {
 	var b = a.concat(rest);
 	console.log(b);
 }
+function  uc_first(word) {
+	var first_word = word.charAt(0);
+    var rent = word.slice(1);
+    var in_hoa = first_word.toUpperCase();
+    var gop = in_hoa.concat(rent);
+    return gop;
+
+}
+function run(str) {
+	var tach_mang = str.split(" ");
+    var result = tach_mang.map(function(word){
+        return uc_first(word);
+    });
+    console.log(result.join(" "));
+}

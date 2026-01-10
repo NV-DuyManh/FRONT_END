@@ -67,3 +67,10 @@ function run(a, b) {
     var a = str.includes("script");
     console.log(a);
 }
+function ucfirst(str) {
+	var first_letter  = str.charAt(0);
+	var rest  = str.slice(1);
+	var a = first_letter.toUpperCase();
+	var b = a.concat(rest);
+	console.log(b);
+}

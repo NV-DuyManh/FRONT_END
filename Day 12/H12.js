@@ -114,3 +114,13 @@ function run(a, b){
 	b= b.concat(a);
 	console.log(b);
 }
+function run(data) {
+	var a = data.every(function (x){
+        return x%2==0;
+    });
+	if (a) {
+		console.log("Yes");
+	} else {
+		console.log("No");
+	}
+}

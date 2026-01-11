@@ -110,3 +110,7 @@ function run() {
 	
 	console.log(data.length); // output: 7
 }
+function run(a, b){
+	b= b.concat(a);
+	console.log(b);
+}

@@ -124,3 +124,11 @@ function run(data) {
 		console.log("No");
 	}
 }
+function duong(x){
+    return x>0;
+}
+
+function run(data) {
+	var a = data.filter(duong);
+	console.log(a);
+}

@@ -132,3 +132,9 @@ function run(data) {
 	var a = data.filter(duong);
 	console.log(a);
 }
+function run(data) {
+	data.forEach(function(element) {
+        if(element%5===0)
+		console.log(element)
+	});
+}

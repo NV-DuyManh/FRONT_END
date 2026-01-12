@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./H7_style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand text-success" id="navbar" href="#">Fruitables</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-success" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Shop Detail</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Pages
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">Cart</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Checkout</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Testimonial</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex gap-3">
+            <div class="icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="lock position-relative">
+              <i class="fa-solid fa-lock text-success"></i>
+              <span class="position-absolute bg-warning text-success">3</span>
+            </div>
+            <div class="user">
+              <i class="fa-solid fa-user text-success"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="nav-silde">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-12 col-lg-6 search">
+            <h6>100% Organic Foods</h6>
+            <h1>
+              Organic Veggies & <br />
+              Fruits Foods
+            </h1>
+            <div class="submit mt-5">
+              <input type="text" input placeholder="Search" />
+              <button>Submit Now</button>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+              <div class="carousel-inner">
+                <div class="carousel-item active box">
+                  <img src="https://themewagon.github.io/fruitables/img/hero-img-1.png" class="d-block w-100"
+                    alt="..." />
+                  <p class="position-absolute">Fruites</p>
+                </div>
+                <div class="carousel-item box">
+                  <img src="https://themewagon.github.io/fruitables/img/hero-img-2.jpg" class="d-block w-100"
+                    alt="..." />
+                  <p class="position-absolute">Fruites</p>
+                </div>
+              </div>
+              <button class="carousel-control-prev bg-success" type="button" data-bs-target="#carouselExample"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next bg-success" type="button" data-bs-target="#carouselExample"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container mt-5">
+      <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3">
+        <div class="col">
+          <div class="card p-3 rounded-2 bg-light">
+            <div class="free">
+              <i class="fa-solid fa-car-side"></i>
+            </div>
+            <h6 class="text-center mt-5">Free Shipping</h6>
+            <p class="text-center">Free on order over $300</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card p-3 rounded-2 bg-light">
+            <div class="free">
+              <i class="fa-solid fa-car-side"></i>
+            </div>
+            <h6 class="text-center mt-5">Free Shipping</h6>
+            <p class="text-center">Free on order over $300</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card p-3 rounded-2 bg-light">
+            <div class="free">
+              <i class="fa-solid fa-car-side"></i>
+            </div>
+            <h6 class="text-center mt-5">Free Shipping</h6>
+            <p class="text-center">Free on order over $300</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card p-3 rounded-2 bg-light">
+            <div class="free">
+              <i class="fa-solid fa-car-side"></i>
+            </div>
+            <h6 class="text-center mt-5">Free Shipping</h6>
+            <p class="text-center">Free on order over $300</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5 org">
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <h1>Our Organic Products</h1>
+        <ul class="d-flex gap-3 flex-wrap p-0 m-0">
+          <li>All Product</li>
+          <li>Vegetables</li>
+          <li>Fruits</li>
+          <li>Bread</li>
+          <li>Meat</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container mt-5 ">
+      <div class="row grapes row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-3">
+      
+     
+      </div>
+    </div>
+    <div class="container mt-5 fresh">
+      <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-3">
+        <div class="col mx-auto">
+          <div class="card border-warning">
+            <div class="car-header position-relative">
+              <img src="https://themewagon.github.io/fruitables/img/featur-1.jpg" class="card-img-top" alt="..." />
+              <div class="apples position-absolute text-center">
+                <h1 class="text-light">Fresh Apples</h1>
+                <h2 class="text-secondary">20% OFF</h2>
+              </div>
+            </div>
+            <h5 class="card-title bg-warning cao m-0"></h5>
+          </div>
+        </div> <div class="col mx-auto">
+          <div class="card border-warning">
+            <div class="car-header position-relative">
+              <img src="https://themewagon.github.io/fruitables/img/featur-1.jpg" class="card-img-top" alt="..." />
+              <div class="apples position-absolute text-center">
+                <h1 class="text-light">Fresh Apples</h1>
+                <h2 class="text-secondary">20% OFF</h2>
+              </div>
+            </div>
+            <h5 class="card-title bg-warning cao m-0"></h5>
+          </div>
+        </div> <div class="col mx-auto">
+          <div class="card border-warning">
+            <div class="car-header position-relative">
+              <img src="https://themewagon.github.io/fruitables/img/featur-1.jpg" class="card-img-top" alt="..." />
+              <div class="apples position-absolute text-center">
+                <h1 class="text-light">Fresh Apples</h1>
+                <h2 class="text-secondary">20% OFF</h2>
+              </div>
+            </div>
+            <h5 class="card-title bg-warning cao m-0"></h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    <div class="container mt-5 vegetables">
+      <h1>Fresh Organic Vegetables</h1>
+      <div class="muiten d-flex justify-content-end gap-3">
+        <button>
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 mt-2 g-3">
+        <div class="col">
+          <div class="card the">
+            <div class="anh position: relative">
+              <img src="https://themewagon.github.io/fruitables/img/fruite-item-5.jpg" class="card-img-top" alt="..." />
+              <p style="position: absolute">Vegetables</p>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Grapes</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
+                eiusmod te incididunt
+              </p>
+            </div>
+            <div class="d-flex justify-content-around align-items-center cart mb-3">
+              <p class="mt-2" style="font-weight: bold">$4.99 / kg</p>
+              <div class="add d-flex text-center justify-content-center align-items-center text-success gap-2">
+                <i class="fa-solid fa-lock"></i>
+                <p>Add to cart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card the">
+            <div class="anh position: relative">
+              <img src="https://themewagon.github.io/fruitables/img/fruite-item-1.jpg" class="card-img-top" alt="..." />
+              <p style="position: absolute">Vegetables</p>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Grapes</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
+                eiusmod te incididunt
+              </p>
+            </div>
+            <div class="d-flex justify-content-around align-items-center cart mb-3">
+              <p class="mt-2" style="font-weight: bold">$4.99 / kg</p>
+              <div class="add d-flex text-center justify-content-center align-items-center text-success gap-2">
+                <i class="fa-solid fa-lock"></i>
+                <p>Add to cart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card the">
+            <div class="anh position: relative">
+              <img src="https://themewagon.github.io/fruitables/img/fruite-item-5.jpg" class="card-img-top" alt="..." />
+              <p style="position: absolute">Vegetables</p>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Grapes</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
+                eiusmod te incididunt
+              </p>
+            </div>
+            <div class="d-flex justify-content-around align-items-center cart mb-3">
+              <p class="mt-2" style="font-weight: bold">$4.99 / kg</p>
+              <div class="add d-flex text-center justify-content-center align-items-center text-success gap-2">
+                <i class="fa-solid fa-lock"></i>
+                <p>Add to cart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card the">
+            <div class="anh position: relative">
+              <img src="https://themewagon.github.io/fruitables/img/fruite-item-1.jpg" class="card-img-top" alt="..." />
+              <p style="position: absolute">Vegetables</p>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Grapes</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
+                eiusmod te incididunt
+              </p>
+            </div>
+            <div class="d-flex justify-content-around align-items-center cart mb-3">
+              <p class="mt-2" style="font-weight: bold">$4.99 / kg</p>
+              <div class="add d-flex text-center justify-content-center align-items-center text-success gap-2">
+                <i class="fa-solid fa-lock"></i>
+                <p>Add to cart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="exotic mt-5 bg-warning">
+      <div class="container">
+        <div class="row mt-5 g-5 align-items-center">
+          <div class="col-12 col-lg-6 text">
+            <h1 class="text-white">Fresh Exotic Fruits</h1>
+            <h1 class="text-secondary">in Our Store</h1>
+            <p class="mt-4">
+              The generated Lorem Ipsum is therefore always free from
+              repetition injected <br />humour, or non-characteristic words
+              etc.
+            </p>
+            <button>BUY</button>
+          </div>
+          <div class="col-12 col-lg-6 mb-5 position-relative">
+            <img src="https://themewagon.github.io/fruitables/img/baner-1.png" alt="" />
+            <div class="kg d-flex justify-content-center align-items-center position-absolute">
+              <h1 class="text-secondary">1</h1>
+              <p class="mt-2 text-secondary">
+                50$ <br />
+                kg
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bestseller mt-5">
+      <h1 class="text-center">Bestseller Products</h1>
+      <p class="text-center">
+        Latin words, combined with a handful of model sentence structures, to
+        generate Lorem <br />Ipsum which looks reasonable.
+      </p>
+      <div class="container mt-4">
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-3">
+          <div class="col">
+            <div class="card mb-3 bg-light">
+              <div class="row mt-3 mb-3 g-0">
+                <div class="col-6 mt-3 mt-md-0 d-flex align-items-center justify-content-center anh">
+                  <img src="https://themewagon.github.io/fruitables/img/best-product-3.jpg" />
+                </div>
+                <div class="col-6 text-start">
+                  <div class="card-body">
+                    <h5 class="card-title">Organic Tomato</h5>
+                    <ul class="d-flex p-0 m-0 sao">
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star text-secondary"></i></li>
+                    </ul>
+                    <h4 class="card-title mt-2">3.12 $</h4>
+                    <div class="add d-flex text-center justify-content-center align-items-center text-success gap-2">
+                      <i class="fa-solid fa-lock"></i>
+                      <p>Add to cart</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-3 bg-light">
+              <div class="row mt-3 mb-3 g-0">
+                <div class="col-6 mt-3 mt-md-0 d-flex align-items-center justify-content-center anh">
+                  <img src="https://themewagon.github.io/fruitables/img/best-product-3.jpg" />
+                </div>
+                <div class="col-6 text-start">
+                  <div class="card-body">
+                    <h5 class="card-title">Organic Tomato</h5>
+                    <ul class="d-flex p-0 m-0 sao">
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star text-secondary"></i></li>
+                    </ul>
+                    <h4 class="card-title mt-2">3.12 $</h4>
+                    <div class="add d-flex text-center justify-content-center align-items-center text-success gap-2">
+                      <i class="fa-solid fa-lock"></i>
+                      <p>Add to cart</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-3 bg-light">
+              <div class="row mt-3 mb-3 g-0">
+                <div class="col-6 mt-3 mt-md-0 d-flex align-items-center justify-content-center anh">
+                  <img src="https://themewagon.github.io/fruitables/img/best-product-3.jpg" />
+                </div>
+                <div class="col-6 text-start">
+                  <div class="card-body">
+                    <h5 class="card-title">Organic Tomato</h5>
+                    <ul class="d-flex p-0 m-0 sao">
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star text-secondary"></i></li>
+                    </ul>
+                    <h4 class="card-title mt-2">3.12 $</h4>
+                    <div class="add d-flex text-center justify-content-center align-items-center text-success gap-2">
+                      <i class="fa-solid fa-lock"></i>
+                      <p>Add to cart</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-3 bg-light">
+              <div class="row mt-3 mb-3 g-0">
+                <div class="col-6 mt-3 mt-md-0 d-flex align-items-center justify-content-center anh">
+                  <img src="https://themewagon.github.io/fruitables/img/best-product-3.jpg" />
+                </div>
+                <div class="col-6 text-start">
+                  <div class="card-body">
+                    <h5 class="card-title">Organic Tomato</h5>
+                    <ul class="d-flex p-0 m-0 sao">
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star text-secondary"></i></li>
+                    </ul>
+                    <h4 class="card-title mt-2">3.12 $</h4>
+                    <div class="add d-flex text-center justify-content-center align-items-center text-success gap-2">
+                      <i class="fa-solid fa-lock"></i>
+                      <p>Add to cart</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-3 bg-light">
+              <div class="row mt-3 mb-3 g-0">
+                <div class="col-6 mt-3 mt-md-0 d-flex align-items-center justify-content-center anh">
+                  <img src="https://themewagon.github.io/fruitables/img/best-product-3.jpg" />
+                </div>
+                <div class="col-6 text-start">
+                  <div class="card-body">
+                    <h5 class="card-title">Organic Tomato</h5>
+                    <ul class="d-flex p-0 m-0 sao">
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star text-secondary"></i></li>
+                    </ul>
+                    <h4 class="card-title mt-2">3.12 $</h4>
+                    <div class="add d-flex text-center justify-content-center align-items-center text-success gap-2">
+                      <i class="fa-solid fa-lock"></i>
+                      <p>Add to cart</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-3 bg-light">
+              <div class="row mt-3 mb-3 g-0">
+                <div class="col-6 mt-3 mt-md-0 d-flex align-items-center justify-content-center anh">
+                  <img src="https://themewagon.github.io/fruitables/img/best-product-3.jpg" />
+                </div>
+                <div class="col-6 text-start">
+                  <div class="card-body">
+                    <h5 class="card-title">Organic Tomato</h5>
+                    <ul class="d-flex p-0 m-0 sao">
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star text-secondary"></i></li>
+                    </ul>
+                    <h4 class="card-title mt-2">3.12 $</h4>
+                    <div class="add d-flex text-center justify-content-center align-items-center text-success gap-2">
+                      <i class="fa-solid fa-lock"></i>
+                      <p>Add to cart</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Tomato mt-5">
+      <div class="container mt-4">
+        <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3">
+          <div class="col">
+            <div class="cardd mb-3">
+              <div class="row g-0">
+                <div class="col-12 mt-3 mt-md-0 d-flex align-items-center justify-content-center anh">
+                  <img src="https://themewagon.github.io/fruitables/img/fruite-item-2.jpg" />
+                </div>
+                <div class="col-12 text-center">
+                  <div class="card-body">
+                    <h5 class="card-title mt-3 mb-2">Organic Tomato</h5>
+                    <ul class="d-flex justify-content-center p-0 m-1 sao">
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star text-secondary"></i></li>
+                    </ul>
+                    <h4 class="card-title">3.12 $</h4>
+                    <div
+                      class="add d-flex text-center justify-content-center align-items-center text-success mt-2 gap-2">
+                      <i class="fa-solid fa-lock"></i>
+                      <p>Add to cart</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cardd mb-3">
+              <div class="row g-0">
+                <div class="col-12 mt-3 mt-md-0 d-flex align-items-center justify-content-center anh">
+                  <img src="https://themewagon.github.io/fruitables/img/fruite-item-2.jpg" />
+                </div>
+                <div class="col-12 text-center">
+                  <div class="card-body">
+                    <h5 class="card-title mt-3 mb-2">Organic Tomato</h5>
+                    <ul class="d-flex justify-content-center p-0 m-1 sao">
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star text-secondary"></i></li>
+                    </ul>
+                    <h4 class="card-title">3.12 $</h4>
+                    <div
+                      class="add d-flex text-center justify-content-center align-items-center text-success mt-2 gap-2">
+                      <i class="fa-solid fa-lock"></i>
+                      <p>Add to cart</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cardd mb-3">
+              <div class="row g-0">
+                <div class="col-12 mt-3 mt-md-0 d-flex align-items-center justify-content-center anh">
+                  <img src="https://themewagon.github.io/fruitables/img/fruite-item-2.jpg" />
+                </div>
+                <div class="col-12 text-center">
+                  <div class="card-body">
+                    <h5 class="card-title mt-3 mb-2">Organic Tomato</h5>
+                    <ul class="d-flex justify-content-center p-0 m-1 sao">
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star text-secondary"></i></li>
+                    </ul>
+                    <h4 class="card-title">3.12 $</h4>
+                    <div
+                      class="add d-flex text-center justify-content-center align-items-center text-success mt-2 gap-2">
+                      <i class="fa-solid fa-lock"></i>
+                      <p>Add to cart</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cardd mb-3">
+              <div class="row g-0">
+                <div class="col-12 mt-3 mt-md-0 d-flex align-items-center justify-content-center anh">
+                  <img src="https://themewagon.github.io/fruitables/img/fruite-item-2.jpg" />
+                </div>
+                <div class="col-12 text-center">
+                  <div class="card-body">
+                    <h5 class="card-title mt-3 mb-2">Organic Tomato</h5>
+                    <ul class="d-flex justify-content-center p-0 m-1 sao">
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star text-secondary"></i></li>
+                    </ul>
+                    <h4 class="card-title">3.12 $</h4>
+                    <div
+                      class="add d-flex text-center justify-content-center align-items-center text-success mt-2 gap-2">
+                      <i class="fa-solid fa-lock"></i>
+                      <p>Add to cart</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container bg-light mt-5 customer">
+      <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 p-3 g-3">
+        <div class="col text-center">
+          <div class="card">
+            <div class="card-body g-3">
+              <i class="fa-solid fa-user-group text-warning"></i>
+              <h2 class="mt-3 text-success">SATISFIED CUSTOMERS</h2>
+              <h1>1963</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="card">
+            <div class="card-body g-3">
+              <i class="fa-solid fa-user-group text-warning"></i>
+              <h2 class="mt-3 text-success">SATISFIED CUSTOMERS</h2>
+              <h1>1963</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="card">
+            <div class="card-body g-3">
+              <i class="fa-solid fa-user-group text-warning"></i>
+              <h2 class="mt-3 text-success">SATISFIED CUSTOMERS</h2>
+              <h1>1963</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="card">
+            <div class="card-body g-3">
+              <i class="fa-solid fa-user-group text-warning"></i>
+              <h2 class="mt-3 text-success">SATISFIED CUSTOMERS</h2>
+              <h1>1963</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5 our">
+      <h3 class="text-success text-center">Our Testimonial</h3>
+      <h1 class="text-center">Our Client Saying!</h1>
+      <div class="muiten d-flex justify-content-end gap-3">
+        <button>
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="row row-cols-lg-2 row-cols-1 mt-2 g-3">
+        <div class="col">
+          <div class="card">
+            <div class="card-body the">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing Ipsum has
+                been the industry's standard dummy text ever since the 1500s,
+              </p>
+              <hr />
+              <div class="client d-flex justify-content-between align-items-center">
+                <div class="anh d-flex gap-3 mt-2">
+                  <img src="https://themewagon.github.io/fruitables/img/testimonial-1.jpg" alt="" />
+                  <div class="name">
+                    <h2>Client Name</h2>
+                    <p>Profession</p>
+                    <ul class="d-flex justify-content-start p-0 m-0 sao">
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star text-secondary"></i></li>
+                    </ul>
+                  </div>
+                </div>
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body the">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing Ipsum has
+                been the industry's standard dummy text ever since the 1500s,
+              </p>
+              <hr />
+              <div class="client d-flex justify-content-between align-items-center">
+                <div class="anh d-flex gap-3 mt-2">
+                  <img src="https://themewagon.github.io/fruitables/img/testimonial-1.jpg" alt="" />
+                  <div class="name">
+                    <h2>Client Name</h2>
+                    <p>Profession</p>
+                    <ul class="d-flex justify-content-start p-0 m-0 sao">
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star text-secondary"></i></li>
+                    </ul>
+                  </div>
+                </div>
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <!-- place footer here -->
+    <div class="container pt-5 pb-3">
+      <div class="row row-cols-lg-3 row-cols-1 g-2">
+        <div class="col">
+          <h1 class="">Fruitable</h1>
+          <p class="text-warning">Fresh Products</p>
+        </div>
+        <div class="col email position-relative">
+          <input type="text" placeholder="Your Email" />
+          <button class="position-absolute">Subscribe Now</button>
+        </div>
+        <div class="col d-flex gap-2 justify-content-end align-items-center icon m-0">
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+      <hr />
+      <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-2">
+        <div class="col">
+          <h2>Why People Like us!</h2>
+          <p style="color: rgb(177, 176, 176)">
+            typesetting, remaining essentially unchanged. It was popularised
+            in the 1960s with the like Aldus PageMaker including of Lorem
+            Ipsum.
+          </p>
+          <button class="read">Read More</button>
+        </div>
+        <div class="col">
+          <h2>Shop Info</h2>
+          <ul class="p-0" style="color: rgb(177, 176, 176)">
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Condition</li>
+            <li>Return Policy</li>
+            <li>FAQs & Help</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2>Account</h2>
+          <ul class="p-0" style="color: rgb(177, 176, 176)">
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Condition</li>
+            <li>Return Policy</li>
+            <li>FAQs & Help</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2>Contact</h2>
+          <p style="color: rgb(177, 176, 176)">
+            Address: 1429 Netus Rd, NY 48247 <br />
+            Email: Example@gmail.com <br />
+            Phone: +0123 4567 8910<br />
+            Payment Accepted
+          </p>
+          <div class="anh">
+            <img src="https://themewagon.github.io/fruitables/img/payment.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="row text-white mt-3">
+        <div class="col-md-6 text-md-start text-center mb-2 mb-md-0">
+          <a href="" style="text-decoration: none;">
+            <i class="fas fa-copyright text-light me-2"></i> Your Site Name</a>, All right reserved.
+        </div>
+        <div class="col-md-6 text-md-end text-center">
+          Designed By
+          <a href="">HTML Codex</a>
+          Distributed By
+          <a href="">ThemeWagon</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="./Day13.js"></script>
+</body>
+
+</html>

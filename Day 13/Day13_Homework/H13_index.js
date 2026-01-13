@@ -111,21 +111,25 @@ traiCay();
 function vegetable() {
   const organic = [
     {
+      id: 1,
       nhanhieu: "Orange",
       tieude: "One",
       anh: "https://cdn.pixabay.com/photo/2025/12/07/16/31/carnation-10000623_1280.jpg",
     },
     {
+      id: 2,
       nhanhieu: "Red",
       tieude: "Two",
       anh: "https://cdn.pixabay.com/photo/2025/12/10/08/15/autumn-district-10005775_1280.jpg",
     },
     {
+      id: 3,
       nhanhieu: "Yellow",
       tieude: "Three",
       anh: "https://cdn.pixabay.com/photo/2025/11/25/13/30/13-30-04-723_1280.jpg",
     },
     {
+      id: 4,
       nhanhieu: "Green",
       tieude: "Four",
       anh: "https://cdn.pixabay.com/photo/2025/10/11/18/59/autumn-leaves-9888526_1280.jpg",
@@ -296,5 +300,10 @@ function product() {
 product();
 
 // kiem Organic Veggies & Fruits Foods theo id - lam gi do tuy
+const tim = document.getElementById("search");
+tim.setAttribute("h1", "text-danger");
+console.log(tim);
+
+
 
 // xem lai cac cach kiem id ,class , query ,querySelectorAll

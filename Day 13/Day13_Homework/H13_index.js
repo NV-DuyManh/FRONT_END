@@ -160,6 +160,64 @@ function vegetable() {
 }
 vegetable();
 
+function khoaitay() {
+  const listTomato = [
+    {
+      anh: "https://cdn.pixabay.com/photo/2019/12/26/09/31/nature-4720041_1280.jpg",
+      cost: "2.3",
+      name: "Chicken",
+    },
+    {
+      anh: "https://cdn.pixabay.com/photo/2021/12/22/00/28/city-6886266_1280.jpg",
+      cost: "4.3",
+      name: "Elephent",
+    },
+    {
+      anh: "https://cdn.pixabay.com/photo/2019/05/31/16/40/landscapes-4242555_1280.jpg",
+      cost: "6.3",
+      name: "Duck",
+    },
+    {
+      anh: "https://cdn.pixabay.com/photo/2021/07/16/09/32/landscape-6470419_1280.jpg",
+      cost: "9.3",
+      name: "Tiger",
+    },
+  ];
+  const input = document.querySelector(".khoai");
+  listTomato.forEach((s) => {
+    input.innerHTML += `          <div class="col">
+            <div class="cardd mb-3">
+              <div class="row g-0">
+                <div class="col-12 mt-3 mt-md-0 d-flex align-items-center justify-content-center anh">
+                  <img src="${s.anh}" />
+                </div>
+                <div class="col-12 text-center">
+                  <div class="card-body">
+                    <h5 class="card-title mt-3 mb-2">${s.name}</h5>
+                    <ul class="d-flex justify-content-center p-0 m-1 sao">
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star"></i></li>
+                      <li><i class="fa-solid fa-star text-secondary"></i></li>
+                    </ul>
+                    <h4 class="card-title">${s.cost} $</h4>
+                    <div
+                      class="add d-flex text-center justify-content-center align-items-center text-success mt-2 gap-2">
+                      <i class="fa-solid fa-lock"></i>
+                      <p>Add to cart</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+  });
+}
+khoaitay();
+
+// bestseller card-title => thay doi chu va mau sac
+
 function product() {
   const listSP = [
     {
@@ -207,7 +265,7 @@ function product() {
                 </div>
                 <div class="col-6 text-start">
                   <div class="card-body">
-                    <h5 class="card-title">${s.name}</h5>
+                    <h5 class="card-title doichu">${s.name}</h5>
                     <ul class="d-flex p-0 m-0 sao">
                       <li><i class="fa-solid fa-star"></i></li>
                       <li><i class="fa-solid fa-star"></i></li>
@@ -215,7 +273,7 @@ function product() {
                       <li><i class="fa-solid fa-star"></i></li>
                       <li><i class="fa-solid fa-star text-secondary"></i></li>
                     </ul>
-                    <h4 class="card-title mt-2">${s.cost}</h4>
+                    <h4 class="card-title mt-2 doiso">${s.cost}</h4>
                     <div class="add d-flex text-center justify-content-center align-items-center text-success gap-2">
                       <i class="fa-solid fa-lock"></i>
                       <p>Add to cart</p>
@@ -226,62 +284,17 @@ function product() {
             </div>
           </div>`;
   });
+  const doiChu = document.getElementsByClassName("doichu");
+  Array.from(doiChu).forEach((a) => {
+    a.setAttribute("class", "text-danger");
+  });
+  const doiSo = document.getElementsByClassName("doiso");
+  Array.from(doiSo).forEach((a) => {
+    a.setAttribute("class", "text-warning");
+  });
 }
 product();
 
-function khoaitay(){
-  const listTomato = [
-    {
-      anh: "https://cdn.pixabay.com/photo/2019/12/26/09/31/nature-4720041_1280.jpg",
-      cost: "2.3",
-      name: "Chicken"
-    },
-    {
-      anh: "https://cdn.pixabay.com/photo/2021/12/22/00/28/city-6886266_1280.jpg",
-      cost: "4.3", name: "Elephent"
-    },
-    {
-      anh: "https://cdn.pixabay.com/photo/2019/05/31/16/40/landscapes-4242555_1280.jpg",
-      cost: "6.3",name: "Duck"
-    },
-    {
-      anh: "https://cdn.pixabay.com/photo/2021/07/16/09/32/landscape-6470419_1280.jpg",
-      cost: "9.3", name: "Tiger"
-    },
-  ]
-  const input = document.querySelector(".khoai");
-  listTomato.forEach(s=>{
-    input.innerHTML += `          <div class="col">
-            <div class="cardd mb-3">
-              <div class="row g-0">
-                <div class="col-12 mt-3 mt-md-0 d-flex align-items-center justify-content-center anh">
-                  <img src="${s.anh}" />
-                </div>
-                <div class="col-12 text-center">
-                  <div class="card-body">
-                    <h5 class="card-title mt-3 mb-2">${s.name}</h5>
-                    <ul class="d-flex justify-content-center p-0 m-1 sao">
-                      <li><i class="fa-solid fa-star"></i></li>
-                      <li><i class="fa-solid fa-star"></i></li>
-                      <li><i class="fa-solid fa-star"></i></li>
-                      <li><i class="fa-solid fa-star"></i></li>
-                      <li><i class="fa-solid fa-star text-secondary"></i></li>
-                    </ul>
-                    <h4 class="card-title">${s.cost} $</h4>
-                    <div
-                      class="add d-flex text-center justify-content-center align-items-center text-success mt-2 gap-2">
-                      <i class="fa-solid fa-lock"></i>
-                      <p>Add to cart</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>`
-  })
-}
-khoaitay();
+// kiem Organic Veggies & Fruits Foods theo id - lam gi do tuy
 
-// bestseller card-title => thay doi chu va mau sac
-// kiem Organic Veggies & Fruits Foods theo id => lam gi do tuy
 // xem lai cac cach kiem id ,class , query ,querySelectorAll

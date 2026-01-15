@@ -61,23 +61,47 @@
             <div class="icon">
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <div class="lock position-relative">
-              <i class="fa-solid fa-lock text-success"></i>
+            <div class="lock position-relative"id="lock">
+              <button><i class="fa-solid fa-lock text-success"></i></button>
               <span class="position-absolute bg-warning text-success">3</span>
+              <div class="position-absolute d-none bang bottom-0" >
+                <table class="table ">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Image</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Money</th>
+                       <th scope="col">Quantity</th>
+                       <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="cardfood">
+                  
+                   
+                  </tbody>
+                </table>
+              </div>
+
             </div>
-            <div class="user">
-              <i class="fa-solid fa-user text-success"></i>
+            <div class="user position-relative" id="user">
+              <button> <i class="fa-solid fa-user text-success"></i></button>
+              <div class="position-absolute d-none auth bottom-0 bg-light shadow-lg">
+                <li class="p-2">Login</li>
+                <li class="p-2">Logout</li>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </nav>
+
   </header>
   <main>
     <section class="nav-silde">
       <div class="container">
         <div class="row g-5">
-          <div class="col-12 col-lg-6 search" >
+          <div class="col-12 col-lg-6 search">
             <h6>100% Organic Foods</h6>
             <h1 id="search">
               Organic Veggies & <br />
@@ -85,7 +109,7 @@
             </h1>
             <div class="submit mt-5">
               <input type="text" id="inputSearch" placeholder="Search" />
-              <button id="btnSubmit">Submit Now</button>
+              <button id="submit">Submit Now</button>
             </div>
           </div>
           <div class="col-12 col-lg-6">
@@ -432,7 +456,7 @@
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
 
-    <script src="./H13_index.js"></script>
+  <script src="./H13_index.js"></script>
 </body>
 
 </html>

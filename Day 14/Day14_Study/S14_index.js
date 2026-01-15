@@ -1,50 +1,49 @@
 // tao mang chua doi tuong gom { title , img , discount }
-
+const listContent = [
+  {
+    anh: "https://cdn.pixabay.com/photo/2025/12/22/10/18/icebear-10029029_1280.jpg",
+    tieude: "Tao",
+    kg: "$4.99 / kg",
+  },
+  {
+    anh: "https://cdn.pixabay.com/photo/2025/12/27/22/06/ship-10038606_1280.jpg",
+    tieude: "Cam",
+    kg: "$9 / kg",
+  },
+  {
+    anh: "https://cdn.pixabay.com/photo/2024/10/28/17/47/landscape-9156798_1280.jpg",
+    tieude: "Mit",
+    kg: "$329 / kg",
+  },
+  {
+    anh: "https://cdn.pixabay.com/photo/2025/10/07/14/20/japanese-barberry-9879260_1280.jpg",
+    tieude: "Nho",
+    kg: "$123 / kg",
+  },
+  {
+    anh: "https://cdn.pixabay.com/photo/2025/12/10/13/27/bird-10006302_1280.jpg",
+    tieude: "Xoai",
+    kg: "$456 / kg",
+  },
+  {
+    anh: "https://cdn.pixabay.com/photo/2025/12/10/08/15/autumn-district-10005775_1280.jpg",
+    tieude: "Man",
+    kg: "$789 / kg",
+  },
+  {
+    anh: "https://cdn.pixabay.com/photo/2025/12/18/21/01/royal-poodle-aurelio-10023295_1280.jpg",
+    tieude: "Tao",
+    kg: "$23 / kg",
+  },
+  {
+    anh: "https://cdn.pixabay.com/photo/2025/12/18/14/06/crocodiles-10022535_1280.jpg",
+    tieude: "Dao",
+    kg: "$69 / kg",
+  },
+];
 function Grapes() {
-  const listContent = [
-    {
-      anh: "https://cdn.pixabay.com/photo/2025/12/22/10/18/icebear-10029029_1280.jpg",
-      tieude: "Tao",
-      kg: "$4.99 / kg",
-    },
-    {
-      anh: "https://cdn.pixabay.com/photo/2025/12/27/22/06/ship-10038606_1280.jpg",
-      tieude: "Cam",
-      kg: "$9 / kg",
-    },
-    {
-      anh: "https://cdn.pixabay.com/photo/2024/10/28/17/47/landscape-9156798_1280.jpg",
-      tieude: "Mit",
-      kg: "$329 / kg",
-    },
-    {
-      anh: "https://cdn.pixabay.com/photo/2025/10/07/14/20/japanese-barberry-9879260_1280.jpg",
-      tieude: "Nho",
-      kg: "$123 / kg",
-    },
-    {
-      anh: "https://cdn.pixabay.com/photo/2025/12/10/13/27/bird-10006302_1280.jpg",
-      tieude: "Xoai",
-      kg: "$456 / kg",
-    },
-    {
-      anh: "https://cdn.pixabay.com/photo/2025/12/10/08/15/autumn-district-10005775_1280.jpg",
-      tieude: "Man",
-      kg: "$789 / kg",
-    },
-    {
-      anh: "https://cdn.pixabay.com/photo/2025/12/18/21/01/royal-poodle-aurelio-10023295_1280.jpg",
-      tieude: "Tao",
-      kg: "$23 / kg",
-    },
-    {
-      anh: "https://cdn.pixabay.com/photo/2025/12/18/14/06/crocodiles-10022535_1280.jpg",
-      tieude: "Dao",
-      kg: "$69 / kg",
-    },
-  ];
   const input = document.querySelector(".grapes");
-  listContent.forEach((s) => {
+  listContent.forEach((s, index) => {
     input.innerHTML += `<div class="col">
             <div class="card">
             <div class="anh position: relative">
@@ -61,7 +60,7 @@ function Grapes() {
             </div>
             <div class="d-flex justify-content-around align-items-center cart mb-3">
                 <p class="mt-2" style="font-weight: bold">${s.kg}</p>
-                <div class="add d-flex text-center justify-content-center align-items-center text-success gap-2">
+                <div onClick=addToCart(${index}) class="add d-flex text-center justify-content-center align-items-center text-success gap-2">
                 <i class="fa-solid fa-lock"></i>
                 <p>Add to cart</p>
                 </div>
@@ -303,7 +302,53 @@ product();
 const tim = document.getElementById("search");
 tim.setAttribute("class", "text-danger");
 
+const log = document.getElementById("user");
+log.addEventListener("click", (s) => {
+  s.preventDefault();
+  const dangnhap = document.querySelector(".auth");
+  dangnhap.classList.toggle("d-none");
+});
 
+setInterval(() => {
+  const doimau = document.getElementById("search");
+  doimau.classList.toggle("text-success");
+  doimau.classList.toggle("text-danger");
+}, 500);
 
+const changeChu = document.getElementById("inputSearch");
+const chu = document.getElementById("search");
+changeChu.addEventListener("change", (e) => {
+  chu.innerText = changeChu.value;
+});
+const lockk = document.getElementById("lock");
+lock.addEventListener("click", (s) => {
+  s.preventDefault();
+  const dangnhap = document.querySelector(".bang");
+  dangnhap.classList.toggle("d-none");
+});
 
-// xem lai cac cach kiem id ,class , query ,querySelectorAll
+const cart = [];
+
+function addToCart(index) {
+  const food = listContent.find((_, i) => i == index);
+  cart.push({...food, quantity : 1 });
+  showCart();
+}
+
+function showCart() {
+  const show = document.getElementById("cardfood");
+  show.innerHTML = "" ;
+  cart.forEach((s,index) => {
+    show.innerHTML += `  <tr>
+                      <th scope="row">${index +1}</th>
+                      <td><img src=${s.anh}
+                          alt=""></td>
+                      <td>${s.tieude}</td>
+                      <td class="text-nowrap">${s.kg}</td>
+                      <td>${s.quantity}</td>
+                       <td><i class="fa-solid fa-delete-left text-danger"></i></td>
+                    </tr>`;
+  });
+}
+// khi click san pham co roi tang so luong len 
+// khi click xoa thi xoa san pham do di 

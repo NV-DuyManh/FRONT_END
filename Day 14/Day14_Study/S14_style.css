@@ -1,0 +1,586 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+li {
+    list-style: none;
+}
+.auth {
+    transform: translateY(100%);
+}
+.bang{
+      transform: translateY(100%);
+      z-index: 10;
+}
+header {
+    .navbar-brand {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .icon {
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        border: 1px solid orange;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: orange;
+        }
+
+        .fa-magnifying-glass {
+            color: green;
+        }
+    }
+
+    .lock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+
+        .fa-lock {
+            font-size: 2rem;
+        }
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+
+            top: 0;
+            transform: translate(50%, 5%);
+        }
+    }
+
+    .user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+
+        .fa-user {
+            font-size: 2rem;
+        }
+    }
+}
+
+main {
+    .nav-silde {
+        padding: 5% 10%;
+        background-image: url(https://themewagon.github.io/fruitables/img/hero-img.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        .search {
+            h6 {
+                color: orange;
+                font-size: 1.5rem;
+            }
+
+            h1 {
+                color: green;
+                font-weight: bold;
+                font-size: 3.5rem;
+            }
+
+            .submit {
+                position: relative;
+
+
+                input {
+                    width: 80%;
+                    padding: 10px;
+                    border-radius: 30px;
+                    border: 1px solid orange;
+                }
+
+                button {
+                    padding: 10px 20px;
+                    border-radius: 30px;
+                    border: 1px solid orange;
+                    position: absolute;
+                    right: 20%;
+                    bottom: 0;
+                    background-color: green;
+                    color: white;
+
+                    &:hover {
+                        background-color: orange;
+                    }
+                }
+            }
+        }
+
+        .carousel-item {
+            height: 350px;
+            background-color: orange;
+            border-radius: 20px;
+            position: relative;
+
+            img {
+                border-radius: 20px;
+            }
+
+            p {
+                padding: 10px 20px;
+                border-radius: 20px;
+                background-color: orange;
+                color: white;
+                top: 50%;
+                right: 50%;
+                transform: translate(50%, -50%);
+            }
+        }
+
+        .carousel-control-prev {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            border: 1px solid white;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+
+        .carousel-control-next {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            border: 1px solid white;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+    }
+
+    .free {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: orange;
+        margin: auto;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 30px;
+            height: 30px;
+            background-color: orange;
+            position: absolute;
+            bottom: 0;
+            transform: translateY(30%) rotate(45deg);
+        }
+
+        .fa-car-side {
+            color: white;
+            font-size: 2rem;
+        }
+    }
+
+    .org {
+        li {
+            background: rgb(235, 234, 234);
+            padding: 10px;
+            border-radius: 20px;
+            white-space: nowrap;
+            width: 120px;
+            text-align: center;
+        }
+
+        li:nth-child(1) {
+            background-color: orange;
+            color: white;
+        }
+
+    }
+
+    .grapes {
+        .anh {
+            p {
+
+                top: 10px;
+                left: 10px;
+                background: orange;
+                padding: 4px 15px;
+                border-radius: 10px;
+                color: white;
+            }
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .add {
+            &:hover {
+                background-color: orange;
+                color: white;
+            }
+
+            border: 1px solid orange;
+            border-radius: 20px;
+            padding: 5px 10px;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .fresh {
+        .apples {
+            background-color: rgb(47, 238, 47);
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 30px;
+
+            h1 {
+                font-size: 2rem;
+                white-space: nowrap;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .card-body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .cao {
+            height: 100px;
+        }
+    }
+
+    .vegetables {
+        .muiten {
+            button {
+                border: 1px solid orange;
+                width: 80px;
+                padding: 2px 0px;
+                font-size: 1.5rem;
+                color: green;
+                border-radius: 20px;
+                background: white;
+
+                &:hover {
+                    background-color: orange;
+                    color: white;
+                }
+            }
+        }
+
+        .the {
+            border: 1px solid green;
+        }
+
+        .anh {
+            p {
+
+                top: 10px;
+                right: 10px;
+                background: rgb(15, 160, 15);
+                padding: 4px 15px;
+                border-radius: 10px;
+                color: white;
+            }
+        }
+
+        .card-body {
+            text-align: start;
+        }
+
+        .add {
+            &:hover {
+                background-color: orange;
+            }
+
+            border: 1px solid orange;
+            border-radius: 20px;
+            padding: 5px 10px;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .exotic {
+        padding: 0px 10%;
+        align-items: center;
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        .text {
+
+            button {
+                padding: 10px 35px;
+                border-radius: 25px;
+                border: 2px solid white;
+                background-color: rgba(var(--bs-warning-rgb));
+
+                &:hover {
+                    background-color: green;
+                }
+            }
+
+        }
+
+        .kg {
+            top: 0;
+            background-color: white;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            transform: translateX(40%);
+        }
+    }
+
+    .bestseller {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h5 {
+            &:hover {
+                color: green;
+            }
+        }
+
+        .anh {
+
+            img {
+                background-color: white;
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                border: 1px solid white;
+            }
+        }
+
+        .sao {
+            .fa-star {
+                color: green;
+            }
+        }
+
+        .add {
+            &:hover {
+                background-color: orange;
+            }
+
+            border: 1px solid orange;
+            border-radius: 20px;
+            padding: 5px 10px;
+            width: 120px;
+            white-space: nowrap;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .Tomato {
+        .sao {
+            .fa-star {
+                color: green;
+            }
+        }
+
+        .add {
+            &:hover {
+                background-color: orange;
+            }
+
+            border: 1px solid orange;
+            border-radius: 20px;
+            padding: 5px 10px;
+            width: 120px;
+            white-space: nowrap;
+            margin: auto;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        h5 {
+            &:hover {
+                color: green;
+            }
+        }
+    }
+
+    .customer {
+        border-radius: 10px;
+
+        .fa-user-group {
+            font-size: 3rem;
+        }
+    }
+
+    .our {
+        .muiten {
+            button {
+                border: 1px solid orange;
+                width: 80px;
+                padding: 2px 0px;
+                font-size: 1.5rem;
+                color: green;
+                border-radius: 20px;
+                background: white;
+
+                &:hover {
+                    background-color: orange;
+                    color: white;
+                }
+            }
+        }
+
+        .the {
+            background-color: rgb(238, 238, 238);
+            border: 1px solid rgb(238, 238, 238);
+        }
+
+        hr {
+            color: rgb(255, 166, 0);
+            border: 1.3px solid orange;
+        }
+
+        .client {
+            img {
+                width: 100px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .sao {
+                .fa-star {
+                    color: green;
+                }
+            }
+        }
+
+        .fa-quote-right {
+            font-size: 2.5rem;
+            color: orange;
+        }
+    }
+}
+
+footer {
+    margin-top: 70px;
+    background-color: rgb(80, 94, 80);
+    color: white;
+
+    h1 {
+        color: rgb(0, 250, 71);
+    }
+
+    .email {
+        input {
+            padding: 10px;
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        button {
+            padding: 10px;
+            right: 0px;
+            top: 1%;
+            border-radius: 20px;
+            background-color: rgb(36, 239, 36);
+            color: white;
+            border: 1px solid white;
+
+            &:hover {
+                background-color: orange;
+            }
+        }
+    }
+
+    .icon {
+        i {
+            font-size: 2rem;
+            border: 1px solid orange;
+            color: orange;
+            border-radius: 50%;
+            text-align: center;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                background-color: orange;
+                color: black;
+            }
+        }
+
+    }
+
+    hr {
+        color: orange;
+        border: 1px solid orange;
+    }
+
+    .read {
+        background-color: rgb(80, 94, 80);
+        border: 1px solid orange;
+        padding: 5px 15px;
+        border-radius: 20px;
+        color: rgb(0, 250, 71);
+
+        &:hover {
+            background-color: orange;
+            color: white;
+        }
+    }
+
+    .anh {
+        width: 200px;
+    }
+
+    a {
+        color: rgb(0, 250, 71);
+         &:hover {
+            color:yellow;
+        }
+    }
+}

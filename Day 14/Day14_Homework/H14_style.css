@@ -14,35 +14,40 @@ img {
 li {
     list-style: none;
 }
+
 .auth {
     transform: translateY(100%);
 }
-.bang{
-      transform: translateY(100%);
-      z-index: 10;
+
+.bang {
+    transform: translateY(100%);
+    z-index: 10;
 }
+
 header {
+    button {
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        border: 1px solid orange;
+        background: whitesmoke;
+
+        &:hover {
+            background-color: orange;
+        }
+
+    }
+
     .navbar-brand {
         font-size: 2rem;
         font-weight: bold;
     }
 
     .icon {
-        border-radius: 50%;
-        width: 44px;
-        height: 44px;
         display: flex;
-        border: 1px solid orange;
         justify-content: center;
         align-items: center;
-
-        &:hover {
-            background-color: orange;
-        }
-
-        .fa-magnifying-glass {
-            color: green;
-        }
+       
     }
 
     .lock {
@@ -579,8 +584,9 @@ footer {
 
     a {
         color: rgb(0, 250, 71);
-         &:hover {
-            color:yellow;
+
+        &:hover {
+            color: yellow;
         }
     }
 }

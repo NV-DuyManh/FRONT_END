@@ -324,12 +324,22 @@ setInterval(() => {
   doimau.classList.toggle("text-danger");
 }, 500);
 
+setInterval(() => {
+  const doi = document.getElementById("organic");
+  doi.classList.toggle("text-danger");
+}, 500);
 const changeChu = document.getElementById("inputSearch");
 const chu = document.getElementById("search");
 const submit = document.getElementById("submit");
 submit.addEventListener("click", (e) => {
   chu.innerText = changeChu.value;
 });
+const fruit = document.getElementById("in");
+const hung  = document.getElementById("abc");
+const nut = document.getElementById("nut");
+nut.addEventListener("click", s=>{
+  hung.innerText = fruit.value;
+})
 
 const lockk = document.getElementById("lock");
 lock.addEventListener("click", (s) => {
@@ -352,7 +362,7 @@ function showCart() {
                           <td class="text-nowrap">${s.kg}</td>
                           <td>${s.quantity}</td>
                           <td>
-                            <button onclick="deleteCart(${index})" >
+                            <button onclick="xoa(${index})" >
                               <i class="fa-solid fa-delete-left text-danger"></i>
                             </button>
                           </td>
@@ -375,11 +385,11 @@ function addToCart(index) {
   }
 
   showCart();
-  updateCartCount();
+  dem();
 }
 
-function updateCartCount() {
-  const count = document.getElementById("cartCount");
+function dem() {
+  const count = document.getElementById("dem");
 
   let total = 0;
   cart.forEach(s => {
@@ -390,10 +400,15 @@ function updateCartCount() {
 }
 
 
-function deleteCart(index) {
-  cart.splice(index, 1);
+function xoa(index) {
+  if (cart[index].quantity > 1) {
+    cart[index].quantity -= 1;  
+  } else {
+    cart.splice(index, 1);      
+  }
+
   showCart();
-  updateCartCount();
+  dem();
 }
 
 // khi click san pham co roi tang so luong len

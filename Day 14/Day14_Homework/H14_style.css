@@ -9,7 +9,13 @@ img {
     height: 100%;
 }
 
-
+.tim{
+    transform: translateY(100%);
+    background-color: yellow;
+    li{
+        font-weight: bold;
+    }
+}
 
 li {
     list-style: none;

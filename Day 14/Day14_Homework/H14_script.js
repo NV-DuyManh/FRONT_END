@@ -309,6 +309,15 @@ log.addEventListener("click", (s) => {
   dangnhap.classList.toggle("d-none");
 });
 
+const timkiem = document.getElementById("ttim");
+ttim.addEventListener("click", s => {
+  s.preventDefault();
+  const nhap = document.querySelector(".tim");
+  nhap.classList.toggle("d-none");
+})
+
+
+
 setInterval(() => {
   const doimau = document.getElementById("search");
   doimau.classList.toggle("text-success");
@@ -317,9 +326,11 @@ setInterval(() => {
 
 const changeChu = document.getElementById("inputSearch");
 const chu = document.getElementById("search");
-changeChu.addEventListener("change", (e) => {
+const submit = document.getElementById("submit");
+submit.addEventListener("click", (e) => {
   chu.innerText = changeChu.value;
 });
+
 const lockk = document.getElementById("lock");
 lock.addEventListener("click", (s) => {
   s.preventDefault();
@@ -329,24 +340,37 @@ lock.addEventListener("click", (s) => {
 
 const cart = [];
 
-// function addToCart(index) {
-//   const food = listContent.find((_, i) => i == index);
-//   cart.push({ ...food, quantity: 1 });
-//   showCart();
-// }
+function showCart() {
+  const show = document.getElementById("cardfood");
+  show.innerHTML = "";
+
+  cart.forEach((s, index) => {
+    show.innerHTML += `<tr>
+                          <th scope="row">${index + 1}</th>
+                          <td><img src="${s.anh}" alt="" width="50"></td>
+                          <td>${s.tieude}</td>
+                          <td class="text-nowrap">${s.kg}</td>
+                          <td>${s.quantity}</td>
+                          <td>
+                            <button onclick="deleteCart(${index})" >
+                              <i class="fa-solid fa-delete-left text-danger"></i>
+                            </button>
+                          </td>
+                        </tr>`;
+  });
+}
+
 function addToCart(index) {
   const food = listContent[index];
 
-  // tìm sản phẩm đã tồn tại
-  const sanPhamDaCo = cart.find(
-    (item) => item.tieude === food.tieude && item.kg === food.kg
+  const sanPhamDaCo = cart.find(sp => 
+    sp.tieude === food.tieude && sp.kg === food.kg
   );
 
   if (sanPhamDaCo) {
-    // nếu đã có → tăng số lượng
+
     sanPhamDaCo.quantity += 1;
   } else {
-    // nếu chưa có → thêm mới
     cart.push({ ...food, quantity: 1 });
   }
 
@@ -354,60 +378,21 @@ function addToCart(index) {
   updateCartCount();
 }
 
-
-// function showCart() {
-//   const show = document.getElementById("cardfood");
-//   show.innerHTML = "";
-//   cart.forEach((s, index) => {
-//     show.innerHTML += `  <tr>
-//                       <th scope="row">${index + 1}</th>
-//                       <td><img src=${s.anh} alt=""></td>
-//                       <td>${s.tieude}</td>
-//                       <td class="text-nowrap">${s.kg}</td>
-//                       <td>${s.quantity}</td>
-//                       <td>
-//                         <button><i class="fa-solid fa-delete-left text-danger"></i></td></button>
-//                     </tr>`;
-//   });
-// }
-
 function updateCartCount() {
   const count = document.getElementById("cartCount");
 
   let total = 0;
-  cart.forEach(item => {
-    total += item.quantity;
+  cart.forEach(s => {
+    total += s.quantity;
   });
 
   count.innerText = total;
 }
 
 
-function showCart() {
-  const show = document.getElementById("cardfood");
-  show.innerHTML = "";
-
-  cart.forEach((s, index) => {
-    show.innerHTML += `
-      <tr>
-        <th scope="row">${index + 1}</th>
-        <td><img src="${s.anh}" alt="" width="50"></td>
-        <td>${s.tieude}</td>
-        <td class="text-nowrap">${s.kg}</td>
-        <td>${s.quantity}</td>
-        <td>
-          <button onclick="deleteCart(${index})" >
-            <i class="fa-solid fa-delete-left text-danger"></i>
-          </button>
-        </td>
-      </tr>
-    `;
-  });
-}
-
 function deleteCart(index) {
-  cart.splice(index, 1); // xóa đúng sản phẩm
-  showCart(); // render lại bảng
+  cart.splice(index, 1);
+  showCart();
   updateCartCount();
 }
 

@@ -58,13 +58,17 @@
             </li>
           </ul>
           <div class="d-flex gap-3">
-            <div class="icon">
-              <button> <i class="fa-solid fa-magnifying-glass text-success"></i></button>
+            <div class="icon position-relative">
+              <button> <i class="fa-solid fa-magnifying-glass text-success" id="ttim"></i></button>
+              <div class="tim position-absolute bottom-0 d-none ">
+                <li class="p-2 text-danger">Tim</li>
+                <li class="p-2 text-danger">Xem</li>
+              </div>
             </div>
             <div class="lock position-relative" id="lock">
               <button><i class="fa-solid fa-lock text-success"></i></button>
               <span id="cartCount" class="position-absolute bg-warning text-success">0</span>
-              <div class="position-absolute d-none bang bottom-0">
+              <div class="position-absolute d-none bang bottom-0 ">
                 <table class="table ">
                   <thead>
                     <tr>
@@ -77,8 +81,6 @@
                     </tr>
                   </thead>
                   <tbody id="cardfood">
-
-
                   </tbody>
                 </table>
               </div>

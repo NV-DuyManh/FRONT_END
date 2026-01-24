@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/Home.css">
+</head>
+
+<body>
+    <div class="left">
+        <header>
+            <h1 class="item  d-none">ZTK STORE</h1>
+
+            <i class="fa-solid fa-store item text-white" style="font-size: 1.5rem;"></i>
+            <button id="icon">
+                <i class="fa-solid fa-arrow-right-from-bracket item "></i>
+                <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180 item d-none "></i>
+            </button>
+        </header>
+
+        <ul class="menu">
+            <li class="d-flex align-items-center itemm">
+                <i class="fa-solid fa-gauge"></i>
+                <p class="item d-none">DASHBOARD</p>
+            </li>
+            <li class="d-flex  align-items-center itemm">
+                <i class="fa-solid fa-calendar-days"></i>
+                <p class="item d-none ">RESERVATION</p>
+            </li>
+            <li class="d-flex align-items-center itemm">
+                <i class="fa-solid fa-utensils"></i>
+                <p class="item d-none ">ORDER FOOD</p>
+            </li>
+            <li class="d-flex align-items-center itemm">
+                <i class="fa-solid fa-wallet"></i>
+                <p class="item d-none">BILLS</p>
+            </li>
+            <li class="d-flex  align-items-center itemm">
+                <i class="fa-solid fa-user"></i>
+                <p class="item d-none">INFORMATION</p>
+            </li>
+
+        </ul>
+
+    </div>
+    <div class="right">
+        <div class="tab">
+            <div class=" d-flex gap-3 tb ">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button>
+                    <i class="fa-solid fa-bell"></i> </button>
+                <button>
+                    <i class="fa-solid fa-envelope"></i>
+                </button>
+            </div>
+            <div id="interface" class="anh ">
+                <button class="u"><img src="../img/user.jpg" alt=""></button>
+
+                <div id="log" class="log d-flex d-none flex-nowrap gap-2 justify-content-center align-items-center ">
+                    <button class="text-light bg-success p-1">LOG IN</button>
+                    <button class="text-light bg-danger p-1">LOG OUT</button>
+                </div>
+            </div>
+        </div>
+        <div class="box">Dashboard</div>
+        <div class="box">
+            <div class="container mt-3  p-2 order">
+                <div class="row row-cols-xl-4  row-cols-lg-3 row-cols-md-2 row-cols-1 g-3 table"></div>
+            </div>
+        </div>
+        <div class="box p-3">
+            <div class="container food">
+                <div class="row g-3 align-items-center">
+                    <div class="col-12 col-md-8 col-lg-4 order-md-1 order-lg-1">
+                        <div class="chonBan d-flex align-items-center justify-content-between bg-light">
+                            <p class="m-0 text-dark fw-bold text-nowrap ">
+                                <i class="fa-solid fa-book-journal-whills"></i> Choose a table
+                            </p>
+                            <button class="fw-bold ">
+                                <i class="fa-solid fa-cart-shopping"></i> Order
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 col-lg-6 order-md-3 order-lg-2">
+                        <div class="search position-relative">
+                            <input class="form-control " type="text" placeholder="Search...">
+                            <button class="fw-bold ">Submit Now</button>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 col-lg-2 order-md-2 order-lg-3">
+                        <div class="add ">
+                            <button class="fw-bold  d-flex justify-content-center align-items-center gap-2">
+                                <i class="fa-solid fa-plus fs-6" style="font-size: 12px;"></i>
+                                Add Food
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="box">paybill</div>
+        <div class="box">info</div>
+    </div>
+
+    </div>
+
+    <!-- Modal Booking -->
+    <div class="modal fade" id="modalBooking" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="exampleModalLabel">
+                        <i class="fa-solid fa-utensils"></i>
+                        BOOKING FORM
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold text-secondary ">
+                            <i class="fa-solid fa-user me-1 text-primary"></i>CUSTOMER NAME
+                        </label>
+                        <input id="customer_name" type="text" class="form-control custom-input"
+                            placeholder="Customer Name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold text-secondary small">
+                            <i class="fa-solid fa-users me-1 text-primary"></i> QUANTITY
+                        </label>
+                        <input id="quantity" type="number" class="form-control custom-input" placeholder="Quantity">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                    <button id="send" type="button" class="btn btn-primary">SEND</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/getTable.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="../js/home.js"></script>
+</body>
+
+</html>

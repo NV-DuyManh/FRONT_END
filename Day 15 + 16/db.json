@@ -76,9 +76,87 @@
   "foods": [
     {
       "id": "1",
-      "name": "ga ran",
-      "imgUrl": "dnfhmmhnn",
-      "price": 10
+      "name": "Soup",
+      "imgUrl": "../img/bread-soup.png",
+      "price": 76,
+      "quantity": 65
+    },
+    {
+      "id": "2",
+      "name": "Potato",
+      "imgUrl": "../img/potato.png",
+      "price": 10,
+      "quantity": 88
+    },
+    {
+      "id": "3",
+      "name": "Pate",
+      "imgUrl": "../img/pate.png",
+      "price": 6,
+      "quantity": 45
+    },
+    {
+      "id": "4",
+      "name": "Rolls",
+      "imgUrl": "../img/rolls.png",
+      "price": 18,
+      "quantity": 9
+    },
+    {
+      "id": "5",
+      "name": "Chicken",
+      "imgUrl": "../img/chicken.png",
+      "price": 40,
+      "quantity": 2
+    },
+    {
+      "id": "6",
+      "name": "Pizza",
+      "imgUrl": "../img/pizza.png",
+      "price": 14,
+      "quantity": 9
+    },
+    {
+      "id": "7",
+      "name": "Cake",
+      "imgUrl": "../img/cake.png",
+      "price": 98,
+      "quantity": 33
+    },
+    {
+      "id": "8",
+      "name": "Noodles",
+      "imgUrl": "../img/noodles.png",
+      "price": 17,
+      "quantity": 1
+    },
+    {
+      "id": "9",
+      "name": "Chicken",
+      "imgUrl": "../img/shrimp.png",
+      "price": 17,
+      "quantity": 7
+    },
+    {
+      "id": "10",
+      "name": "Sausage",
+      "imgUrl": "../img/sausage.png",
+      "price": 3,
+      "quantity": 45
+    },
+    {
+      "id": "11",
+      "name": "Hot Pot",
+      "imgUrl": "../img/hotPot.png",
+      "price": 43,
+      "quantity": 32
+    },
+    {
+      "id": "12",
+      "name": "Shrimp",
+      "imgUrl": "../img/tom.png",
+      "price": 354,
+      "quantity": 5
     }
   ],
   "profile": {

@@ -178,6 +178,11 @@ body {
                 .u {
                     border-radius: 50%;
                     border: 1px solid orangered;
+                    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+
+                    &:hover {
+                        background-image: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+                    }
 
                     img {
                         width: 35px;
@@ -222,8 +227,7 @@ body {
             }
         }
 
-        .food {
-
+        .choose {
             .chonBan {
                 position: relative;
                 border-radius: 30px;
@@ -242,7 +246,6 @@ body {
                     border: none;
                     transition: 0.3s;
 
-
                     &:hover {
                         background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
                         color: yellow;
@@ -250,14 +253,12 @@ body {
                 }
             }
 
-
             .search {
                 input {
                     padding: 13px;
                     border-radius: 30px;
                     width: 100%;
                     border: 1px solid #ccc;
-
                 }
 
                 button {
@@ -297,11 +298,96 @@ body {
             }
         }
 
+        .food {
+            img {
+                width: 250px;
+                margin: auto;
+                padding-top: 10px;
+                height:200px;
+            }
+
+            .monAn {
+                position: relative;
+                padding: 15px 10px 0px 10px;
+
+                p {
+                    position: absolute;
+                    background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    color: white;
+                    align-items: center;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    transform: translate(-20%, 50%);
+
+                    button {
+                        border: none;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+                    }
+
+                    .fa-pen-to-square {
+                        color: green;
+                    }
+
+                    .fa-trash {
+                        color: orangered;
+                    }
+                }
+            }
+
+
+
+            .editQuantity {
+                text-align: center;
+                margin-top: 0px;
+
+                button {
+                    background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    color: white;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+                }
+
+                input {
+                    width: 100px;
+                    padding: 10px 5px;
+                    border-radius: 10px;
+                    border: 1px solid gray;
+                    text-align: center;
+                    font-weight: bold;
+
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+
+                    -moz-appearance: textfield;
+                }
+            }
+        }
+
     }
 
-    /* .main-right {
-            background: #f3f4f6;
-        } */
+
 
 
 

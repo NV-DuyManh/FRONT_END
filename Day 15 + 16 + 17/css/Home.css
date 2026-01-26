@@ -231,8 +231,13 @@ body {
             .chonBan {
                 position: relative;
                 border-radius: 30px;
-                padding: 13px;
                 width: 100%;
+
+                select {
+                    border-radius: 30px;
+                    padding: 13px;
+                    width: 100%;
+                }
 
                 button {
                     position: absolute;
@@ -303,7 +308,7 @@ body {
                 width: 250px;
                 margin: auto;
                 padding-top: 10px;
-                height:200px;
+                height: 200px;
             }
 
             .monAn {
@@ -336,14 +341,26 @@ body {
                         height: 30px;
                         border-radius: 50%;
                         background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+
+                        &:hover {
+                            background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+                        }
                     }
 
                     .fa-pen-to-square {
                         color: green;
+
+                        &:hover {
+                            color: yellow;
+                        }
                     }
 
                     .fa-trash {
                         color: orangered;
+
+                        &:hover {
+                            color: yellow;
+                        }
                     }
                 }
             }
@@ -364,6 +381,11 @@ body {
                     align-items: center;
                     text-align: center;
                     justify-content: center;
+
+                    &:hover {
+                        color: red;
+                        background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+                    }
                 }
 
                 input {

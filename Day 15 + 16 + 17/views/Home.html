@@ -86,9 +86,11 @@
                     <div class="col-12 col-md-8 col-lg-4 order-md-1 order-lg-1">
                         <div class="chonBan d-flex align-items-center justify-content-between bg-light">
                             <p class="m-0 text-dark fw-bold text-nowrap ">
-                                <i class="fa-solid fa-book-journal-whills"></i> Choose a table
                             </p>
-                            <button class="fw-bold ">
+                            <select class="form-select" id="choose">
+                                <option value="" selected class="fw-bold">Choose a table</option>
+                            </select>
+                            <button class="fw-bold" id="order">
                                 <i class="fa-solid fa-cart-shopping"></i> Order
                             </button>
                         </div>
@@ -114,7 +116,6 @@
             </div>
             <div class="container mt-5">
                 <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-1 g-3 food">
-
                 </div>
             </div>
 

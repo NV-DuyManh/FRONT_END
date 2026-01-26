@@ -1,13 +1,20 @@
 async function getTable() {
     const data = await getData(URL_TABLE);
     const listTable = document.querySelector(".table");
+    // kiem thung chua select 
+    const choose = document.getElementById("choose");
     data.forEach(s => {
+        // if !s.status bien,innerHTML += `<option value="1">Table ${s.id}</option>`
+
+        if(!s.status){
+            choose.innerHTML += `<option value="${s.id}">Table ${s.id}</option>`
+        }
         const img = s.status ? `../img/restaurant.png` : `../img/nhahang_nguoi.png`;
         const nut = s.status ? `  <button type="button" onClick=getIdTable(${s.id})
                                         class="btn btn-primary text-dark bg-warning d-flex align-items-center gap-2"
                                         data-bs-toggle="modal" data-bs-target="#modalBooking">
                                         <i class="fa-solid fa-toolbox"></i> BOOKING
-                                    </button>` : `  <a href="#" class="btn btn-primary text-light bg-success">
+                                    </button>` : `  <a onClick=getIdAdd(${s.id}) href="#" class="btn btn-primary text-light bg-success">
                                         <i class="fa-solid fa-circle-plus"></i> ADD</a>
                                     <a href="#" class="btn btn-primary text-light bg-danger">
                                         <i class="fa-solid fa-cart-plus"></i> CART</a>`;
@@ -45,5 +52,13 @@ function getIdTable(id) {
     })
 }
 
+function getIdAdd(id) {
 
+  listBox[1].style.display = "none";
+  listBox[2].style.display = "block";
+
+  // KIEM SELECT => .VALUE  = id ;
+        const chonBan = document.getElementById("choose");
+        chonBan.value = id;
+}
 

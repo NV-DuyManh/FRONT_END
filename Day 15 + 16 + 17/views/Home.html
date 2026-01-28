@@ -105,7 +105,8 @@
 
                     <div class="col-12 col-md-4 col-lg-2 order-md-2 order-lg-3">
                         <div class="add ">
-                            <button class="fw-bold  d-flex justify-content-center align-items-center gap-2">
+                            <button class="fw-bold  d-flex justify-content-center align-items-center gap-2"
+                                data-bs-toggle="modal" data-bs-target="#modalAddCart">
                                 <i class="fa-solid fa-plus fs-6" style="font-size: 12px;"></i>
                                 Add Food
                             </button>
@@ -157,6 +158,48 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
                     <button id="send" type="button" class="btn btn-primary">SEND</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Add Cart  -->
+    <div class="modal fade" id="modalAddCart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="exampleModalLabel">
+                        <i class="fa-solid fa-utensils"></i>
+                        ADD FOOD
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="margin: 0px 30px;">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold text-secondary ">
+                            <i class="fa-solid fa-user me-1 text-primary"></i>NAME
+                        </label>
+                        <input id="food_name" type="text" class="form-control custom-input"
+                            placeholder="Customer Name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold text-secondary small">
+                            <i class="fa-solid fa-money-bill-1-wave text-warning"></i> PRICE
+                        </label>
+                        <input id="price" type="number" class="form-control custom-input" placeholder="Quantity">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold text-secondary small"> IMAGE </label>
+                        <input type="file" id="chooseImage"class="form-control custom-input" placeholder="Quantity">                        
+                    </div>
+                    <div class="anh">
+                        <img src="../img/logo.jpg" style="height: 250px" alt="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                    <button id="send" type="button" class="btn btn-primary">UPLOAD</button>
                 </div>
             </div>
         </div>

@@ -29,12 +29,15 @@ async function getFoods() {
         const cong = item.querySelector(".fa-plus");
         const soLuong = item.querySelector(".quantity");
         tru.addEventListener("click", (s) => {
-            if (soLuong.value > 0) {
-                soLuong.value = soLuong.value - 1;
+            const slHienTai = parseInt(soLuong.value) || 0;
+            if (slHienTai > 0) {
+                soLuong.value = slHienTai - 1;
             }
         })
+
         cong.addEventListener("click", (s) => {
-            soLuong.value = parseInt(soLuong.value) + 1;
+            const slHienTai = parseInt(soLuong.value) || 0;
+            soLuong.value = slHienTai + 1;
         })
 
 
@@ -60,17 +63,18 @@ order.addEventListener("click", async () => {
     listFood.forEach((s) => {
         const soLuong = s.querySelector(".quantity");
         const idFood = s.querySelector(".doimau").innerText;
-        if (soLuong.value > 0) {
+        const quantityValue = parseInt(soLuong.value) || 0;
+        if (quantityValue > 0) {
             const indexFood = bill.findIndex(s => s.idFood == idFood);
             if (indexFood == -1) {
                 bill.push({
                     idFood: idFood,
-                    quantity: soLuong.value
+                    quantity: quantityValue
                 });
             } else {
-                bill[indexFood].quantity = parseInt(bill[indexFood].quantity) + parseInt(soLuong.value);
+                const billQuantity = parseInt(bill[indexFood].quantity) || 0;
+                bill[indexFood].quantity = billQuantity + quantityValue;
             }
-
         }
     })
     if (!bill.length) {
@@ -82,7 +86,7 @@ order.addEventListener("click", async () => {
         bill: bill
     }
     if (billOld) {
-       editById(URL_ORDER, newOrder) 
+        editById(URL_ORDER, newOrder)
     } else {
         add(URL_ORDER, newOrder);
     }

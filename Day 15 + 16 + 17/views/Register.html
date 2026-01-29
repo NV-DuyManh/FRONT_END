@@ -13,55 +13,60 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/LogIn.css">
+    <link rel="stylesheet" href="../css/Register.css">
 </head>
 
 <body>
     <div class="container  ">
         <div class="row row-cols-1 row-cols-lg-2 box justify-content-center">
-            <div class="col bg-white p-3 order-2 order-lg-1 left">
-                <div class="dangNhap d-flex justify-content-center align-items-center gap-3">
-                    <i class="fa-solid fa-right-to-bracket"></i>
-                    <h1> Đăng Nhập</h1>
+            <div
+                class="col p-3 text-center flex-column text-light align-items-center d-flex justify-content-center right">
+                <h1 class="mt-4">Chào mừng trở lại!</h1>
+                <p class="mt-4">Để giữ kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
+                <button class="p-3 mb-4 rounded-5 mt-4 " style="width: 150px;">ĐĂNG NHẬP</button>
+            </div>
+            <div class="col bg-white p-3 left">
+                <div class="dangKi d-flex justify-content-center align-items-center gap-3">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <h1> Tạo Tài Khoản</h1>
                 </div>
                 <div class="social fs-5 ">
                     <a href=""><i class="fa-brands fa-facebook-f"></i></a>
                     <a href=""><i class="fa-brands fa-google"></i></a>
                     <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <p style="margin-top: 15px">hoặc sử dụng tài khoản của bạn</p>
+                <p style="margin-top: 15px">hoặc sử dụng email để đăng ký</p>
                 <div class="input">
-                    <input type="text" class="form-control rounded-5 p-3" placeholder="Email">
+                    <input type="text" class="form-control rounded-5 p-3" placeholder="Họ và tên">
+                    <input type="email" class="form-control mt-3 rounded-5 p-3" placeholder="Email">
 
                     <div class="input-group mt-3">
-                        <input type="password" class="form-control p-3 rounded-start-5 border-end-0" id="passwordInput"
-                            placeholder="Password">
-                        <span class="input-group-text  bg-white rounded-end-5 border-start-0" style="cursor: pointer;"
-                            onclick="toggleLoginPassword()">
+                        <input type="password" class="form-control p-3 rounded-start-5 border-end-0" id="pass1"
+                            placeholder="Mật khẩu">
+                        <span class="input-group-text bg-white rounded-end-5 border-start-0" style="cursor: pointer;"
+                            onclick="togglePassword('pass1', this)">
+                            <i class="fa-solid fa-eye"></i>
+                        </span>
+                    </div>
+
+                    <div class="input-group mt-3">
+                        <input type="password" class="form-control p-3 rounded-start-5 border-end-0" id="pass2"
+                            placeholder="Xác nhận mật khẩu">
+                        <span class="input-group-text bg-white rounded-end-5 border-start-0" style="cursor: pointer;"
+                            onclick="togglePassword('pass2', this)">
                             <i class="fa-solid fa-eye"></i>
                         </span>
                     </div>
                 </div>
-                <div class="quenMK" style="margin-top: 20px; font-size: 20px; font-weight: bold;">
-                    <a href="">Quên mật khẩu?</a>
-                </div>
-                <button class="p-3 mb-5 rounded-5 mt-4 " style="width: 150px;">ĐĂNG NHẬP </button>
-            </div>
-
-            <div
-                class="col order-1 order-lg-2 p-3 text-center flex-column text-light align-items-center d-flex justify-content-center right">
-                <h1 class="mt-4">Xin chào, Bạn!</h1>
-                <p class="mt-4">Nhập thông tin cá nhân của bạn và bắt đầu hành trình với chúng tôi</p>
-                <button class="p-3 mb-4 rounded-5 mt-4 " style="width: 150px;">ĐĂNG KÝ</button>
+                <button class="p-3 mb-2 rounded-5 mt-4 " style="width: 150px;">ĐĂNG NHẬP </button>
             </div>
         </div>
     </div>
 
     <script>
-        function toggleLoginPassword() {
-            const input = document.getElementById('passwordInput');
-            const icon = document.querySelector('.input-group-text i');
-
+        function togglePassword(inputId, iconSpan) {
+            var input = document.getElementById(inputId);
+            var icon = iconSpan.querySelector('i');
             if (input.type === "password") {
                 input.type = "text";
                 icon.classList.remove('fa-eye');

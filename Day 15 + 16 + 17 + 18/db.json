@@ -75,12 +75,6 @@
   ],
   "foods": [
     {
-      "id": "1",
-      "name": "Soup",
-      "imgUrl": "../img/bread-soup.png",
-      "price": 76
-    },
-    {
       "id": "2",
       "name": "Potato",
       "imgUrl": "../img/potato.png",
@@ -145,47 +139,13 @@
       "name": "Shrimp",
       "imgUrl": "../img/tom.png",
       "price": 354
+    },
+    {
+      "id": 13,
+      "name": "dfgbn",
+      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1769748235/x9cgqaa7dcodm3uxjziv.png",
+      "price": 45
     }
   ],
-  "orders": [
-    {
-      "id": "1",
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": 5
-        },
-        {
-          "idFood": "2",
-          "quantity": 5
-        },
-        {
-          "idFood": "3",
-          "quantity": 6
-        },
-        {
-          "idFood": "4",
-          "quantity": "3"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": "3"
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "bill": [
-        {
-          "idFood": "2",
-          "quantity": "2"
-        }
-      ]
-    }
-  ]
+  "orders": []
 }

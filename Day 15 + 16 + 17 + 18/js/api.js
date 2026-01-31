@@ -37,3 +37,13 @@ function add(url, object) {
     })
     .catch(error => console.error('Error creating post:', error));
 }
+
+function deleted(url, id) {
+  fetch(`${url}/${id}`, {
+    method: 'DELETE',
+  })
+    .then(response => response.json())
+    .then(data => {
+    })
+    .catch(error => console.error('Lỗi khi xóa Item này', error));
+}

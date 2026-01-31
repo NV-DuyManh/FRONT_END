@@ -106,7 +106,7 @@
                     <div class="col-12 col-md-4 col-lg-2 order-md-2 order-lg-3">
                         <div class="add ">
                             <button class="fw-bold  d-flex justify-content-center align-items-center gap-2"
-                                data-bs-toggle="modal" data-bs-target="#modalAddCart">
+                                data-bs-toggle="modal" data-bs-target="#modalAddCart" id="addFood">
                                 <i class="fa-solid fa-plus fs-6" style="font-size: 12px;"></i>
                                 Add Food
                             </button>
@@ -137,7 +137,7 @@
                         <i class="fa-solid fa-utensils"></i>
                         BOOKING FORM
                     </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
@@ -170,41 +170,106 @@
                 <div class="modal-header">
                     <h5 class="modal-title fw-bold" id="exampleModalLabel">
                         <i class="fa-solid fa-utensils"></i>
-                        ADD FOOD
+                        <span id="titleFood">ADD FOOD</span>
                     </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" style="margin: 0px 30px;">
                     <div class="mb-3">
                         <label class="form-label fw-bold text-secondary ">
                             <i class="fa-solid fa-user me-1 text-primary"></i>NAME
                         </label>
-                        <input id="food_name" type="text" class="form-control custom-input"
-                            placeholder="Customer Name">
+                        <input id="foodName" type="text" class="form-control custom-input" placeholder="Dish Name">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label fw-bold text-secondary small">
                             <i class="fa-solid fa-money-bill-1-wave text-warning"></i> PRICE
                         </label>
-                        <input id="price" type="number" class="form-control custom-input" placeholder="Quantity">
+                        <input id="price" type="number" class="form-control custom-input" placeholder="Enter Price">
                     </div>
                     <div class="mb-3">
                         <label class="form-label fw-bold text-secondary small"> IMAGE </label>
-                        <input type="file" id="chooseImage"class="form-control custom-input" placeholder="Quantity">                        
+                        <input type="file" id="chooseImage" class="form-control custom-input">
                     </div>
                     <div class="anh">
-                        <img src="../img/logo.jpg" style="height: 250px" alt="">
+                        <img id="img_food" src="../img/logo.jpg" style="height: 250px" alt="">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
-                    <button id="send" type="button" class="btn btn-primary">UPLOAD</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
+                    <button id="upFood" type="button" class="btn btn-primary"> <span id="ftitte">ADD FOOD</span> <i
+                            class="fa-solid fa-spinner"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal xoa san pham -->
+    <div class="modal fade" id="modaldelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold " id="exampleModalLabel">
+                        CONFIRM DELETE
+                    </h5>
+                    <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p style="font-size: 20px;">Are you sure you want to delete this item?</p>
+                </div>
+                <div class="modal-footer align-items-center d-flex justify-content-center gap-5">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
+                    <button id="deleteFood" type="button" class="btn btn-danger">DELETE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Bill -->
+    <div class="modal fade" id="modalbill" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="exampleModalLabel">
+                        <i class="fa-solid fa-utensils"></i>
+                        BILL DETAILS
+                    </h5>
+                    <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Table 7</h5>
+                    <table class="table table-bordered border-dark mt-3">
+                        <thead>
+                            <tr class="text-center">
+                                <th>ID</th>
+                                <th>Dish Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center">
+                                <td class="fw-bold">1</td>
+                                <td>Gà</td>
+                                <td>50 $</td>
+                                <td>100</td>
+                                <td>5000$</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <h5 class="mt-3 text-center">Total Bill: 0 $</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
+                    <button id="send" type="button" class="btn btn-success">PAY BILL</button>
                 </div>
             </div>
         </div>
     </div>
     <script src="../js/api.js"></script>
+    <script src="../js/configCloundianary.js"></script>
     <script src="../js/getTable.js"></script>
     <script src="../js/getFood.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

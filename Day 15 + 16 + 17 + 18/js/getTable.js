@@ -4,7 +4,6 @@ async function getTable() {
     // kiem thung chua select 
     const choose = document.getElementById("choose");
     data.forEach(s => {
-        // if !s.status bien,innerHTML += `<option value="1">Table ${s.id}</option>`
 
         if(!s.status){
             choose.innerHTML += `<option value="${s.id}">Table ${s.id}</option>`
@@ -16,7 +15,7 @@ async function getTable() {
                                         <i class="fa-solid fa-toolbox"></i> BOOKING
                                     </button>` : `  <a onClick=getIdAdd(${s.id}) href="#" class="btn btn-primary text-light bg-success">
                                         <i class="fa-solid fa-circle-plus"></i> ADD</a>
-                                    <a href="#" class="btn btn-primary text-light bg-danger">
+                                    <a href="#" class="btn btn-primary text-light bg-danger" data-bs-toggle="modal" data-bs-target="#modalbill">
                                         <i class="fa-solid fa-cart-plus"></i> CART</a>`;
         listTable.innerHTML += `    <div class="col ">
                         <div class="card text-center xe">

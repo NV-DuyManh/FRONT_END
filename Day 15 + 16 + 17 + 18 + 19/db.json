@@ -2,9 +2,9 @@
   "tables": [
     {
       "id": "1",
-      "nameCustomer": "fghn",
-      "quantity": "34",
-      "status": false
+      "nameCustomer": "",
+      "quantity": "0",
+      "status": true
     },
     {
       "id": "2",
@@ -75,6 +75,12 @@
   ],
   "foods": [
     {
+      "id": "1",
+      "name": "Soup",
+      "imgUrl": "../img/bread-soup.png",
+      "price": 45
+    },
+    {
       "id": "2",
       "name": "Potato",
       "imgUrl": "../img/potato.png",
@@ -129,23 +135,25 @@
       "price": 3
     },
     {
-      "id": "11",
-      "name": "Hot Pot",
-      "imgUrl": "../img/hotPot.png",
-      "price": 43
-    },
-    {
       "id": "12",
       "name": "Shrimp",
       "imgUrl": "../img/tom.png",
       "price": 354
-    },
-    {
-      "id": 13,
-      "name": "dfgbn",
-      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1769748235/x9cgqaa7dcodm3uxjziv.png",
-      "price": 45
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "id": "2",
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 3
+        },
+        {
+          "idFood": "2",
+          "quantity": 1
+        }
+      ]
+    }
+  ]
 }

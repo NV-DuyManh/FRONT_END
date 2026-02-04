@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<style>
+  .shape {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    
+    /* TRẠNG THÁI 1: HÌNH TRÒN */
+    /* Tạo hình tròn bằng border-radius */
+    border-radius: 50%;
+    
+    /* Khai báo một đa giác 10 điểm bao quanh viền (để khớp với 10 điểm của ngôi sao) */
+    /* Thực tế nó là hình vuông, nhưng bị border-radius cắt thành tròn */
+    clip-path: polygon(
+      0% 0%, 50% 0%, 100% 0%, 
+      100% 50%, 100% 100%, 50% 100%, 
+      0% 100%, 0% 50%, 0% 0%, 0% 0%
+    );
+    
+    /* Hiệu ứng chuyển đổi mượt mà */
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    cursor: pointer;
+  }
+
+  /* TRẠNG THÁI 2: HOVER THÀNH NGÔI SAO */
+  .shape:hover {
+    /* Bỏ bo tròn */
+    border-radius: 0%;
+    
+    /* Biến các điểm ở trên thành toạ độ ngôi sao */
+    clip-path: polygon(
+      50% 0%, 61% 35%, 98% 35%, 
+      68% 57%, 79% 91%, 50% 70%, 
+      21% 91%, 32% 57%, 2% 35%, 39% 35%
+    );
+    
+    /* Đổi màu để đẹp hơn (tuỳ chọn) */
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    transform: rotate(360deg); /* Xoay 1 vòng cho ngầu */
+  }
+  
+  /* Căn giữa màn hình để dễ nhìn */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+
+  <div class="shape"></div>
+
+</body>
+</html>

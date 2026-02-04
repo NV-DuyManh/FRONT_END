@@ -23,9 +23,31 @@ h6 {
     margin: 0;
 }
 
-th {
-    color: red !important;
-    background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+:root {
+    --bg-btn: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+}
+
+hr {
+    width: 100%;
+    opacity: 1;
+}
+
+.cartt {
+    th {
+        background: none;
+        color: red;
+    }
+
+}
+
+.anhTable {
+    width: 50px;
+}
+
+
+
+.bg-yg {
+    background-image: var(--bg-btn);
 }
 
 .box {
@@ -48,6 +70,8 @@ th {
 }
 
 body {
+    margin: 0;
+
     .left {
         background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 
@@ -221,10 +245,10 @@ body {
         }
 
         .order {
-            .xe {
+            /* .xe {
                 background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 
-            }
+            } */
 
             .quantity {
                 background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
@@ -321,10 +345,11 @@ body {
 
         .food {
             img {
-                width: 250px;
+                /* width: 250px; */
                 margin: auto;
                 padding-top: 10px;
-                height: 200px;
+                height: 150px;
+                padding: 5px;
             }
 
             .monAn {
@@ -405,7 +430,7 @@ body {
                 }
 
                 input {
-                    width: 100px;
+                    width: 60px;
                     padding: 10px 5px;
                     border-radius: 10px;
                     border: 1px solid gray;
@@ -423,6 +448,265 @@ body {
             }
         }
 
+        .bills {
+            .card {
+                box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            }
+
+            .card-header {
+                background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+                color: white;
+            }
+
+            .card-body {
+                background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+            }
+
+            .card-footer {
+                background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+            }
+        }
+
+        .infor {
+            margin-top: 50px;
+
+            .in4 {
+                margin: auto;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+                background: white;
+                max-width: 700px;
+                width: 100%;
+            }
+
+            .infor-left {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+
+                transition: all 0.4s ease;
+
+                .anhUser {
+                    position: relative;
+                    width: 120px;
+                    height: 120px;
+                    margin-bottom: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 20px;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: -15px;
+                        left: -15px;
+                        right: -15px;
+                        bottom: -15px;
+
+                        background-color: #ff4d4d;
+                        z-index: 0;
+
+                        border-radius: 50%;
+                        clip-path: polygon(0% 0%, 50% 0%, 100% 0%,
+                                100% 50%, 100% 100%, 50% 100%,
+                                0% 100%, 0% 50%, 0% 0%, 0% 0%);
+
+                        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+                        transform: rotate(720deg);
+                    }
+
+                    img {
+                        position: relative;
+                        z-index: 1;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        object-fit: cover;
+
+                        transition: none;
+                    }
+                }
+
+                p {
+                    margin-top: 5px;
+                    color: #777;
+                    font-size: 0.9rem;
+                    transition: color 0.3s;
+                    font-size: 1.1rem;
+                }
+
+                button {
+                    margin-top: 20px;
+                    color: white;
+                    padding: 8px 5px;
+                    border: none;
+                    border-radius: 50px;
+                    width: 100px;
+                    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+                    color: white;
+
+                    i {
+                        margin-right: 8px;
+                    }
+
+                    &:hover {
+
+                        background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+                        color: red;
+                    }
+                }
+
+                &:hover {
+                    background-color: #d63031;
+
+                    h2 {
+                        color: greenyellow;
+                    }
+
+                    p {
+                        color: white;
+
+                    }
+
+                    .anhUser::before {
+                        background-color: #f1c40f;
+                        border-radius: 0;
+                        transform: rotate(360deg) scale(1.2);
+                        clip-path: polygon(50% 0%, 61% 35%, 98% 35%,
+                                68% 57%, 79% 91%, 50% 70%,
+                                21% 91%, 32% 57%, 2% 35%, 39% 35%);
+                    }
+                }
+            }
+
+            .infor-right {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 40px !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                &:hover {
+                    background-image: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+                }
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                hr {
+                    border: 0;
+                    border: 1px solid white;
+                    width: 100%;
+                    margin: 20px 0;
+                    opacity: 1;
+                }
+
+                .inforBasic,
+                .inforBasic2 {
+                    margin-bottom: 15px;
+
+                    h3 {
+                        font-size: 1.1rem;
+
+                        margin-bottom: 5px;
+                    }
+
+                    p {
+                        color: rgba(255, 255, 255, 0.7);
+                        font-weight: 500;
+                        margin: 0;
+                        font-size: 0.9rem;
+                    }
+                }
+
+                .inforBasic {
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+
+                .icon {
+                    margin-top: 10px;
+
+                    i {
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                        transition: transform 0.2s;
+
+                        &:hover {
+                            transform: scale(2);
+                            opacity: 1;
+                            color: greenyellow;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+/* Loading Overlay Full Screen */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Màu nền đen mờ */
+    background: rgba(0, 0, 0, 0.6);
+    /* Hiệu ứng làm mờ hậu cảnh (Glassmorphism) */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 9999;
+    /* Đảm bảo nằm trên cùng, đè lên cả Modal */
+
+    /* Căn giữa spinner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Mặc định ẩn đi */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    /* Khi có class active thì hiện lên */
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .spinner-container {
+        i {
+            font-size: 60px;
+            /* Kích thước lớn */
+            /* Màu Gradient cho đẹp */
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            /* Hiệu ứng xoay vô tận */
+            animation: spinLoading 1s linear infinite;
+        }
+    }
+}
+
+/* Keyframes cho hiệu ứng xoay */
+@keyframes spinLoading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 

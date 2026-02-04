@@ -1,11 +1,11 @@
 async function getTable() {
     const data = await getData(URL_TABLE);
-    const listTable = document.querySelector(".table");
+    const listTable = document.querySelector(".tables");
     // kiem thung chua select 
     const choose = document.getElementById("choose");
     data.forEach(s => {
 
-        if(!s.status){
+        if (!s.status) {
             choose.innerHTML += `<option value="${s.id}">Table ${s.id}</option>`
         }
         const img = s.status ? `../img/restaurant.png` : `../img/nhahang_nguoi.png`;
@@ -15,7 +15,7 @@ async function getTable() {
                                         <i class="fa-solid fa-toolbox"></i> BOOKING
                                     </button>` : `  <a onClick=getIdAdd(${s.id}) href="#" class="btn btn-primary text-light bg-success">
                                         <i class="fa-solid fa-circle-plus"></i> ADD</a>
-                                    <a href="#" class="btn btn-primary text-light bg-danger" data-bs-toggle="modal" data-bs-target="#modalbill">
+                                    <a onClick=getIdCart(${s.id}) href="#" class="btn btn-primary text-light bg-danger" data-bs-toggle="modal" data-bs-target="#modalbill">
                                         <i class="fa-solid fa-cart-plus"></i> CART</a>`;
         listTable.innerHTML += `    <div class="col ">
                         <div class="card text-center xe">
@@ -53,11 +53,45 @@ function getIdTable(id) {
 
 function getIdAdd(id) {
 
-  listBox[1].style.display = "none";
-  listBox[2].style.display = "block";
+    listBox[1].style.display = "none";
+    listBox[2].style.display = "block";
 
-  // KIEM SELECT => .VALUE  = id ;
-        const chonBan = document.getElementById("choose");
-        chonBan.value = id;
+    // KIEM SELECT => .VALUE  = id ;
+    const chonBan = document.getElementById("choose");
+    chonBan.value = id;
+}
+
+async function getIdCart(id) {
+    const orders = await getData(URL_ORDER);
+    const dataFood = await getData(URL_FOOD);
+    const numberTable = document.getElementById("numberTable");
+    numberTable.innerText = `Table ${id}`;
+    const order = orders.find(o => o.id == id);
+
+    if (!order) {
+        alert("Bàn này chưa có order!");
+        return;
+    }
+    // kiem id tbody => cartShow
+    // order.bill foreach => s  =>  dataFood.find => f s.idFood == f.id => food
+    const cartShow = document.getElementById("cartShow");
+    cartShow.innerHTML = "";
+    let total = 0;
+    order.bill.forEach(s => {
+
+        const food = dataFood.find(f => f.id == s.idFood);
+        total += s.quantity * food.price;
+        cartShow.innerHTML += `   <tr class="text-center align-middle">
+                                <td class="fw-bold">1</td>
+                                <td class="anhTable"><img src="${food.imgUrl}" alt=""></td>
+                                <td>${food.name}</td>
+                                <td>${food.price} $</td>
+                                <td>${s.quantity}</td>
+                                <td>${s.quantity * food.price} $</td>
+                            </tr>`
+
+    })
+    const totalElement = document.getElementById("totalBill")
+    totalElement.innerText = `Total Bill: ${total} $`
 }
 

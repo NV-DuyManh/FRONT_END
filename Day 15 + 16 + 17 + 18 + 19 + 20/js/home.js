@@ -23,8 +23,13 @@ listLI.forEach((li, index) => {
     li.addEventListener("click", () => {
         listBox.forEach(e => e.style.display = "none");
         listBox[index].style.display = "block";
+        localStorage.setItem("key", index);
     });
 });
 
+const checkIndex = localStorage.getItem("key");
+if (checkIndex) {
+    listBox[checkIndex].style.display = "block";
+}
 
 

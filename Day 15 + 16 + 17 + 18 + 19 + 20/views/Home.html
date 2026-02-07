@@ -76,13 +76,13 @@
         </div>
         <div class="box">Dashboard</div>
 
-        <div class="box dat_ban">
+        <div class="box dat_ban pb-4">
             <div class="container order pt-4">
                 <div class="row row-cols-xl-4  row-cols-lg-3 row-cols-md-2 row-cols-1 g-3 tables"></div>
             </div>
         </div>
 
-        <div class="box order_food">
+        <div class="box order_food pb-4">
             <div class="container choose mt-4">
                 <div class="row g-3 align-items-center">
                     <div class="col-12 col-md-8 col-lg-4 order-md-1 order-lg-1">
@@ -123,78 +123,12 @@
             </div>
         </div>
 
-        <div class="box bills container">
-            <h1 class="mt-5">The invoice has been paid</h1>
-            <div class="row row-cols-md-2 row-cols-1 g-3 mt-1">
-                <div class="col mt-5">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Table number: 1</h3>
-                        </div>
-                        <div class="card-body" style="padding: 10px 50px;">
-                            <p>Chicken x 2 = 240 USD</p>
-                            <p>Fish x 3 = 123 USD</p>
-                        </div>
-                        <div class="card-footer">
-                            <h5 class="text-end" style="padding: 0px 30px;">Total: 363 USD </h5>
-                            <p class="text-end" style=" color: gray; font-style:italic;">Payment made
-                                on
-                                1/2/2026, 7:57:33 PM</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mt-5">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Table number: 1</h3>
-                        </div>
-                        <div class="card-body" style="padding: 10px 50px;">
-                            <p>Chicken x 2 = 240 USD</p>
-                            <p>Fish x 3 = 123 USD</p>
-                        </div>
-                        <div class="card-footer">
-                            <h5 class="text-end" style="padding: 0px 30px;">Total: 363 USD </h5>
-                            <p class="text-end" style=" color: gray; font-style:italic;">Payment made
-                                on
-                                1/2/2026, 7:57:33 PM</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mt-5">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Table number: 1</h3>
-                        </div>
-                        <div class="card-body" style="padding: 10px 50px;">
-                            <p>Chicken x 2 = 240 USD</p>
-                            <p>Fish x 3 = 123 USD</p>
-                        </div>
-                        <div class="card-footer">
-                            <h5 class="text-end" style="padding: 0px 30px;">Total: 363 USD </h5>
-                            <p class="text-end" style=" color: gray; font-style:italic;">Payment made
-                                on
-                                1/2/2026, 7:57:33 PM</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mt-5">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Table number: 1</h3>
-                        </div>
-                        <div class="card-body" style="padding: 10px 50px;">
-                            <p>Chicken x 2 = 240 USD</p>
-                            <p>Fish x 3 = 123 USD</p>
-                        </div>
-                        <div class="card-footer">
-                            <h5 class="text-end" style="padding: 0px 30px;">Total: 363 USD </h5>
-                            <p class="text-end" style=" color: gray; font-style:italic;">Payment made
-                                on
-                                1/2/2026, 7:57:33 PM</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="box bills pb-4">
+            <div class="container mt-3">
+                <h1>The invoice has been paid</h1>
+                <div class="row row-cols-md-2 row-cols-1 g-3 mt-1 payment"></div>
             </div>
+
         </div>
 
         <div class="box information">
@@ -385,7 +319,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
-                    <button id="send" type="button" class="btn bg-yg">PAY BILL</button>
+                    <button id="paybill" type="button" class="btn bg-yg">PAY BILL</button>
                 </div>
             </div>
         </div>
@@ -395,6 +329,7 @@
     <script src="../js/configCloundianary.js"></script>
     <script src="../js/getTable.js"></script>
     <script src="../js/getFood.js"></script>
+    <script src="../js/paybill.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

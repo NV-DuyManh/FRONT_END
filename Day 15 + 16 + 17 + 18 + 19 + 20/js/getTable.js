@@ -60,29 +60,27 @@ function getIdAdd(id) {
     const chonBan = document.getElementById("choose");
     chonBan.value = id;
 }
-
+// bien toan cuc  let 
+let orderDeleted;
 async function getIdCart(id) {
     const orders = await getData(URL_ORDER);
     const dataFood = await getData(URL_FOOD);
     const numberTable = document.getElementById("numberTable");
     numberTable.innerText = `Table ${id}`;
     const order = orders.find(o => o.id == id);
-
-    if (!order) {
-        alert("Bàn này chưa có order!");
-        return;
-    }
     // kiem id tbody => cartShow
     // order.bill foreach => s  =>  dataFood.find => f s.idFood == f.id => food
     const cartShow = document.getElementById("cartShow");
+    const totalElement = document.getElementById("totalBill");
     cartShow.innerHTML = "";
+    totalElement.innerText = "";
     let total = 0;
-    order.bill.forEach(s => {
+    order.bill.forEach((s,index) => {
 
         const food = dataFood.find(f => f.id == s.idFood);
         total += s.quantity * food.price;
         cartShow.innerHTML += `   <tr class="text-center align-middle">
-                                <td class="fw-bold">1</td>
+                                <td class="fw-bold">${index + 1 }</td>
                                 <td class="anhTable"><img src="${food.imgUrl}" alt=""></td>
                                 <td>${food.name}</td>
                                 <td>${food.price} $</td>
@@ -91,7 +89,16 @@ async function getIdCart(id) {
                             </tr>`
 
     })
-    const totalElement = document.getElementById("totalBill")
+    orderDeleted = {
+        idTable: id,
+        bill: order.bill,
+        total: total
+    }
     totalElement.innerText = `Total Bill: ${total} $`
 }
+
+
+
+
+
 

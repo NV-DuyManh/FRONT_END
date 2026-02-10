@@ -19,6 +19,7 @@ paybill.addEventListener("click", async () => {
 
 });
 
+//Hiển thị các bill hiện có
 async function show() {
     const data = await getData(URL_BILL);
     const dataFood = await getData(URL_FOOD);

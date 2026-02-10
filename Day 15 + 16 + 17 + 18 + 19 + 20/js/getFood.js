@@ -2,10 +2,13 @@ async function getFoods(search) {
     const data = await getData(URL_FOOD);
     const listFood = document.querySelector(".food");
     listFood.innerHTML = "";
-   const dataFilter = data.filter(s => s.name.toLowerCase().includes(search.toLowerCase()))
-    dataFilter.forEach((s,index) => {
+
+    const dataFilter = data.filter(s => s.name.toLowerCase().includes(search.toLowerCase()))   // Tìm kiếm món ăn theo tên
+    dataFilter.forEach((s, index) => {
         const item = document.createElement("div");
         item.classList.add("col");
+
+        //DOM order món ăn
         item.innerHTML = `
                         <div class="card ">
                             <div class="monAn ">
@@ -21,14 +24,14 @@ async function getFoods(search) {
                             <img src="${s.imgUrl}" class="card-img-top" alt="...">
                             <h4 class="text-center mt-3 text-danger fw-bold mt-4">${s.price} USD</h4>
                             <div class="card-body editQuantity d-flex gap-3  justify-content-center align-items-center">
-                                <button id="tru"><i class="fa-solid fa-minus"></i></button>
+                                <button class="btn_Tru" id="tru"><i class="fa-solid fa-minus"></i></button>
                                 <input type="number" value="0" class="quantity" >
-                                <button id="cong"><i class="fa-solid fa-plus"></i></button>
+                                <button  class="btn_Cong" id="cong"><i class="fa-solid fa-plus"></i></button>
                             </div>
                         </div>`;
         listFood.appendChild(item);
-        const tru = item.querySelector(".fa-minus");
-        const cong = item.querySelector(".fa-plus");
+        const tru = item.querySelector(".btn_Tru");
+        const cong = item.querySelector(".btn_Cong");
         const soLuong = item.querySelector(".quantity");
         tru.addEventListener("click", (s) => {
             const slHienTai = parseInt(soLuong.value) || 0;
@@ -45,6 +48,8 @@ async function getFoods(search) {
 }
 getFoods("");
 
+
+//Chọn những bàn đã có khách bên getTable
 const order = document.getElementById("order");
 order.addEventListener("click", async () => {
     const dataAOrder = await getData(URL_ORDER);
@@ -56,6 +61,8 @@ order.addEventListener("click", async () => {
         return;
     }
 
+
+    //Edit tăng giảm số lượng món ăn
     const listFood = document.querySelectorAll(".food .col");
     listFood.forEach((s) => {
         const soLuong = s.querySelector(".quantity");
@@ -74,6 +81,8 @@ order.addEventListener("click", async () => {
             }
         }
     })
+
+
     if (!bill.length) {
         alert("Vui lòng chọn món!");
         return;
@@ -89,15 +98,18 @@ order.addEventListener("click", async () => {
     }
 });
 
-let selectedFoodImageFile; 
+
+//Thay đổi ảnh theo ảnh mình chọn
+let selectedFoodImageFile;
 let idEdit;
 const chonImg = document.getElementById("chooseImage");
 chonImg.addEventListener("change", handleFoodImageSelect)
 
-const addFood = document.getElementById("upFood");
-const loadingOverlay = document.getElementById("loading-overlay");
 
-addFood.addEventListener("click", async () => {
+const addFood = document.getElementById("upFood");
+const loadingOverlay = document.getElementById("loading-overlay");  //Hiệu ứng vòng xoay khi loading ảnh
+
+addFood.addEventListener("click", async () => {  //Bắt thông tin modal AddFood
     const data = await getData(URL_FOOD);
     const foodName = document.getElementById("foodName");
     const price = document.getElementById("price");
@@ -105,7 +117,7 @@ addFood.addEventListener("click", async () => {
         alert("Vui lòng nhập đủ thông tin!");
         return;
     }
-    if (!selectedFoodImageFile && !idEdit) { 
+    if (!selectedFoodImageFile && !idEdit) {
         alert("Vui lòng chọn ảnh!");
         return;
     }
@@ -114,24 +126,24 @@ addFood.addEventListener("click", async () => {
     addFood.disabled = true;
     addFood.style.background = "gray";
     const icon = document.querySelector(".fa-spinner");
-    if(icon) {
+    if (icon) {
         icon.style.transition = "all 5s ease-in";
         icon.style.transform = "rotate(720deg)";
     }
 
     try {
         let maxId = 0;
-        if(data.length > 0) {
-            maxId = Math.max(...data.map(item => Number(item.id))); 
+        if (data.length > 0) {
+            maxId = Math.max(...data.map(item => Number(item.id)));
         }
         let id = maxId + 1;
 
         let imgUrl = "";
-        if(selectedFoodImageFile){
-             imgUrl = await uploadImageToCloudinary(selectedFoodImageFile);
+        if (selectedFoodImageFile) {
+            imgUrl = await uploadImageToCloudinary(selectedFoodImageFile);
         } else if (idEdit) {
-             const current = data.find(s => s.id == idEdit);
-             imgUrl = current.imgUrl;
+            const current = data.find(s => s.id == idEdit);
+            imgUrl = current.imgUrl;
         }
 
         const newFood = {
@@ -145,13 +157,12 @@ addFood.addEventListener("click", async () => {
         } else {
             await add(URL_FOOD, newFood);
         }
-        
-        await getFoods(); 
-       
+
+        await getFoods();
+
 
     } catch (error) {
         console.error(error);
-        alert("Có lỗi xảy ra");
     } finally {
         loadingOverlay.classList.remove("active");
         addFood.disabled = false;
@@ -169,7 +180,7 @@ function handleFoodImageSelect(event) {
     reader.onload = (e) => {
         document.getElementById("img_food").src = e.target.result;
     };
-    selectedFoodImageFile = file; 
+    selectedFoodImageFile = file;
 }
 
 async function getIdFood(id) {
@@ -188,6 +199,8 @@ async function getIdFood(id) {
     upFood.innerText = "UPDATE FOOD";
 }
 
+
+// Thêm món ăn mới
 const addfood = document.getElementById("addFood");
 addfood.addEventListener("click", () => {
     const foodName = document.getElementById("foodName");
@@ -202,17 +215,20 @@ addfood.addEventListener("click", () => {
     upFood.innerText = "ADD FOOD";
 });
 
+// Xóa món ăn hiện có
 async function xoafood(id) {
     const deleteFood = document.getElementById("deleteFood");
-    deleteFood.onclick = async function() {
+    deleteFood.onclick = async function () {
         await deleted(URL_FOOD, id);
         await getFoods();
     }
 }
 
+
+//Tìm kiếm món ăn theo tên 
 const submit = document.getElementById("submit");
-submit.addEventListener("click", () =>{
+submit.addEventListener("click", () => {
     const search = document.getElementById("search");
-       getFoods(search.value);
-    
+    getFoods(search.value);
+
 })

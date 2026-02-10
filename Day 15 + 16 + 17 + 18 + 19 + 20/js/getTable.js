@@ -1,10 +1,10 @@
 async function getTable() {
     const data = await getData(URL_TABLE);
     const listTable = document.querySelector(".tables");
-    // kiem thung chua select 
+
     const choose = document.getElementById("choose");
     data.forEach(s => {
-
+        //Edit ảnh (Có khách / Không có khách) dựa theo trạng thái
         if (!s.status) {
             choose.innerHTML += `<option value="${s.id}">Table ${s.id}</option>`
         }
@@ -33,6 +33,8 @@ async function getTable() {
 }
 getTable();
 
+
+//Booking table and update nó
 function getIdTable(id) {
 
     const send = document.getElementById("send");
@@ -51,36 +53,38 @@ function getIdTable(id) {
     })
 }
 
+//Add bàn
 function getIdAdd(id) {
 
     listBox[1].style.display = "none";
     listBox[2].style.display = "block";
 
-    // KIEM SELECT => .VALUE  = id ;
     const chonBan = document.getElementById("choose");
     chonBan.value = id;
 }
-// bien toan cuc  let 
+
 let orderDeleted;
+//Nhấn vào button add và trỏ đến urlFood, và hiển thị số bàn tương ứng
 async function getIdCart(id) {
     const orders = await getData(URL_ORDER);
     const dataFood = await getData(URL_FOOD);
     const numberTable = document.getElementById("numberTable");
     numberTable.innerText = `Table ${id}`;
     const order = orders.find(o => o.id == id);
-    // kiem id tbody => cartShow
-    // order.bill foreach => s  =>  dataFood.find => f s.idFood == f.id => food
+
+
+    //Tính tổng bills => In ra tổng tiền và xóa đi order đó
     const cartShow = document.getElementById("cartShow");
     const totalElement = document.getElementById("totalBill");
     cartShow.innerHTML = "";
     totalElement.innerText = "";
     let total = 0;
-    order.bill.forEach((s,index) => {
+    order.bill.forEach((s, index) => {
 
         const food = dataFood.find(f => f.id == s.idFood);
         total += s.quantity * food.price;
         cartShow.innerHTML += `   <tr class="text-center align-middle">
-                                <td class="fw-bold">${index + 1 }</td>
+                                <td class="fw-bold">${index + 1}</td>
                                 <td class="anhTable"><img src="${food.imgUrl}" alt=""></td>
                                 <td>${food.name}</td>
                                 <td>${food.price} $</td>

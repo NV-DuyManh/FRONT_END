@@ -17,10 +17,11 @@
 </head>
 
 <body>
+    <!-- Thanh bên -->
     <div class="left">
         <header>
             <h1 class="item  d-none">ZTK STORE</h1>
-
+z
             <i class="fa-solid fa-store item text-white" style="font-size: 1.5rem;"></i>
             <button id="icon">
                 <i class="fa-solid fa-arrow-right-from-bracket item "></i>
@@ -54,6 +55,8 @@
 
     </div>
     <div class="right">
+
+        <!-- NavBar -->
         <div class="tab">
             <div class=" d-flex gap-3 tb ">
                 <button>
@@ -74,14 +77,56 @@
                 </div>
             </div>
         </div>
-        <div class="box">Dashboard</div>
 
+        <!-- Giao diện dashBoard -->
+        <div class="box dashBoard pb-4">
+            <div class="container pt-4">
+                <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-chair"></i>
+                                <p class="card-text">Tổng số bàn </p>
+                                <h1 class="card-title">12</h1>
+                            </div>
+                        </div>
+                    </div> <div class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-chair"></i>
+                                <p class="card-text">Tổng số bàn </p>
+                                <h1 class="card-title">12</h1>
+                            </div>
+                        </div>
+                    </div> <div class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-chair"></i>
+                                <p class="card-text">Tổng số bàn </p>
+                                <h1 class="card-title">12</h1>
+                            </div>
+                        </div>
+                    </div> <div class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-chair"></i>
+                                <p class="card-text">Tổng số bàn </p>
+                                <h1 class="card-title">12</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Giao diện Reservation -->
         <div class="box dat_ban pb-4">
             <div class="container order pt-4">
                 <div class="row row-cols-xl-4  row-cols-lg-3 row-cols-md-2 row-cols-1 g-3 tables"></div>
             </div>
         </div>
 
+        <!-- Giao diện orderFood -->
         <div class="box order_food pb-4">
             <div class="container choose mt-4">
                 <div class="row g-3 align-items-center">
@@ -123,14 +168,15 @@
             </div>
         </div>
 
+        <!-- Giao diện Bill -->
         <div class="box bills pb-4">
             <div class="container mt-3">
-                <h1>The invoice has been paid</h1>
                 <div class="row row-cols-md-2 row-cols-1 g-3 mt-1 payment"></div>
             </div>
 
         </div>
 
+        <!-- Giao diện information -->
         <div class="box information">
             <div class="container infor">
                 <div class="row in4 justify-content-center">
@@ -259,12 +305,14 @@
             </div>
         </div>
     </div>
-
+    
+    <!-- Vòng xoay chờ đợi -->
     <div id="loading-overlay">
         <div class="spinner-container">
             <i class="fa-solid fa-spinner"></i>
         </div>
     </div>
+    
     <!-- Modal xoa san pham -->
     <div class="modal fade" id="modaldelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

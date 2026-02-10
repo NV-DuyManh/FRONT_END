@@ -9,7 +9,7 @@ async function getData(url) {
   const data = await response.json();
   return data;
 }
-
+//Chỉnh sửa data
 async function editById(url, item) {
   try {
     await fetch(`${url}/${item.id}`, {
@@ -24,6 +24,8 @@ async function editById(url, item) {
     throw error; // nếu muốn nơi gọi hàm xử lý tiếp
   }
 }
+
+//Thêm data mới
 function add(url, object) {
   fetch(url, {
     method: 'POST',
@@ -40,6 +42,7 @@ function add(url, object) {
     .catch(error => console.error('Error creating post:', error));
 }
 
+//Xóa data
 function deleted(url, id) {
   fetch(`${url}/${id}`, {
     method: 'DELETE',

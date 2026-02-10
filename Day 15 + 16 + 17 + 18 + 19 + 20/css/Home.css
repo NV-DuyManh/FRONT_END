@@ -8,7 +8,7 @@ img {
     width: 100%;
     height: 100%;
 }
-    
+
 
 p,
 h1,
@@ -19,9 +19,13 @@ h5,
 h6 {
     margin: 0;
 }
+
+
+zzzz
 .img_pay {
     width: 30px;
 }
+
 :root {
     --bg-btn: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
 }
@@ -243,6 +247,32 @@ body {
             }
         }
 
+        .dashBoard {
+
+            i {
+                font-size: 30px;
+                background-color: green;
+                width: 50px;
+                height: 50px;
+                margin: auto;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+            }
+
+            p {
+                margin-top: 8px;
+                font-size: 20px;
+            }
+
+            h1 {
+                margin-top: 10px;
+                font-size: 50px;
+            }
+        }
+
         .order {
             /* .xe {
                 background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
@@ -381,9 +411,11 @@ body {
                         height: 30px;
                         border-radius: 50%;
                         background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+                        transition: transform 0.3s ease;
 
                         &:hover {
                             background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+                            transform: scale(1.2);
                         }
                     }
 
@@ -400,6 +432,7 @@ body {
 
                         &:hover {
                             color: yellow;
+
                         }
                     }
                 }
@@ -443,6 +476,7 @@ body {
                     }
 
                     -moz-appearance: textfield;
+                    appearance: textfield;
                 }
             }
         }
@@ -662,10 +696,11 @@ body {
     /* Màu nền đen mờ */
     background: rgba(0, 0, 0, 0.6);
     /* Hiệu ứng làm mờ hậu cảnh (Glassmorphism) */
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    /* Đặt webkit trước */
+    backdrop-filter: blur(10px);
+    /* Đặt chuẩn sau */
     z-index: 9999;
-    /* Đảm bảo nằm trên cùng, đè lên cả Modal */
 
     /* Căn giữa spinner */
     display: flex;
@@ -687,10 +722,23 @@ body {
         i {
             font-size: 60px;
             /* Kích thước lớn */
+
             /* Màu Gradient cho đẹp */
             background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+
+            /* --- KHU VỰC ĐÃ FIX LỖI VÀNG --- */
+
+            /* 1. Fix lỗi background-clip */
             -webkit-background-clip: text;
+            background-clip: text;
+            /* Thêm dòng chuẩn này để VS Code hết báo thiếu */
+
+            /* 2. Fix lỗi text-fill-color */
             -webkit-text-fill-color: transparent;
+            color: transparent;
+            /* Thêm dòng chuẩn này làm fallback */
+
+            /* ------------------------------- */
 
             /* Hiệu ứng xoay vô tận */
             animation: spinLoading 1s linear infinite;

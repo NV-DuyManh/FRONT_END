@@ -15,8 +15,8 @@ async function getFoods(search) {
                                 <p >${index + 1}</p>
                                 <input class="doimau d-none" type="text" value="${s.id}" >
                                 <h5  class="card-title text-center">${s.name}</h5>
-                                <div class="icon">
-                                    <button onClick="getIdFood('${s.id}')"> <i class="fa-solid fa-pen-to-square fs-5"  data-bs-toggle="modal" data-bs-target="#modalAddCart"></i></button>
+                                <div class="icon d-flex gap-2">
+                                    <button onClick="getIdFood('${s.id}')"><i class="fa-solid fa-pen-to-square fs-5"  data-bs-toggle="modal" data-bs-target="#modalAddCart"></i></button>
                                     <button onClick="xoafood('${s.id}')"><i class="fa-solid fa-trash fs-5" id="delete" data-bs-toggle="modal" data-bs-target="#modaldelete" ></i></button>
                                 </div>
 

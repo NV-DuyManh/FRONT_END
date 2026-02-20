@@ -23,7 +23,7 @@
                 class="col p-3 text-center flex-column text-light align-items-center d-flex justify-content-center right">
                 <h1 class="mt-4">Chào mừng trở lại!</h1>
                 <p class="mt-4">Để giữ kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
-                <button class="p-3 mb-4 rounded-5 mt-4 " style="width: 150px;">ĐĂNG NHẬP</button>
+                <button id="dangNhapdk" class="p-3 mb-4 rounded-5 mt-4 " style="width: 150px;">ĐĂNG NHẬP</button>
             </div>
             <div class="col bg-white p-3 left">
                 <div class="dangKi d-flex justify-content-center align-items-center gap-3">
@@ -38,11 +38,11 @@
                 <p style="margin-top: 15px">hoặc sử dụng email để đăng ký</p>
                 <div class="input">
                     <input type="text" class="form-control rounded-5 p-3" placeholder="Họ và tên">
-                    <input type="email" class="form-control mt-3 rounded-5 p-3" placeholder="Email">
+                    <input type="email" class="form-control mt-3 rounded-5 p-3" placeholder="Username">
 
                     <div class="input-group mt-3">
                         <input type="password" class="form-control p-3 rounded-start-5 border-end-0" id="pass1"
-                            placeholder="Mật khẩu">
+                            placeholder="Password">
                         <span class="input-group-text bg-white rounded-end-5 border-start-0" style="cursor: pointer;"
                             onclick="togglePassword('pass1', this)">
                             <i class="fa-solid fa-eye"></i>
@@ -51,33 +51,19 @@
 
                     <div class="input-group mt-3">
                         <input type="password" class="form-control p-3 rounded-start-5 border-end-0" id="pass2"
-                            placeholder="Xác nhận mật khẩu">
+                            placeholder="Confirm password">
                         <span class="input-group-text bg-white rounded-end-5 border-start-0" style="cursor: pointer;"
                             onclick="togglePassword('pass2', this)">
                             <i class="fa-solid fa-eye"></i>
                         </span>
                     </div>
                 </div>
-                <button class="p-3 mb-2 rounded-5 mt-4 " style="width: 150px;">ĐĂNG NHẬP </button>
+                <button class="p-3 mb-2 rounded-5 mt-4 " style="width: 150px;">ĐĂNG KÍ </button>
             </div>
         </div>
     </div>
 
-    <script>
-        function togglePassword(inputId, iconSpan) {
-            var input = document.getElementById(inputId);
-            var icon = iconSpan.querySelector('i');
-            if (input.type === "password") {
-                input.type = "text";
-                icon.classList.remove('fa-eye');
-                icon.classList.add('fa-eye-slash');
-            } else {
-                input.type = "password";
-                icon.classList.remove('fa-eye-slash');
-                icon.classList.add('fa-eye');
-            }
-        }
-    </script>
+    <script src="../js/dangKi.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -85,6 +71,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+    <script src="../js/dangNhap.js"></script>
+    <script src="../js/dangKi.js"></script>
 </body>
 
 </html>

@@ -12,18 +12,44 @@ function toggleLoginPassword() {
         icon.classList.add('fa-eye');
     }
 }
+function logIn() {
+    const dangNhap = document.getElementById("dangNhap");
+    if (dangNhap) {
+        dangNhap.addEventListener("click", async () => {
+            const taiKhoan = document.getElementById("userLogin").value.trim();
+            const password = document.getElementById("passwordLogin").value.trim();
+            const data = await getData(URL_PROFILE);
+            const checkTK = data.find(user => user.userName === taiKhoan && user.pass === password);
+            if (!checkTK) {
+                alert("Tên đăng nhập hoặc mật khẩu không đúng !!!");
+                return;
+            }
 
-const dangNhap = document.getElementById("dangNhap");
-dangNhap.addEventListener("click", async () => {
-
-    const email = document.getElementById("emailLogin").value;
-    const password = document.getElementById("passwordLogin").value;
-    const data =  await getData(URL_PROFILE);
-
-    if(email != data.email || password != data.pass) {
-        alert("email hoac mat khau khong khop !!!");
-        return;
+            location.href = "Home.html";
+        });
     }
-    location.href = "Home.html";
-})
+}
+logIn();
+
+
+// Đăng nhập tại đăng kí
+function logIn2() {
+    const dangnhap = document.getElementById("dangNhapdk");
+    if (dangnhap) {
+        dangnhap.addEventListener("click", () => {
+            location.href = "LogIn.html";
+        })
+    }
+}
+logIn2();
+
+
+
+// function logOut() {
+//     const logOut = document.getElementById("logOut");
+//     logOut.addEventListener("click", () => {
+//         location.href = "LogIn.html";
+//     })
+// }
+// logOut();
 

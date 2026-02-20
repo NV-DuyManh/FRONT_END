@@ -10,37 +10,41 @@
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="../css/Home.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
     <!-- Thanh bên -->
     <div class="left">
         <header>
-            <h1 class="item  d-none">ZTK STORE</h1>
-z
-            <i class="fa-solid fa-store item text-white" style="font-size: 1.5rem;"></i>
+            <h1 class="item d-none" style="font-weight: 900">FOOD STORE</h1>
+
+            <i class="fa-solid fa-store item text-white" style="font-size: 2rem;"></i>
             <button id="icon">
                 <i class="fa-solid fa-arrow-right-from-bracket item "></i>
                 <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180 item d-none "></i>
             </button>
         </header>
 
-        <ul class="menu">
+        <ul class="menu" style="font-weight: 500">
             <li class="d-flex align-items-center itemm">
                 <i class="fa-solid fa-gauge"></i>
                 <p class="item d-none">DASHBOARD</p>
             </li>
             <li class="d-flex  align-items-center itemm">
                 <i class="fa-solid fa-calendar-days"></i>
-                <p class="item d-none ">RESERVATION</p>
+                <p class="item d-none">RESERVATION</p>
             </li>
             <li class="d-flex align-items-center itemm">
                 <i class="fa-solid fa-utensils"></i>
-                <p class="item d-none ">ORDER FOOD</p>
+                <p class="item d-none">ORDER FOOD</p>
             </li>
             <li class="d-flex align-items-center itemm">
                 <i class="fa-solid fa-wallet"></i>
@@ -63,17 +67,17 @@ z
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <button>
-                    <i class="fa-solid fa-bell"></i> </button>
+                    <i class="fea-solid fa-bell"></i> </button>
                 <button>
                     <i class="fa-solid fa-envelope"></i>
                 </button>
             </div>
             <div id="interface" class="anh ">
-                <button class="u"><img src="../img/user.png" alt=""></button>
+                <button class="user"><img src="../img/user.png" alt=""></button>
 
-                <div id="log" class="log d-flex d-none flex-nowrap gap-2 justify-content-center align-items-center ">
-                    <button class="text-light bg-success p-1">LOG IN</button>
-                    <button class="text-light bg-danger p-1">LOG OUT</button>
+                <div id="log" class="log d-none flex-nowrap ">
+
+                    <button id="logOut" class=" bg-danger p-1">LOG OUT</button>
                 </div>
             </div>
         </div>
@@ -81,40 +85,87 @@ z
         <!-- Giao diện dashBoard -->
         <div class="box dashBoard pb-4">
             <div class="container pt-4">
-                <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3">
+                <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-1 g-3 ban">
                     <div class="col">
-                        <div class="card">
+                        <div class="card tongBan">
                             <div class="card-body text-center">
                                 <i class="fa-solid fa-chair"></i>
-                                <p class="card-text">Tổng số bàn </p>
-                                <h1 class="card-title">12</h1>
-                            </div>
-                        </div>
-                    </div> <div class="col">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <i class="fa-solid fa-chair"></i>
-                                <p class="card-text">Tổng số bàn </p>
-                                <h1 class="card-title">12</h1>
-                            </div>
-                        </div>
-                    </div> <div class="col">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <i class="fa-solid fa-chair"></i>
-                                <p class="card-text">Tổng số bàn </p>
-                                <h1 class="card-title">12</h1>
-                            </div>
-                        </div>
-                    </div> <div class="col">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <i class="fa-solid fa-chair"></i>
-                                <p class="card-text">Tổng số bàn </p>
+                                <p class="card-text">Tổng số bàn</p>
                                 <h1 class="card-title">12</h1>
                             </div>
                         </div>
                     </div>
+                    <div class="col">
+                        <div class="card banTiepKhach">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-utensils"></i>
+                                <p class="card-text">Bàn sẵn sàng tiếp khách</p>
+                                <h1 class="card-title">8</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card donchuaTT">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-money-check-dollar"></i>
+                                <p class="card-text">Đơn chưa thanh toán</p>
+                                <h1 class="card-title">3</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card doanhThu">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-coins"></i>
+                                <p class="card-text">Doanh thu hôm nay</p>
+                                <h1 class="card-title">1000$</h1>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-1 g-3 mt-2 doanhtthu">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <p class="card-text"></p>
+                                <h2 class="card-title">Tổng doanh thu</h2>
+                                <h1 class="card-title ">3000</h1>
+                                <p>USD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <p class="card-text"></p>
+                                <h2 class="card-title">Số đơn hàng</h2>
+                                <h1 class="card-title">9</h1>
+                                <p>Đơn</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <p class="card-text"></p>
+                                <h2 class="card-title">Món ăn phổ biến</h2>
+                                <h1 class="card-title">Fried Rice</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <p class="card-text"></p>
+                                <h2 class="card-title">Khách hàng thường xuyên</h2>
+                                <h1 class="card-title">Duy Manh</h1>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -189,23 +240,23 @@ z
                         <button><i class="fa-solid fa-pen-to-square" style="padding-right: 20px"></i>Edit</button>
                     </div>
 
-                    <div class="col-md-8 col-12 p-3 flex-column text-light infor-right">
+                    <div class="col-md-8 col-12 p-3 flex-column  infor-right">
                         <h2 class="m-0">Information</h2>
                         <hr>
                         <div class="inforBasic d-flex justify-content-between">
                             <div class="email">
                                 <h3>Email</h3>
-                                <p>nvdm12345@gmail.com</p>
+                                <p>duymanhdnvn1@gmail.com</p>
                             </div>
                             <div class="phone">
                                 <h3>Phone</h3>
-                                <p>0123456789</p>
+                                <p>0779534325</p>
                             </div>
                         </div>
                         <div class="inforBasic2 d-flex justify-content-between">
                             <div class="address">
                                 <h3>Address</h3>
-                                <p>123 ABC street, QWS city</p>
+                                <p>Ba Na commune, Da Nang city</p>
                             </div>
                             <div class="birth">
                                 <h3>Birthday</h3>
@@ -305,14 +356,14 @@ z
             </div>
         </div>
     </div>
-    
+
     <!-- Vòng xoay chờ đợi -->
     <div id="loading-overlay">
         <div class="spinner-container">
             <i class="fa-solid fa-spinner"></i>
         </div>
     </div>
-    
+
     <!-- Modal xoa san pham -->
     <div class="modal fade" id="modaldelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -402,6 +453,7 @@ z
         }
     </script>
     <script src="../js/home.js"></script>
+    <script src="../js/logout.js"></script>z
 
 </body>
 

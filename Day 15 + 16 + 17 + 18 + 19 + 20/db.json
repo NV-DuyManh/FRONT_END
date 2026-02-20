@@ -8,15 +8,15 @@
     },
     {
       "id": "2",
-      "nameCustomer": "ád",
-      "quantity": "6",
+      "nameCustomer": "Duy Mạnh",
+      "quantity": "12",
       "status": false
     },
     {
       "id": "3",
-      "nameCustomer": "234567",
-      "quantity": "324",
-      "status": false
+      "nameCustomer": "",
+      "quantity": 0,
+      "status": true
     },
     {
       "id": "4",
@@ -68,9 +68,9 @@
     },
     {
       "id": "12",
-      "nameCustomer": "Bao",
+      "nameCustomer": "",
       "quantity": 0,
-      "status": false
+      "status": true
     }
   ],
   "foods": [
@@ -165,22 +165,10 @@
       "price": 34
     },
     {
-      "id": "16",
-      "name": "bdfbdfb",
-      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770556959/li9mrys5w6zjrg5l5hmp.png",
-      "price": 435
-    },
-    {
       "id": "17",
       "name": "ịijhnb",
       "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770557118/lupowx4drfealehrefld.png",
       "price": 4
-    },
-    {
-      "id": "18",
-      "name": "CANH TOM",
-      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770737572/vbdsbqrapiprij4jtlrb.png",
-      "price": 34
     }
   ],
   "orders": [
@@ -189,256 +177,32 @@
       "bill": [
         {
           "idFood": "1",
-          "quantity": 2
+          "quantity": 1
         },
         {
           "idFood": "2",
-          "quantity": 2
+          "quantity": 1
+        },
+        {
+          "idFood": "10",
+          "quantity": 1
+        },
+        {
+          "idFood": "11",
+          "quantity": 3
         },
         {
           "idFood": "14",
           "quantity": 1
+        },
+        {
+          "idFood": "15",
+          "quantity": 2
         }
       ]
     }
   ],
   "bills": [
-    {
-      "id": "d33b",
-      "idTable": 2,
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": 3
-        },
-        {
-          "idFood": "2",
-          "quantity": 1
-        }
-      ],
-      "total": 145,
-      "createAt": "2026-02-06T03:55:22.561Z"
-    },
-    {
-      "id": "9023",
-      "idTable": 3,
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": 4
-        },
-        {
-          "idFood": "2",
-          "quantity": 4
-        }
-      ],
-      "total": 220,
-      "createAt": "2026-02-06T04:05:39.767Z"
-    },
-    {
-      "id": "0ab4",
-      "idTable": 1,
-      "bill": [
-        {
-          "idFood": "10",
-          "quantity": 3
-        },
-        {
-          "idFood": "11",
-          "quantity": 2
-        },
-        {
-          "idFood": "12",
-          "quantity": 1
-        }
-      ],
-      "total": 369,
-      "createAt": "2026-02-06T04:36:37.671Z"
-    },
-    {
-      "id": "404f",
-      "idTable": 2,
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": 1
-        },
-        {
-          "idFood": "6",
-          "quantity": 2
-        },
-        {
-          "idFood": "9",
-          "quantity": 1
-        },
-        {
-          "idFood": "12",
-          "quantity": 3
-        }
-      ],
-      "total": 1152,
-      "createAt": "2026-02-06T04:37:57.975Z"
-    },
-    {
-      "id": "f866",
-      "idTable": 6,
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": 2
-        },
-        {
-          "idFood": "3",
-          "quantity": 4
-        }
-      ],
-      "total": 114,
-      "createAt": "2026-02-06T04:46:38.156Z"
-    },
-    {
-      "id": "a239",
-      "idTable": 2,
-      "bill": [
-        {
-          "idFood": "2",
-          "quantity": 2
-        },
-        {
-          "idFood": "3",
-          "quantity": 6
-        },
-        {
-          "idFood": "4",
-          "quantity": 10
-        },
-        {
-          "idFood": "7",
-          "quantity": 5
-        }
-      ],
-      "total": 726,
-      "createAt": "2026-02-07T02:21:03.096Z"
-    },
-    {
-      "id": "7e11",
-      "idTable": 2,
-      "bill": [
-        {
-          "idFood": "2",
-          "quantity": 2
-        },
-        {
-          "idFood": "3",
-          "quantity": 6
-        },
-        {
-          "idFood": "4",
-          "quantity": 10
-        },
-        {
-          "idFood": "7",
-          "quantity": 5
-        }
-      ],
-      "total": 726,
-      "createAt": "2026-02-07T02:21:05.114Z"
-    },
-    {
-      "id": "4408",
-      "idTable": 2,
-      "bill": [
-        {
-          "idFood": "2",
-          "quantity": 2
-        },
-        {
-          "idFood": "3",
-          "quantity": 6
-        },
-        {
-          "idFood": "4",
-          "quantity": 10
-        },
-        {
-          "idFood": "7",
-          "quantity": 5
-        }
-      ],
-      "total": 726,
-      "createAt": "2026-02-07T02:21:05.916Z"
-    },
-    {
-      "id": "9cbd",
-      "idTable": 2,
-      "bill": [
-        {
-          "idFood": "2",
-          "quantity": 2
-        },
-        {
-          "idFood": "3",
-          "quantity": 6
-        },
-        {
-          "idFood": "4",
-          "quantity": 10
-        },
-        {
-          "idFood": "7",
-          "quantity": 5
-        }
-      ],
-      "total": 726,
-      "createAt": "2026-02-07T02:21:06.104Z"
-    },
-    {
-      "id": "ff5a",
-      "idTable": 2,
-      "bill": [
-        {
-          "idFood": "2",
-          "quantity": 2
-        },
-        {
-          "idFood": "3",
-          "quantity": 6
-        },
-        {
-          "idFood": "4",
-          "quantity": 10
-        },
-        {
-          "idFood": "7",
-          "quantity": 5
-        }
-      ],
-      "total": 726,
-      "createAt": "2026-02-07T02:21:06.284Z"
-    },
-    {
-      "id": "34de",
-      "idTable": 2,
-      "bill": [
-        {
-          "idFood": "2",
-          "quantity": 2
-        },
-        {
-          "idFood": "3",
-          "quantity": 6
-        },
-        {
-          "idFood": "4",
-          "quantity": 10
-        },
-        {
-          "idFood": "7",
-          "quantity": 5
-        }
-      ],
-      "total": 726,
-      "createAt": "2026-02-07T02:21:07.108Z"
-    },
     {
       "id": "8863",
       "idTable": 2,
@@ -542,10 +306,115 @@
       ],
       "total": 654,
       "createAt": "2026-02-07T02:50:36.528Z"
+    },
+    {
+      "id": "ca1e",
+      "idTable": 2,
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 2
+        },
+        {
+          "idFood": "2",
+          "quantity": 2
+        },
+        {
+          "idFood": "14",
+          "quantity": 1
+        }
+      ],
+      "total": 553,
+      "createAt": "2026-02-13T14:31:50.284Z"
+    },
+    {
+      "id": "2207",
+      "idTable": 3,
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 1
+        },
+        {
+          "idFood": "2",
+          "quantity": 1
+        },
+        {
+          "idFood": "11",
+          "quantity": 1
+        }
+      ],
+      "total": 70,
+      "createAt": "2026-02-16T15:58:46.604Z"
+    },
+    {
+      "id": "1e3a",
+      "idTable": 12,
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 1
+        },
+        {
+          "idFood": "2",
+          "quantity": 4
+        },
+        {
+          "idFood": "7",
+          "quantity": 1
+        },
+        {
+          "idFood": "11",
+          "quantity": 1
+        }
+      ],
+      "total": 198,
+      "createAt": "2026-02-16T15:59:27.448Z"
+    },
+    {
+      "id": "9233",
+      "idTable": 4,
+      "bill": [
+        {
+          "idFood": "2",
+          "quantity": 1
+        },
+        {
+          "idFood": "3",
+          "quantity": 2
+        },
+        {
+          "idFood": "6",
+          "quantity": 1
+        },
+        {
+          "idFood": "7",
+          "quantity": 2
+        },
+        {
+          "idFood": "11",
+          "quantity": 1
+        }
+      ],
+      "total": 247,
+      "createAt": "2026-02-20T14:27:59.557Z"
     }
   ],
-  "profile": {
-    "pass": "123456",
-    "email": "duymanh@gmail.com"
-  }
+  "profile": [
+    {
+      "userName": "dm",
+      "pass": "123",
+      "id": "3935"
+    },
+    {
+      "userName": "manh",
+      "pass": "123",
+      "id": "76dc"
+    },
+    {
+      "userName": "admin",
+      "pass": "123",
+      "id": "b8de"
+    }
+  ]
 }

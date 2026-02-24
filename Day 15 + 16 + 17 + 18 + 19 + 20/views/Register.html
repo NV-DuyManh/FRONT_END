@@ -37,33 +37,34 @@
                 </div>
                 <p style="margin-top: 15px">hoặc sử dụng email để đăng ký</p>
                 <div class="input">
-                    <input type="text" class="form-control rounded-5 p-3" placeholder="Họ và tên">
-                    <input type="email" class="form-control mt-3 rounded-5 p-3" placeholder="Username">
+                    <input id="hoten" type="text" class="form-control rounded-5 p-3" placeholder="Họ và tên">
+                    <input id="username" type="email" class="form-control mt-3 rounded-5 p-3" placeholder="Username">
 
                     <div class="input-group mt-3">
-                        <input type="password" class="form-control p-3 rounded-start-5 border-end-0" id="pass1"
+                        <input id="password" type="password" class="form-control p-3 rounded-start-5 border-end-0"
                             placeholder="Password">
                         <span class="input-group-text bg-white rounded-end-5 border-start-0" style="cursor: pointer;"
-                            onclick="togglePassword('pass1', this)">
+                            onclick="togglePassword('password', this)">
                             <i class="fa-solid fa-eye"></i>
                         </span>
                     </div>
 
                     <div class="input-group mt-3">
-                        <input type="password" class="form-control p-3 rounded-start-5 border-end-0" id="pass2"
+                        <input id="xnPass" type="password" class="form-control p-3 rounded-start-5 border-end-0"
                             placeholder="Confirm password">
                         <span class="input-group-text bg-white rounded-end-5 border-start-0" style="cursor: pointer;"
-                            onclick="togglePassword('pass2', this)">
+                            onclick="togglePassword('xnPass', this)">
                             <i class="fa-solid fa-eye"></i>
                         </span>
                     </div>
                 </div>
-                <button class="p-3 mb-2 rounded-5 mt-4 " style="width: 150px;">ĐĂNG KÍ </button>
+                <button id="dangkiTaoTK" class="p-3 mb-2 rounded-5 mt-4 " style="width: 150px;">ĐĂNG KÍ </button>
             </div>
         </div>
     </div>
 
     <script src="../js/dangKi.js"></script>
+    <script src="../js/dangkiTaoTK.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

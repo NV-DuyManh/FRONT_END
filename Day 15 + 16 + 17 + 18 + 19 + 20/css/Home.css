@@ -20,6 +20,18 @@ h6 {
     margin: 0;
 }
 
+input,
+select,
+.form-control,
+.form-select {
+    transition: all 0.3s ease;
+
+    &:focus {
+        border-color: #00e3ae !important;
+        box-shadow: 0 0 8px rgba(0, 227, 174, 0.4) !important;
+        outline: none !important;
+    }
+}
 
 
 .img_pay {
@@ -40,14 +52,11 @@ hr {
         background: none;
         color: red;
     }
-
 }
 
 .anhTable {
     width: 50px;
 }
-
-
 
 .bg-yg {
     background-image: var(--bg-btn);
@@ -111,7 +120,7 @@ body {
 
                 &:hover {
                     background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
-                    color: yellow;
+                    color: rgb(251, 255, 0);
                     transform: translate(50%, -50%) scale(1.2);
                     opacity: 1;
                 }
@@ -423,6 +432,10 @@ body {
                         color: yellow;
                         transform: scale(1.05);
                     }
+
+                    &:active {
+                        transform: scale(0.9);
+                    }
                 }
             }
 
@@ -451,6 +464,10 @@ body {
                         color: yellow;
                         transform: scale(1.05);
                     }
+
+                    &:active {
+                        transform: scale(0.9);
+                    }
                 }
             }
 
@@ -469,6 +486,10 @@ body {
                         background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
                         color: yellow;
                         transform: scale(1.05);
+                    }
+
+                    &:active {
+                        transform: scale(0.9);
                     }
                 }
             }
@@ -514,6 +535,7 @@ body {
                         border-radius: 50%;
                         background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
                         transition: transform 0.3s ease;
+                        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
                         &:hover {
                             background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
@@ -526,6 +548,10 @@ body {
                             .fa-trash {
                                 color: yellow;
                             }
+                        }
+
+                        &:active {
+                            transform: scale(0.9);
                         }
                     }
 
@@ -556,10 +582,19 @@ body {
                     align-items: center;
                     text-align: center;
                     justify-content: center;
+                    transition: 0.1s;
+                    border: none;
+                    /* border: 0.5px solid black; */
+                    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
                     &:hover {
                         color: red;
                         background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+                        transform: scale(1.2);
+                    }
+
+                    &:active {
+                        transform: scale(0.9);
                     }
                 }
 

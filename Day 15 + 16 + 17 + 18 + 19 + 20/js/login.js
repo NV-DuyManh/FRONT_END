@@ -14,20 +14,19 @@ function toggleLoginPassword() {
 }
 function logIn() {
     const dangNhap = document.getElementById("dangNhap");
-    if (dangNhap) {
-        dangNhap.addEventListener("click", async () => {
-            const taiKhoan = document.getElementById("userLogin").value.trim();
-            const password = document.getElementById("passwordLogin").value.trim();
-            const data = await getData(URL_PROFILE);
-            const checkTK = data.find(user => user.userName === taiKhoan && user.pass === password);
-            if (!checkTK) {
-                alert("Tên đăng nhập hoặc mật khẩu không đúng !!!");
-                return;
-            }
 
-            location.href = "Home.html";
-        });
-    }
+    dangNhap.addEventListener("click", async () => {
+        const taiKhoan = document.getElementById("userLogin").value.trim();
+        const password = document.getElementById("passwordLogin").value.trim();
+        const data = await getData(URL_PROFILE);
+        const checkTK = data.find(user => user.userName === taiKhoan && user.pass === password);
+        if (!checkTK) {
+            alert("Tên đăng nhập hoặc mật khẩu không đúng !!!");
+            return;
+        }
+
+        location.href = "Home.html";
+    });
 }
 logIn();
 

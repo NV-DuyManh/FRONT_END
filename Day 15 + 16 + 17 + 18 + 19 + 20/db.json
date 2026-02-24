@@ -153,22 +153,10 @@
       "price": 34
     },
     {
-      "id": "14",
-      "name": "bdfbdfb",
-      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770556861/snrvubgwqtn2giaclipm.png",
-      "price": 443
-    },
-    {
       "id": "15",
       "name": "mì",
       "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770556931/gztxi1fxrvaj0r7rvldw.png",
       "price": 34
-    },
-    {
-      "id": "17",
-      "name": "ịijhnb",
-      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770557118/lupowx4drfealehrefld.png",
-      "price": 4
     }
   ],
   "orders": [
@@ -177,7 +165,7 @@
       "bill": [
         {
           "idFood": "1",
-          "quantity": 1
+          "quantity": 7
         },
         {
           "idFood": "2",
@@ -198,6 +186,10 @@
         {
           "idFood": "15",
           "quantity": 2
+        },
+        {
+          "idFood": "3",
+          "quantity": 123
         }
       ]
     }
@@ -404,17 +396,22 @@
     {
       "userName": "dm",
       "pass": "123",
-      "id": "3935"
+      "id": "762a"
     },
     {
       "userName": "manh",
       "pass": "123",
-      "id": "76dc"
+      "id": "c6e2"
     },
     {
       "userName": "admin",
       "pass": "123",
-      "id": "b8de"
+      "id": "f7d5"
+    },
+    {
+      "userName": "duymanh",
+      "pass": "123",
+      "id": "0454"
     }
   ]
 }

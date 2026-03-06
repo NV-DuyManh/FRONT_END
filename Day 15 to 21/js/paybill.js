@@ -1,6 +1,7 @@
 const paybill = document.getElementById("paybill");
 paybill.addEventListener("click", async () => {
-
+      console.log(orderDeleted);
+      
     const updateTable = {
         id: orderDeleted.idTable,
         nameCustomer: "",
@@ -27,7 +28,7 @@ async function show() {
     data.forEach(s => {
         const item = document.createElement("div");
         item.classList.add("col");
-         item.classList.add("mt-3");
+        item.classList.add("mt-3");
         item.innerHTML = `
                     <div class="card">
                         <div class="card-header">
@@ -43,8 +44,8 @@ async function show() {
                     </div>`;
         const pay_bill = item.querySelector(".pay_bill");
         s.bill.forEach(f => {
-           const food = dataFood.find(p => p.id == f.idFood);
-           pay_bill.innerHTML +=  `<li class="col d-flex align-items-center gap-2"> <i class="fa-solid fa-carrot"></i> <img class="img_pay" src="${food.imgUrl}" alt=""> ${food.name} x ${f.quantity} = ${food.price*f.quantity} USD</li>`
+            const food = dataFood.find(p => p.id == f.idFood);
+            pay_bill.innerHTML += `<li class="col d-flex align-items-center gap-2"> <i class="fa-solid fa-carrot"></i> <img class="img_pay" src="${food?.imgUrl}" alt=""> ${food?.name} x ${f?.quantity} = ${food?.price * f?.quantity} USD</li>`
         })
         listOrder.appendChild(item);
     })

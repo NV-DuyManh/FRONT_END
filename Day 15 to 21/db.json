@@ -1,0 +1,236 @@
+{
+  "tables": [
+    {
+      "id": "1",
+      "nameCustomer": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "2",
+      "nameCustomer": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "3",
+      "nameCustomer": "manh",
+      "quantity": "10",
+      "status": false
+    },
+    {
+      "id": "4",
+      "nameCustomer": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "5",
+      "nameCustomer": "Duy Mạnh",
+      "quantity": "2",
+      "status": false
+    },
+    {
+      "id": "6",
+      "nameCustomer": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "7",
+      "nameCustomer": "dwe",
+      "quantity": "67",
+      "status": false
+    },
+    {
+      "id": "8",
+      "nameCustomer": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "9",
+      "nameCustomer": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "10",
+      "nameCustomer": "manh",
+      "quantity": "3",
+      "status": false
+    },
+    {
+      "id": "11",
+      "nameCustomer": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "12",
+      "nameCustomer": "",
+      "quantity": 0,
+      "status": true
+    }
+  ],
+  "foods": [
+    {
+      "id": "1",
+      "name": "Soup",
+      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1772766798/oftevkmkr0aupi2l6pqi.png",
+      "price": 50
+    },
+    {
+      "id": "2",
+      "name": "Potato",
+      "imgUrl": "../img/potato.png",
+      "price": 10
+    },
+    {
+      "id": "3",
+      "name": "Beef",
+      "imgUrl": "../img/beef.png",
+      "price": 6
+    },
+    {
+      "id": "4",
+      "name": "Rolls",
+      "imgUrl": "../img/rolls.png",
+      "price": 18
+    },
+    {
+      "id": "5",
+      "name": "Pork",
+      "imgUrl": "../img/chicken.png",
+      "price": 40
+    },
+    {
+      "id": "6",
+      "name": "Pizza",
+      "imgUrl": "../img/pizza.png",
+      "price": 14
+    },
+    {
+      "id": "7",
+      "name": "Cake",
+      "imgUrl": "../img/cake.png",
+      "price": 98
+    },
+    {
+      "id": "8",
+      "name": "Noodles",
+      "imgUrl": "../img/noodles.png",
+      "price": 17
+    },
+    {
+      "id": "9",
+      "name": "Chicken",
+      "imgUrl": "../img/shrimp.png",
+      "price": 17
+    },
+    {
+      "id": "10",
+      "name": "Sausage",
+      "imgUrl": "../img/sausage.png",
+      "price": 3
+    },
+    {
+      "id": "11",
+      "name": "Hot Pot",
+      "imgUrl": "../img/hotPot.png",
+      "price": 15
+    },
+    {
+      "id": "12",
+      "name": "Shrimp",
+      "imgUrl": "../img/tom.png",
+      "price": 354
+    },
+    {
+      "id": "13",
+      "name": "CANH TOM",
+      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770556824/yjb7iwbdsvuayhugcptu.png",
+      "price": 34
+    }
+  ],
+  "bills": [
+    {
+      "id": "2257",
+      "idTable": 1,
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 1
+        },
+        {
+          "idFood": "2",
+          "quantity": 2
+        },
+        {
+          "idFood": "3",
+          "quantity": 1
+        },
+        {
+          "idFood": "10",
+          "quantity": 2
+        },
+        {
+          "idFood": "11",
+          "quantity": 1
+        }
+      ],
+      "total": 97,
+      "createAt": "2026-03-06T12:22:50.872Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "3",
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 2
+        },
+        {
+          "idFood": "2",
+          "quantity": 2
+        },
+        {
+          "idFood": "3",
+          "quantity": 2
+        },
+        {
+          "idFood": "6",
+          "quantity": 1
+        },
+        {
+          "idFood": "8",
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "profile": [
+    {
+      "userName": "dm",
+      "pass": "123",
+      "id": "762a"
+    },
+    {
+      "userName": "manh",
+      "pass": "123",
+      "id": "c6e2"
+    },
+    {
+      "userName": "admin",
+      "pass": "123",
+      "id": "f7d5"
+    },
+    {
+      "userName": "duymanh",
+      "pass": "123",
+      "id": "0454"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

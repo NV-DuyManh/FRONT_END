@@ -98,6 +98,8 @@ async function getIdCart(id) {
         bill: order.bill,
         total: total
     }
+    console.log(orderDeleted);
+    
     totalElement.innerText = `Total Bill: ${total} $`
 }
 

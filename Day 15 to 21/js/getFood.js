@@ -147,11 +147,12 @@ addFood.addEventListener("click", async () => {  //Bắt thông tin modal AddFoo
         }
 
         const newFood = {
-            id: idEdit ? JSON.stringify(idEdit) : JSON.stringify(id),
+            id: idEdit ? idEdit : id,
             name: foodName.value,
             imgUrl: imgUrl,
             price: parseInt(price.value)
         }
+        console.log(newFood);  
         if (idEdit) {
             await editById(URL_FOOD, newFood)
         } else {

@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://media.giphy.com/media/l2Je2skI6CVnZ0Sju/giphy.gif" width="200px">
+  <img src="https://media.giphy.com/media/l2Je2skI6CVnZ0Sju/giphy.gif" width="100px">
 
   # 🍽️ FRONT_END Learning Path 🍷
   

@@ -2,7 +2,7 @@
 
   <img src="https://media.giphy.com/media/l2Je2skI6CVnZ0Sju/giphy.gif" width="100px">
 
-  # 🍽️ FRONT_END Learning Path 🍷
+  # FRONT_END Learning Path 
   
   This repository records my front-end learning journey, including daily practice exercises while studying web development fundamentals.
 </div>

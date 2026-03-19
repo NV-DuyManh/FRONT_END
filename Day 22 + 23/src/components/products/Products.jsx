@@ -2,9 +2,11 @@ import React from 'react';
 
 function Products(props) {
     return (
-        <div>
-            Products
-        </div>
+        <>
+             <h1>dd</h1>
+        <h2>xax</h2>
+        </>
+   
     );
 }
 

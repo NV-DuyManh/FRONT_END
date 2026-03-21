@@ -10,7 +10,7 @@ function Header(props) {
             </div>
             <div className="list flex justify-between gap-5 items-center ">
                 {LIST_MENU.map((p, index) => (
-                    <Link className='text-white no-underline hover:!text-yellow-200 fs-4' to={p.path}>{p.title}</Link>
+                    <Link key={index} className='text-white no-underline hover:!text-yellow-200 fs-4' to={p.path}>{p.title}</Link>
                 ))}
             </div>
             <div className="button flex justify-between gap-5 items-center">

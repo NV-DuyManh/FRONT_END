@@ -2,9 +2,9 @@
   "tables": [
     {
       "id": "1",
-      "nameCustomer": "",
-      "quantity": 0,
-      "status": true
+      "nameCustomer": "Duy Manh",
+      "quantity": "2",
+      "status": false
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
     },
     {
       "id": "3",
-      "nameCustomer": "manh",
+      "nameCustomer": "fghn",
       "quantity": "10",
       "status": false
     },
@@ -84,7 +84,7 @@
       "id": "2",
       "name": "Potato",
       "imgUrl": "../img/potato.png",
-      "price": 10
+      "price": 100
     },
     {
       "id": "3",
@@ -181,11 +181,33 @@
       ],
       "total": 97,
       "createAt": "2026-03-06T12:22:50.872Z"
-    }
-  ],
-  "orders": [
+    },
     {
-      "id": "3",
+      "idTable": 2,
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 2
+        },
+        {
+          "idFood": "4",
+          "quantity": 2
+        },
+        {
+          "idFood": "10",
+          "quantity": 2
+        },
+        {
+          "idFood": "11",
+          "quantity": 2
+        }
+      ],
+      "total": 172,
+      "createAt": "2026-04-04T15:44:52.617Z",
+      "id": "COpG1GDiFhA"
+    },
+    {
+      "idTable": 3,
       "bill": [
         {
           "idFood": "1",
@@ -207,7 +229,126 @@
           "idFood": "8",
           "quantity": 1
         }
+      ],
+      "total": 163,
+      "createAt": "2026-04-04T15:47:15.599Z",
+      "id": "6CZP1Y077yM"
+    },
+    {
+      "idTable": 2,
+      "bill": [
+        {
+          "idFood": "2",
+          "quantity": 5
+        },
+        {
+          "idFood": "3",
+          "quantity": 1
+        },
+        {
+          "idFood": "6",
+          "quantity": 3
+        },
+        {
+          "idFood": "7",
+          "quantity": 2
+        }
+      ],
+      "total": 294,
+      "createAt": "2026-04-04T16:11:35.301Z",
+      "id": "mmB0qz9awwc"
+    }
+  ],
+  "orders": [
+    {
+      "id": "5",
+      "idTable": "5",
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 2
+        },
+        {
+          "idFood": "2",
+          "quantity": 6
+        },
+        {
+          "idFood": "3",
+          "quantity": 4
+        },
+        {
+          "idFood": "6",
+          "quantity": 1
+        },
+        {
+          "idFood": "8",
+          "quantity": 1
+        },
+        {
+          "idFood": "4",
+          "quantity": 2
+        },
+        {
+          "idFood": "9",
+          "quantity": 1
+        },
+        {
+          "idFood": "10",
+          "quantity": 1
+        },
+        {
+          "idFood": "11",
+          "quantity": 1
+        },
+        {
+          "idFood": "12",
+          "quantity": 1
+        }
       ]
+    },
+    {
+      "id": "3PCVyw66kQU",
+      "idTable": "1",
+      "bill": [
+        {
+          "idFood": "2",
+          "quantity": 4
+        },
+        {
+          "idFood": "3",
+          "quantity": 1
+        },
+        {
+          "idFood": "11",
+          "quantity": 1
+        },
+        {
+          "idFood": "1",
+          "quantity": 2
+        },
+        {
+          "idFood": "4",
+          "quantity": 1
+        },
+        {
+          "idFood": "8",
+          "quantity": 1
+        },
+        {
+          "idFood": "12",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "idTable": "7",
+      "bill": [
+        {
+          "idFood": "3",
+          "quantity": 2
+        }
+      ],
+      "id": "iaXYkJSkTIE"
     }
   ],
   "profile": [

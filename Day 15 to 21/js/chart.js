@@ -1,148 +1,83 @@
+let currentChart = null;
 
-async function chartBar() {
+async function renderChart(type) {
+    const container = document.getElementById("chartContainer");
+    container.innerHTML = "";
+
     const ctx = document.createElement("canvas");
-    document.getElementById("barChart").appendChild(ctx);
+    container.appendChild(ctx);
 
-    const dataTable = await getData(URL_TABLE);
-    const labels = dataTable.map(t => t.id);
-    const dataBill = await getData(URL_BILL);
-    const totalBill = labels.map((e) => {
-        const total = dataBill.reduce((acc, curr) => {
-            if (curr.idTable == e) {
-                return acc + curr.total
-            }
-            return acc;
+    const tables = await getData(URL_TABLE);
+    const bills = await getData(URL_BILL);
+
+    const labels = tables.map(t => `Table ${t.id}`);
+
+    const data = tables.map(t => {
+        return bills.reduce((sum, b) => {
+            if (b.idTable == t.id) return sum + b.total;
+            return sum;
         }, 0);
-        return total;
     });
 
-    const data = {
-        labels: labels.map(e => `Table ${e}`),
-        datasets: [{
-            label: 'USD',
-            data: totalBill,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 205, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(201, 203, 207, 0.2)'
-            ],
-            borderColor: [
-                'rgb(255, 99, 132)',
-                'rgb(255, 159, 64)',
-                'rgb(255, 205, 86)',
-                'rgb(75, 192, 192)',
-                'rgb(54, 162, 235)',
-                'rgb(153, 102, 255)',
-                'rgb(201, 203, 207)'
-            ],
-            borderWidth: 1
-        }]
-    };
+    const gradientColors = [
+        "#ff6b6b",
+        "#feca57",
+        "#48dbfb",
+        "#1dd1a1",
+        "#5f27cd",
+        "#ee5253",
+        "#10ac84",
+        "#341f97",
+        "#ff9ff3",
+        "#00d2d3",
+        "#54a0ff",
+        "#c8d6e5"
+    ];
 
-    new Chart(ctx, {
-        type: 'bar',
-        data: data,
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
+    if (currentChart) {
+        currentChart.destroy();
+    }
+
+    currentChart = new Chart(ctx, {
+        type: type,
+        data: {
+            labels: labels,
+            datasets: [{
+                label: "Revenue ($)",
+                data: data,
+                backgroundColor: gradientColors,
+                borderRadius: 10,
+                borderWidth: 1
+            }]
         },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: "#333",
+                        font: {
+                            size: 13
+                        }
+                    }
+                }
+            },
+            scales: type === "bar" ? {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        color: "rgba(0,0,0,0.1)"
+                    }
+                }
+            } : {}
+        }
     });
 }
 
-chartBar();
-
-async function chartPie() {
-    const ctx = document.createElement("canvas");
-    document.getElementById("pieChart").appendChild(ctx);
-    const dataTable = await getData(URL_TABLE);
-    const labels = dataTable.map(t => t.id);
-    const dataBill = await getData(URL_BILL);
-    const totalBill = labels.map((e) => {
-        const total = dataBill.reduce((acc, curr) => {
-            if (curr.idTable == e) {
-                return acc + curr.total
-            }
-            return acc;
-        }, 0);
-        return total;
-    });
-    const data = {
-        labels: labels.map(e => `Table ${e}`),
-        datasets: [{
-            label: 'USD',
-            data: totalBill,
-            backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(75, 192, 192)',
-                'rgb(255, 205, 86)',
-                'rgb(201, 203, 207)',
-                'rgb(54, 162, 235)',
-                'rgb(130, 235, 54)',
-                'rgb(156, 99, 255)',
-                'rgb(192, 149, 75)',
-                'rgb(255, 139, 86)',
-                'rgb(202, 30, 199)',
-                'rgb(54, 202, 235)',
-                'rgb(54, 235, 187)',
-            ],
-            hoverOffset: 4
-        }]
-    };
-    new Chart(ctx, {
-        type: 'doughnut',
-        data: data,
-    });
+// 👉 nút click
+function showChart(type) {
+    renderChart(type);
 }
-chartPie();
 
-async function chartPolar() {
-    const ctx = document.createElement("canvas");
-    document.getElementById("polarChart").appendChild(ctx);
-    const dataTable = await getData(URL_TABLE);
-    const labels = dataTable.map(t => t.id);
-    const dataBill = await getData(URL_BILL);
-    const totalBill = labels.map((e) => {
-        const total = dataBill.reduce((acc, curr) => {
-            if (curr.idTable == e) {
-                return acc + curr.total
-            }
-            return acc;
-        }, 0);
-        return total;
-    });
-    const data = {
-        labels: labels.map(e => `Table ${e}`),
-        datasets: [{
-            label: 'USD',
-            data: totalBill,
-            backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(75, 192, 192)',
-                'rgb(255, 205, 86)',
-                'rgb(201, 203, 207)',
-                'rgb(54, 162, 235)',
-                'rgb(130, 235, 54)',
-                'rgb(156, 99, 255)',
-                'rgb(192, 149, 75)',
-                'rgb(255, 139, 86)',
-                'rgb(202, 30, 199)',
-                'rgb(54, 202, 235)',
-                'rgb(54, 235, 187)',
-            ]
-        }]
-    };
-    new Chart(ctx, {
-        type: 'polarArea',
-        data: data,
-        options: {}
-    });
-
-} chartPolar();
-
+// 👉 mặc định load Bar
+renderChart("bar");

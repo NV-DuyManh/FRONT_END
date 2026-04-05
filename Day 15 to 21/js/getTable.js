@@ -4,107 +4,114 @@ async function getTable() {
 
     const choose = document.getElementById("choose");
     data.forEach(s => {
-        //Edit ảnh (Có khách / Không có khách) dựa theo trạng thái
         if (!s.status) {
-            choose.innerHTML += `<option value="${s.id}">Table ${s.id}</option>`
+            choose.innerHTML += `<option value="${s.id}">Table ${s.id}</option>`;
         }
         const img = s.status ? `../img/restaurant.png` : `../img/nhahang_nguoi.png`;
-        const nut = s.status ? `  <button type="button" onClick=getIdTable(${s.id})
-                                        class="btn btn-primary text-dark bg-warning d-flex align-items-center gap-2"
-                                        data-bs-toggle="modal" data-bs-target="#modalBooking">
-                                        <i class="fa-solid fa-toolbox"></i> BOOKING
-                                    </button>` : `  <a onClick=getIdAdd(${s.id}) href="#" class="btn btn-primary text-light bg-success">
-                                        <i class="fa-solid fa-circle-plus"></i> ADD</a>
-                                    <a onClick=getIdCart(${s.id}) href="#" class="btn btn-primary text-light bg-danger" data-bs-toggle="modal" data-bs-target="#modalbill">
-                                        <i class="fa-solid fa-cart-plus"></i> CART</a>`;
-        listTable.innerHTML += `    <div class="col ">
-                        <div class="card text-center xe">
-                            <div class="card-body rounded-3">
-                                <p class="quantity">${s.id}</p>
-                                <img src=${img} alt="">
-                                <div class="nut d-flex justify-content-center gap-3" style="  white-space: nowrap;">
-                                        ${nut}
-                                </div>
+        const nut = s.status
+            ? `<button type="button" onClick="getIdTable(${s.id})"
+                    class="btn btn-primary text-dark bg-warning d-flex align-items-center gap-2"
+                    data-bs-toggle="modal" data-bs-target="#modalBooking">
+                    <i class="fa-solid fa-toolbox"></i> BOOKING
+               </button>`
+            : `<a onClick="getIdAdd(${s.id})" href="#" class="btn btn-primary text-light bg-success">
+                    <i class="fa-solid fa-circle-plus"></i> ADD
+               </a>
+               <a onClick="getIdCart(${s.id})" href="#" class="btn btn-primary text-light bg-danger"
+                    data-bs-toggle="modal" data-bs-target="#modalbill">
+                    <i class="fa-solid fa-cart-plus"></i> CART
+               </a>`;
 
-                            </div>
+        listTable.innerHTML += `
+            <div class="col">
+                <div class="card text-center xe">
+                    <div class="card-body rounded-3">
+                        <p class="quantity">${s.id}</p>
+                        <img src=${img} alt="">
+                        <div class="nut d-flex justify-content-center gap-3" style="white-space: nowrap;">
+                            ${nut}
                         </div>
-                    </div>`
-    })
+                    </div>
+                </div>
+            </div>`;
+    });
 }
 getTable();
 
 
-//Booking table and update nó
+// Booking bàn
 function getIdTable(id) {
-
     const send = document.getElementById("send");
     send.addEventListener("click", () => {
-
         const customer_name = document.getElementById("customer_name").value;
         const quantity = document.getElementById("quantity").value;
-
         const tableEdit = {
             id: id,
             nameCustomer: customer_name,
             quantity: quantity,
             status: false
-        }
-        editById(URL_TABLE, tableEdit)
-    })
+        };
+        editById(URL_TABLE, tableEdit);
+    });
 }
 
-//Add bàn
+// Chuyển sang tab Order Food và chọn đúng bàn
 function getIdAdd(id) {
-
     listBox[1].style.display = "none";
     listBox[2].style.display = "block";
-
     const chonBan = document.getElementById("choose");
     chonBan.value = id;
 }
 
 let orderDeleted;
-//Nhấn vào button add và trỏ đến urlFood, và hiển thị số bàn tương ứng
+
 async function getIdCart(id) {
     const orders = await getData(URL_ORDER);
     const dataFood = await getData(URL_FOOD);
-    const numberTable = document.getElementById("numberTable");
-    numberTable.innerText = `Table ${id}`;
-    const order = orders.find(o => o.id == id);
 
+    document.getElementById("numberTable").innerText = `Table ${id}`;
 
-    //Tính tổng bills => In ra tổng tiền và xóa đi order đó
+    const order = orders.find(o => o.idTable == id || o.id == id);
+
     const cartShow = document.getElementById("cartShow");
     const totalElement = document.getElementById("totalBill");
     cartShow.innerHTML = "";
     totalElement.innerText = "";
+
+    if (!order || !order.bill || order.bill.length === 0) {
+        cartShow.innerHTML = `
+            <tr>
+                <td colspan="6" class="text-center text-danger fw-bold py-3">
+                    ⚠️ Bàn này chưa có order nào!
+                </td>
+            </tr>`;
+        totalElement.innerText = "Total Bill: 0 $";
+        orderDeleted = null;
+        return;
+    }
+
     let total = 0;
     order.bill.forEach((s, index) => {
-
         const food = dataFood.find(f => f.id == s.idFood);
+        if (!food) return;
         total += s.quantity * food.price;
-        cartShow.innerHTML += `   <tr class="text-center align-middle">
-                                <td class="fw-bold">${index + 1}</td>
-                                <td class="anhTable"><img src="${food.imgUrl}" alt=""></td>
-                                <td>${food.name}</td>
-                                <td>${food.price} $</td>
-                                <td>${s.quantity}</td>
-                                <td>${s.quantity * food.price} $</td>
-                            </tr>`
+        cartShow.innerHTML += `
+            <tr class="text-center align-middle">
+                <td class="fw-bold">${index + 1}</td>
+                <td class="anhTable"><img src="${food.imgUrl}" alt=""></td>
+                <td>${food.name}</td>
+                <td>${food.price} $</td>
+                <td>${s.quantity}</td>
+                <td>${s.quantity * food.price} $</td>
+            </tr>`;
+    });
 
-    })
     orderDeleted = {
         idTable: id,
+        orderId: order.id,   // id thực trong DB
         bill: order.bill,
         total: total
-    }
-    console.log(orderDeleted);
-    
-    totalElement.innerText = `Total Bill: ${total} $`
+    };
+
+    totalElement.innerText = `Total Bill: ${total} $`;
 }
-
-
-
-
-
-

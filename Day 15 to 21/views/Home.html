@@ -16,7 +16,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../css/Home.css">
-
+    <link rel="stylesheet" href="../css/Chart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
@@ -156,7 +156,7 @@
                             <div class="card-body text-center">
                                 <p class="card-text"></p>
                                 <h2 class="card-title">Món ăn phổ biến</h2>
-                                <h1 class="card-title">Fried Rice</h1>
+                                <h1 id="monPhoBien" class="card-title">Fried Rice</h1>
                             </div>
                         </div>
                     </div>
@@ -165,17 +165,23 @@
                             <div class="card-body text-center">
                                 <p class="card-text"></p>
                                 <h2 class="card-title">Khách hàng thường xuyên</h2>
-                                <h1 class="card-title">Duy Manh</h1>
+                                <h1 id="khachHang" class="card-title">Duy Manh</h1>
                             </div>
                         </div>
                     </div>
 
 
                 </div>
-                <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 g-3 mt-5">
-                    <div class="col" id="barChart"></div>
-                    <div class="col" id="pieChart"></div>
-                    <div class="col" id="polarChart"></div>
+                <div class="row mt-5">
+                    <div class="col-12 text-center mb-3">
+                        <button class="btn btn-primary me-2" onclick="showChart('bar')">Bar</button>
+                        <button class="btn btn-success me-2" onclick="showChart('pie')">Pie</button>
+                        <button class="btn btn-warning" onclick="showChart('polarArea')">Polar</button>
+                    </div>
+
+                    <div class="col-12 d-flex justify-content-center">
+                        <div id="chartContainer" style="width: 600px; height: 400px;"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -246,7 +252,10 @@
                         </div>
                         <h2>Duy Manh</h2>
                         <p>Member</p>
-                        <button><i class="fa-solid fa-pen-to-square" style="padding-right: 20px"></i>Edit</button>
+                        <button id="btnEdit">
+                            <i class="fa-solid fa-pen-to-square" style="padding-right: 20px"></i>
+                            Edit
+                        </button>
                     </div>
 
                     <div class="col-md-8 col-12 p-3 flex-column  infor-right">
@@ -465,7 +474,7 @@
     </script>
     <script src="../js/home.js"></script>
     <script src="../js/logout.js"></script>
-
+    <script src="../js/information.js"></script>
 </body>
 
 </html>

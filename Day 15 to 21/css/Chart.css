@@ -1,0 +1,18 @@
+#chartContainer {
+    background: rgba(255,255,255,0.7);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+
+button.btn {
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+button.btn:hover {
+    transform: scale(1.1);
+}

@@ -108,10 +108,10 @@ http://localhost:3000
 
 ### 3. Run frontend
 
-- Mở:
+- Mở đầu tiên tại:
 
 ```
-views/Home.html
+views/Register.html
 ```
 
 - Chọn **Open with Live Server**

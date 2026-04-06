@@ -15,18 +15,45 @@ function toggleLoginPassword() {
 function logIn() {
     const dangNhap = document.getElementById("dangNhap");
 
-    dangNhap.addEventListener("click", async () => {
-        const taiKhoan = document.getElementById("userLogin").value.trim();
-        const password = document.getElementById("passwordLogin").value.trim();
-        const data = await getData(URL_PROFILE);
-        const checkTK = data.find(user => user.userName === taiKhoan && user.pass === password);
-        if (!checkTK) {
-            alert("Tên đăng nhập hoặc mật khẩu không đúng !!!");
-            return;
-        }
+    if (dangNhap) {
+        dangNhap.addEventListener("click", async () => {
+            const taiKhoan = document.getElementById("userLogin").value.trim();
+            const password = document.getElementById("passwordLogin").value.trim();
 
-        location.href = "Home.html";
-    });
+            if (!taiKhoan || !password) {
+                alert("Vui lòng nhập đầy đủ tài khoản và mật khẩu!");
+                return;
+            }
+
+            // Đổi text để báo hiệu đang tải
+            dangNhap.innerText = "ĐANG ĐĂNG NHẬP...";
+            dangNhap.disabled = true;
+
+            try {
+                // Kéo toàn bộ data từ db.json key profile
+                const data = await getData(URL_PROFILE);
+                
+                // So sánh
+                const checkTK = data.find(user => user.userName === taiKhoan && user.pass === password);
+                
+                if (!checkTK) {
+                    alert("Tên đăng nhập hoặc mật khẩu không đúng !!!");
+                    dangNhap.innerText = "ĐĂNG NHẬP";
+                    dangNhap.disabled = false;
+                    return;
+                }
+
+                alert("Đăng nhập thành công!");
+                location.href = "Home.html";
+
+            } catch (error) {
+                console.error("Lỗi khi fetch user:", error);
+                alert("Lỗi kết nối đến máy chủ!");
+                dangNhap.innerText = "ĐĂNG NHẬP";
+                dangNhap.disabled = false;
+            }
+        });
+    }
 }
 logIn();
 

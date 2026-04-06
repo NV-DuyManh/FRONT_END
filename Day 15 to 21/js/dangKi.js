@@ -13,6 +13,9 @@ function togglePassword(inputId, iconSpan) {
 };
 
 const dangKidn = document.getElementById("dangKidn");
-dangKidn.addEventListener("click", () => {
-    location.href = "Register.html";
-});
+// FIX: Phải check xem dangKidn có tồn tại ở trang hiện tại không
+if (dangKidn) {
+    dangKidn.addEventListener("click", () => {
+        location.href = "Register.html";
+    });
+}

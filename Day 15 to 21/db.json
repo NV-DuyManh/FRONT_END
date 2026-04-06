@@ -353,24 +353,34 @@
   ],
   "profile": [
     {
+      "fullName": "Duy Manh",
       "userName": "dm",
       "pass": "123",
       "id": "762a"
     },
     {
+      "fullName": "Duy Manh",
       "userName": "manh",
       "pass": "123",
       "id": "c6e2"
     },
     {
+      "fullName": "Admin",
       "userName": "admin",
       "pass": "123",
       "id": "f7d5"
     },
     {
-      "userName": "duymanh",
-      "pass": "123",
-      "id": "0454"
+      "fullName": "abc",
+      "userName": "manh",
+      "pass": "123456",
+      "id": "az95yKtOJqU"
+    },
+    {
+      "FullName": "Nguyễn Văn Duy Mạnh",
+      "userName": "DM",
+      "pass": "123456",
+      "id": "g3wbDRqLUWw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

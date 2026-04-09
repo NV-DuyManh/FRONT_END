@@ -203,40 +203,42 @@ class Sex {
     + name: text
 }
 
-
-Movies "n" -down-> "n" Favorites
-Movies "n" -down-> "n" actors
-Movies "1" -down-> "1" authors
+Movies "1" -down-> "n" Favorites
+Movies "n" -down-> "n" Actors
+Movies "1" -down-> "1" Authors
 Movies "1" -right-> "n" Episodes
-Movies "1" -down-> "n" characters
+Movies "n" -down-> "n" Characters
 Movies "n" -up-> "n" Categories
-Movies "1" -left-> "n" reviews
-Movies "1" -left-> "n" comments
-Movies "1" -up-> "n" Category_type
-Movies "1" -up-> "1" showtimes
+Movies "1" -left-> "n" Reviews
+Movies "1" -left-> "n" Comments
+Movies "1" -up-> "1" CategoryType
+Movies "1" -up-> "n" ShowTimes
 
-actors "1" -right-> "1" sex
-authors "1" -left-> "1" sex
-Users "1" -up-> "1" sex
-actors "1" -up-> "1" Countries
+Actors "1" -right-> "1" Sex
+Authors "1" -left-> "1" Sex
+Users "1" -up-> "1" Sex
+Actors "1" -up-> "1" Countries
+Authors "1" -up-> "1" Countries
 
 Users "1" -right-> "n" Favorites
-Users "1" -right-> "n" comments
-Users "1" -right-> "n" reviews
-Users "1" -down-> "n" folders
-Users "1" -down-> "n" watchHistory
+Users "1" -right-> "n" Comments
+Users "1" -right-> "n" Reviews
+Users "1" -down-> "n" Folders
+Users "1" -down-> "n" WatchHistory
 
-folders "1" -right-> "n" moviesSave
-watchHistory "n" -right-> "1" Episodes
+Folders "1" -right-> "n" MoviesSave
+WatchHistory "n" -right-> "1" Episodes
 
-plans "1" -down-> "n" features
-plans "1" -down-> "n" packages
-plans "1" -left-> "n" Movies
+Plans "1" -down-> "n" Features
+Plans "1" -down-> "n" Packages
+Plans "1" -left-> "n" Movies
 
-rentMovies "n" -down-> "1" Users
-rentMovies "n" -up-> "1" Movies
-subcription "n" -up-> "1" Users
-subcription "n" -right-> "1" plans
-moviesSave "n" -up-> "1" Movies
+RentMovies "n" -down-> "1" Users
+RentMovies "n" -up-> "1" Movies
+
+Subcriptions "n" -up-> "1" Users
+Subcriptions "n" -right-> "1" Plans
+
+MoviesSave "n" -up-> "1" Movies
 
 @enduml

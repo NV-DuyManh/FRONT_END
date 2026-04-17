@@ -12,7 +12,6 @@
     <a href="#-tech-stack">Tech Stack</a> •
     <a href="#-project-structure">Structure</a> •
     <a href="#-how-it-works">How it works</a> •
-    <a href="#-setup">Setup</a>
   </p>
 
 </div>

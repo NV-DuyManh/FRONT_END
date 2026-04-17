@@ -1,0 +1,115 @@
+.noel-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+    background-color: black;
+}
+
+/* Icon Noel rơi như tuyết */
+.noel-item {
+    position: absolute;
+    top: -80px;
+    opacity: 0.9;
+    animation: icon-fall linear infinite;
+}
+
+@keyframes icon-fall {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(110vh);
+    }
+}
+
+/* Tuyết rơi */
+.snow {
+    position: absolute;
+    top: -10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    filter: blur(0.5px);
+    animation: snow-fall linear infinite;
+}
+
+@keyframes snow-fall {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(110vh);
+    }
+}
+
+
+
+
+
+/* Hiệu ứng khác */
+
+/* .noel-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 30%, #0a0a0a, #000);
+}
+
+
+.noel-item {
+    position: absolute;
+    opacity: 0.9;
+}
+
+.snow {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.85;
+}
+
+
+.sparkle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    animation: sparkle 2.5s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1.6); }
+}
+
+.moon {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #fff, #ddd);
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(255,255,255,0.4);
+}
+
+.cloud {
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50px;
+    filter: blur(10px);
+    animation: cloudMove linear infinite;
+}
+
+@keyframes cloudMove {
+    from { transform: translateX(-200px); }
+    to { transform: translateX(110vw); }
+} */

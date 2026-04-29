@@ -1,0 +1,244 @@
+@startuml
+
+
+skinparam class {
+    FontColor #1A1A1A
+    AttributeFontColor #2A2A2A
+    AttributeIconSize 12
+    HeaderBackgroundColor #D9E2EC
+}
+skinparam arrowColor #ff0000
+skinparam nodesep 70
+skinparam ranksep 80
+skinparam linetype ortho
+
+class Users {
+    + id: text
+    + name: text
+    + email: text
+    + password: text
+    + phone: text
+    + avatarUrl: text
+    + sexId: text
+    + createdAt: datetime
+}
+
+class Favorites {
+    + id: text
+    + userId: text
+    + movieId: text
+    + createdAt: datetime
+}
+
+class Folders {
+    + id: text
+    + name: text
+    + userId: text
+    + createdAt: datetime
+}
+
+class MoviesSave {
+    + id: text
+    + movieId: text
+    + folderID: text
+    + createdAt: datetime
+}
+
+class WatchHistory {
+    + id: text
+    + episodesID: text
+    + userId: text
+    + time: int
+    + createdAt: datetime
+}
+
+class Movies {
+    + id: text
+    + name: text
+    + description: text
+    + imgUrl: text
+    + trailerUrl: text
+    + duration: int
+    + views: int
+    + rating: float
+    + endEpisode: int
+    + category_Type_Id: text
+    + productionYear: int
+    + list_Category: text
+    + list_Actor: text
+    + list_Character: text
+    + createdAt: datetime
+    + planID: text
+    + rent: int
+    + status: text
+}
+
+class Episodes {
+    + id: text
+    + numberEpisode: int
+    + title: text
+    + url: text
+    + duration: int
+    + createdAt: datetime
+}
+
+class ShowTimes {
+    + id: text
+    + time: datetime
+    + movieId: text
+    + roomName: text
+}
+
+class Categories {
+    + id: text
+    + name: text
+    + description: text
+}
+
+class CategoryType {
+    + id: text
+    + name: text
+    + description: text
+}
+
+class Actors {
+    + id: text
+    + name: text
+    + imgUrl: text
+    + description: text
+    + sexID: text
+    + countriesID: text
+}
+
+class Authors {
+    + id: text
+    + name: text
+    + imgUrl: text
+    + description: text
+    + countriesID: text
+    + sexID: text
+}
+
+class Characters {
+    + id: text
+    + name: text
+    + description: text
+    + imgUrl: text
+    + roleType: text
+}
+
+class Reviews {
+    + id: text
+    + moviesId: text
+    + userId: text
+    + rate: float
+    + content: text
+    + createdAt: datetime
+}
+
+class Comments {
+    + id: text
+    + userId: text
+    + moviesId: text
+    + description: text
+    + createdAt: datetime
+}
+
+class RentMovies {
+    + id: text
+    + transactionID: text
+    + userId: text
+    + moviesId: text
+    + paymentMethod: text
+    + price: float
+    + startDate: datetime
+    + expiryDate: datetime
+    + status: text
+}
+
+class Subcriptions {
+    + id: text
+    + transactionID: text
+    + userId: text
+    + paymentMethod: text
+    + planID: text
+    + price: float
+    + startDate: datetime
+    + expiryDate: datetime
+    + status: text
+}
+
+class Plans {
+    + id: text
+    + name: text
+    + level: int
+    + price: float
+    + billingCycle: text
+}
+
+class Features {
+    + id: text
+    + planID: text
+    + description: text
+    + available: boolean
+}
+
+class Packages {
+    + id: text
+    + planID: text
+    + discount: float
+    + time: int
+    + name: text
+}
+
+class Countries {
+    + id: text
+    + name: text
+    + imgUrl: text
+    + description: text
+}
+
+class Sex {
+    + id: text
+    + name: text
+}
+
+Movies "1" -down-> "n" Favorites
+Movies "n" -down-> "n" Actors
+Movies "1" -down-> "1" Authors
+Movies "1" -right-> "n" Episodes
+Movies "n" -down-> "n" Characters
+Movies "n" -up-> "n" Categories
+Movies "1" -left-> "n" Reviews
+Movies "1" -left-> "n" Comments
+Movies "1" -up-> "1" CategoryType
+Movies "1" -up-> "n" ShowTimes
+
+Actors "1" -right-> "1" Sex
+Authors "1" -left-> "1" Sex
+Users "1" -up-> "1" Sex
+Actors "1" -up-> "1" Countries
+Authors "1" -up-> "1" Countries
+
+Users "1" -right-> "n" Favorites
+Users "1" -right-> "n" Comments
+Users "1" -right-> "n" Reviews
+Users "1" -down-> "n" Folders
+Users "1" -down-> "n" WatchHistory
+
+Folders "1" -right-> "n" MoviesSave
+WatchHistory "n" -right-> "1" Episodes
+
+Plans "1" -down-> "n" Features
+Plans "1" -down-> "n" Packages
+Plans "1" -left-> "n" Movies
+
+RentMovies "n" -down-> "1" Users
+RentMovies "n" -up-> "1" Movies
+
+Subcriptions "n" -up-> "1" Users
+Subcriptions "n" -right-> "1" Plans
+
+MoviesSave "n" -up-> "1" Movies
+
+@enduml
